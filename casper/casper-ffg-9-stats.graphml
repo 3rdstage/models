@@ -37,10 +37,9 @@
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="20.0" width="5.0" x="582.0" y="230.0"/>
+          <y:Geometry height="30.0" width="5.0" x="582.0" y="225.0"/>
           <y:Fill color="#000000" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Comic Sans MS" fontSize="20" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.87109375" horizontalTextPosition="center" iconTextGap="4" modelName="eight_pos" modelPosition="s" textColor="#000000" verticalTextPosition="bottom" visible="true" width="38.6484375" x="-16.82421875" xml:space="preserve" y="24.0">2/3</y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -49,10 +48,9 @@
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="20.0" width="5.0" x="513.1840000000001" y="230.0"/>
+          <y:Geometry height="30.0" width="5.0" x="513.1840000000001" y="225.0"/>
           <y:Fill color="#000000" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Comic Sans MS" fontSize="20" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.87109375" horizontalTextPosition="center" iconTextGap="4" modelName="eight_pos" modelPosition="n" textColor="#000000" verticalTextPosition="bottom" visible="true" width="38.6484375" x="-16.82421875" xml:space="preserve" y="-35.87109375">3/5</y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -61,10 +59,9 @@
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="20.0" width="5.0" x="483.792" y="230.0"/>
+          <y:Geometry height="30.0" width="5.0" x="483.792" y="225.0"/>
           <y:Fill color="#000000" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Comic Sans MS" fontSize="20" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.87109375" horizontalTextPosition="center" iconTextGap="4" modelName="eight_pos" modelPosition="s" textColor="#000000" verticalTextPosition="bottom" visible="true" width="38.6484375" x="-16.82421875" xml:space="preserve" y="24.0">4/7</y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -73,10 +70,9 @@
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="20.0" width="5.0" x="412.5" y="230.0"/>
+          <y:Geometry height="30.0" width="5.0" x="412.5" y="225.0"/>
           <y:Fill color="#000000" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Comic Sans MS" fontSize="20" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.87109375" horizontalTextPosition="center" iconTextGap="4" modelName="eight_pos" modelPosition="s" textColor="#000000" verticalTextPosition="bottom" visible="true" width="35.4453125" x="-15.22265625" xml:space="preserve" y="24.0">1/2</y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
