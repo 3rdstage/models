@@ -74,7 +74,7 @@
           <y:Geometry height="60.0" width="400.0" x="213.10737499999948" y="495.6875"/>
           <y:Fill color="#EEEEEE" color2="#EEEEEE" transparent="false"/>
           <y:BorderStyle hasColor="false" raised="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Comic Sans MS" fontSize="12" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" height="20.72265625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="br" textColor="#000000" verticalTextPosition="bottom" visible="true" width="92.095703125" x="303.904296875" xml:space="preserve" y="35.27734375">What's wrong ?</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Comic Sans MS" fontSize="12" fontStyle="italic" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="br" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="392.0" y="52.0"/>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
       </data>
@@ -816,7 +816,7 @@
           </y:Path>
           <y:LineStyle color="#0033FF" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Comic Sans MS" fontSize="18" fontStyle="bolditalic" hasBackgroundColor="false" hasLineColor="false" height="38.0" horizontalTextPosition="center" iconTextGap="4" modelName="free" modelPosition="anywhere" preferredPlacement="anywhere" ratio="0.5" textColor="#0033CC" verticalTextPosition="bottom" visible="true" width="52.0" x="-31.99689961077047" xml:space="preserve" y="-151.99824877929686">&lt;html&gt;V&lt;sub&gt;A,5 &lt;/sub&gt;&lt;/html&gt;<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Comic Sans MS" fontSize="18" fontStyle="bolditalic" hasBackgroundColor="false" hasLineColor="false" height="38.0" horizontalTextPosition="center" iconTextGap="4" modelName="free" modelPosition="anywhere" preferredPlacement="anywhere" ratio="0.5" textColor="#0033CC" verticalTextPosition="bottom" visible="true" width="52.0" x="-31.99689961077047" xml:space="preserve" y="-151.99824877929686">&lt;html&gt;V&lt;sub&gt;A,6 &lt;/sub&gt;&lt;/html&gt;<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
@@ -830,7 +830,7 @@
           </y:Path>
           <y:LineStyle color="#0033FF" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Comic Sans MS" fontSize="18" fontStyle="bolditalic" hasBackgroundColor="false" hasLineColor="false" height="38.0" horizontalTextPosition="center" iconTextGap="4" modelName="free" modelPosition="anywhere" preferredPlacement="anywhere" ratio="0.5" textColor="#0033CC" verticalTextPosition="bottom" visible="true" width="52.0" x="-111.07488422991116" xml:space="preserve" y="-147.22266284179693">&lt;html&gt;V&lt;sub&gt;A,6 &lt;/sub&gt;&lt;/html&gt;<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Comic Sans MS" fontSize="18" fontStyle="bolditalic" hasBackgroundColor="false" hasLineColor="false" height="38.0" horizontalTextPosition="center" iconTextGap="4" modelName="free" modelPosition="anywhere" preferredPlacement="anywhere" ratio="0.5" textColor="#0033CC" verticalTextPosition="bottom" visible="true" width="52.0" x="-111.07488422991116" xml:space="preserve" y="-147.22266284179693">&lt;html&gt;V&lt;sub&gt;A,7 &lt;/sub&gt;&lt;/html&gt;<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
