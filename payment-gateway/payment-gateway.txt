@@ -1,0 +1,23 @@
+
+https://plantuml.com/sequence-diagram
+
+@startuml
+Actor "End User" as EndUser order 10
+participant Marketplace order 20
+participant "Payment Gateway" as PG order 30
+participant "Clearing House" as ClearingHouse order 40
+participant "End User's Bank" as EndUserBank order 50
+participant "Marketplace's Bank" as MarketplaceBank order 60
+
+EndUser -> Marketplace ++ : Place Order
+EndUser <<-- Marketplace --:
+
+EndUser -> PG ++ : Make a Payment
+
+PG -> ClearingHouse++ : Request a Transfer
+ClearingHouse -> EndUserBank++ : Withdraw
+
+
+
+
+@enduml
