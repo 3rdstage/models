@@ -6,18 +6,34 @@ Actor "End User" as EndUser order 10
 participant Marketplace order 20
 participant "Payment Gateway" as PG order 30
 participant "Clearing House" as ClearingHouse order 40
-participant "End User's Bank" as EndUserBank order 50
-participant "Marketplace's Bank" as MarketplaceBank order 60
+participant "End User's\nBank" as EndUserBank order 50
+participant "Marketplace's\nBank" as MarketplaceBank order 60
+participant Seller order 25
 
-EndUser -> Marketplace ++ : Place Order
-EndUser <<-- Marketplace --:
+EndUser -> Marketplace ++ : Place an order
+EndUser <<-- Marketplace --: Redirect to Payment Gateway
 
-EndUser -> PG ++ : Make a Payment
+EndUser -> PG ++ : Make a payment
+  PG -> ClearingHouse++ : Request a transfer
+    ClearingHouse -> EndUserBank++ : Withdraw
+      EndUserBank--
+    ClearingHouse -> MarketplaceBank++ : Deposit
+      MarketplaceBank--
+    return
+  PG -> Marketplace++ : Notify payment
+    Marketplace -> Marketplace++ : Confirm the order
+    Marketplace--
+  Marketplace--
+  PG --> EndUser--: Redirect to marketplace
 
-PG -> ClearingHouse++ : Request a Transfer
-ClearingHouse -> EndUserBank++ : Withdraw
+EndUser -> Marketplace++ : Review the order
+Marketplace--
 
+Marketplace -> Seller++ : Order an fulfillment
+Seller -> EndUser: Fulfill the order
+Seller--
 
-
+EndUser -> Marketplace++ : Confirm the fulfillment
+Marketplace--
 
 @enduml
