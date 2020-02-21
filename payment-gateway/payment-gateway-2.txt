@@ -1,0 +1,88 @@
+
+https://plantuml.com/sequence-diagram
+https://plantuml-documentation.readthedocs.io/en/latest/diagrams/sequence.html
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+
+@startuml
+Hide Footbox
+Title Bank Transfer through Payment Gateway
+Skinparam Sequence {
+  GroupBorderThickness 1
+  GroupBorderShadowing false
+}
+
+Actor "Donator:d2" as d2
+Actor "Donator:d1" as d1
+Participant Platform as p
+Participant "Payme\nGateway" as pg
+Participant "Account:acct-d1" as acct_d1
+Note Right Of acct_d1
+   bank account
+   for donator d1
+End Note
+Participant "Account:acct-d2" as acct_d2
+Note Right Of acct_d2
+   bank account
+   for donator d2
+End Note
+Participant "Account:acct-p1" as acct_p1
+Note Right Of acct_p1
+   bank account
+   for project p1
+End Note
+Participant "Account:acct-p2" as acct_p2
+Note Right Of acct_p2
+   bank account
+   for project p2
+End Note
+
+
+Group Donator 'd1' -> Project 'p1'
+d1 -> p ++ : donate for project 1
+Activate d1
+d1 <<-- p -- : redirect to payment gateway
+
+d1 -> pg ++ : request bank trasfer
+  pg -> acct_d1 ++: withdraw
+    acct_d1--
+  pg -> acct_p1 ++: deposit
+    acct_p1 --
+Return
+Deactivate d1
+End
+
+|||
+|||
+
+Group Donator 'd1' -> Project 'p2'
+d1 -> p ++ : donate for project 2
+Activate d1
+d1 <<-- p -- : redirect to payment gateway
+
+d1 -> pg ++ : request bank trasfer
+  pg -> acct_d1 ++: withdraw
+    acct_d1--
+  pg -> acct_p2 ++: deposit
+    acct_p2 --
+Return
+Deactivate d1
+End
+
+|||
+|||
+
+Group Donator 'd2' -> Project 'p2'
+d2 -> p ++ : donate for project 'p2'
+Activate d2
+d2 <<-- p -- : redirect to payment gateway
+
+d2 -> pg ++ : request bank trasfer
+  pg -> acct_d2 ++: withdraw
+    acct_d2--
+  pg -> acct_p2 ++: deposit
+    acct_p2 --
+Return
+Deactivate d2
+End
+
+@enduml
