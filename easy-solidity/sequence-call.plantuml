@@ -1,0 +1,41 @@
+@startuml
+' https://plantuml.com/sequence-diagram
+
+' hide footbox
+title Call to Solidity Function
+Skinparam Sequence {
+  GroupBorderThickness 1
+  GroupBorderShadowing false
+}
+
+participant "Client" as Client order 10
+participant "FunctionBuilder" as FunctionBuilder order 20
+participant "fn:Function" as Function order 30
+participant "ethCall:CallProcessor" as Call <<Service>> order 40
+participant "fo:FunctionOutput" as FunctionOutput order 50
+participant "Ethereum Node" as Node order 60
+
+Client -> FunctionBuilder ** : create
+Client -> FunctionBuilder : set function name
+loop
+  Client -> FunctionBuilder : add input argument
+end
+loop
+  Client -> FunctionBuilder : add output parameter
+end
+Client -> FunctionBuilder ++ : build function call
+  FunctionBuilder -> Function ** : create
+Client <<-- FunctionBuilder -- : return function call object ""//fn//""
+
+Client -> Call ++ : process function call : ""//process(fn)//""
+  Call -> Call : ABI encode function : ""//encode(fn)//""
+  Call -> Node ++ : ""//eth_call//""
+  Call <<-- Node -- : return output
+  Call -> Call : ABI decode returned output
+  Call -> FunctionOutput ** : create function output
+Client <<-- Call -- : return function output object ""//fo//""
+
+Client -> FunctionOutput : fetch/access function return
+
+
+@enduml

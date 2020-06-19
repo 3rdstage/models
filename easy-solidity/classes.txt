@@ -1,0 +1,50 @@
+
+@startuml
+
+package org.web3j{
+  together {
+    class Credentials
+    class Function
+    class FunctionEncoder
+    class TransactionReceipt
+  }
+  together {
+    class FastRawTransactionManager
+    class PollingTransactionReceiptProcessor
+  }
+  class Web3j
+}
+FastRawTransactionManager -[hidden]-> PollingTransactionReceiptProcessor
+
+together {
+  class FunctionBuilder
+  class FunctionOutput
+  class EventSignatureBuilder
+  class Event
+}
+
+CallProcessor o-- Web3j
+CallProcessor : {method} +process()
+
+CallProcessor .up.> Function
+CallProcessor ..> FunctionOutput
+
+
+SendTxProcessor o-- Web3j
+
+SendTxProcessor ..> org.web3j
+SendTxProcessor ..> EventSignature
+SendTxProcessor ..> EventLogParser
+SendTxProcessor ..> TxResult
+
+Client o-- CallProcessor
+Client o-- SendTxProcessor
+
+Client ..> FunctionBuilder
+Client ..> Function
+Client ..> FunctionOutput
+Client ..> EventSignatureBuilder
+Client ..> EventSignature
+Client ..> Event
+
+@enduml

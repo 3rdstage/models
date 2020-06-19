@@ -1,0 +1,73 @@
+@startuml
+' https://plantuml.com/sequence-diagram
+
+' hide footbox
+title Send Transaction to Solidity Function
+skinparam sequence {
+  GroupBorderThickness 1
+  GroupBorderShadowing false
+}
+
+participant "Client" as Client order 10
+participant "FunctionBuilder" as FunctionBuilder order 20
+participant "fn:Function" as Function order 30
+participant "EventSignatureBuilder" as EventSignatureBuilder order 40
+participant "es:EventSignaturte" as EventSignature order 50
+participant "ethSendTx:SendTxProcessor" as SendTx <<Service>> order 60
+collections "ev:Event" as Event order 70
+participant "TxResult" as TxResult order 80
+participant "Ethereum Node" as Node order 90
+
+Client -> FunctionBuilder ** : create
+Client -> FunctionBuilder : set function name
+loop
+  Client -> FunctionBuilder : add input argument
+end
+loop
+  Client -> FunctionBuilder : add output parameter
+end
+Client -> FunctionBuilder ++ : build function call
+  FunctionBuilder -> Function ** : create
+Client <<-- FunctionBuilder -- : return function call object ""//fn//""
+|||
+loop
+  Client -> EventSignatureBuilder ** : create
+  Client -> EventSignatureBuilder : set contract address
+  Client -> EventSignatureBuilder : set event name
+  loop
+    Client -> EventSignatureBuilder : add event parameter
+  end
+  |||
+  Client -> EventSignatureBuilder ++ : build event signature
+    EventSignatureBuilder -> EventSignature ** : create
+Client <<-- EventSignatureBuilder -- : return event signature ""//es//""
+|||
+end
+
+|||
+Client -> SendTx ++ : process transaction : ""//process(fn, es)//""
+  SendTx -> SendTx : ABI encode function : ""//encode(fn)//""
+  SendTx -> SendTx : sign transaction
+  SendTx -> Node ++ : send transaction: ""//eth_sendRawTransaction//""
+  SendTx <<-- Node -- : return transaction hash
+  ...
+  par
+    Node -> Node : mine block
+    loop until transaction receipt returned or timeout
+      SendTx -> Node ++ : poll trasnaction receipt
+      SendTx <<-- Node --
+      |||
+    end
+    |||
+  end
+  |||
+  SendTx -> SendTx : ABI decode transaction receipt
+  SendTx -> Event ** : extract events in the transaction recipt
+  SendTx -> TxResult ** : create trasnaction result
+Client <<-- SendTx -- : return transaction result
+
+Client -> TxResult : fetch events
+Client -> Event : access events
+|||
+
+@enduml
