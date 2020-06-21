@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_jq80oLPeEeqDtoh549EoFA" name="classes-2">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_j0GwoLPeEeqDtoh549EoFA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_lxKTMLPeEeqDtoh549EoFA" name="CallProcessor">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_GAd20LPgEeqDtoh549EoFA" type="_yutuwLPeEeqDtoh549EoFA" aggregation="shared" association="_GAcosLPgEeqDtoh549EoFA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GAed4LPgEeqDtoh549EoFA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GAed4bPgEeqDtoh549EoFA" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_D3LEgLPfEeqDtoh549EoFA" name="process"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_p8r4cLPeEeqDtoh549EoFA" name="SendTxProcessor">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_IdkLYrPgEeqDtoh549EoFA" type="_yutuwLPeEeqDtoh549EoFA" association="_IdjkULPgEeqDtoh549EoFA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_yutuwLPeEeqDtoh549EoFA" name="Web3j" visibility="package"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_GAcosLPgEeqDtoh549EoFA" visibility="private" memberEnd="_GAd20LPgEeqDtoh549EoFA _GAed4rPgEeqDtoh549EoFA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GAdPwLPgEeqDtoh549EoFA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GAdPwbPgEeqDtoh549EoFA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_GAed4rPgEeqDtoh549EoFA" type="_lxKTMLPeEeqDtoh549EoFA" association="_GAcosLPgEeqDtoh549EoFA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_IdjkULPgEeqDtoh549EoFA" memberEnd="_IdkLYrPgEeqDtoh549EoFA _IdkycrPgEeqDtoh549EoFA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IdkLYLPgEeqDtoh549EoFA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_IdkLYbPgEeqDtoh549EoFA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_IdkycrPgEeqDtoh549EoFA" type="_p8r4cLPeEeqDtoh549EoFA" association="_IdjkULPgEeqDtoh549EoFA"/>
+  </packagedElement>
+</uml:Model>
