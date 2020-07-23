@@ -3,6 +3,8 @@
 
 ' hide footbox
 title Send Transaction to Solidity Function
+
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
 skinparam sequence {
   GroupBorderThickness 1
   GroupBorderShadowing false

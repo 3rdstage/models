@@ -1,0 +1,59 @@
+@startuml
+' https://plantuml.com/sequence-diagram
+
+hide footbox
+'title Create EOA Account and Proxy Account
+
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+skinparam sequence {
+  GroupBorderThickness 1
+  GroupBorderShadowing false
+}
+
+participant Client order 10
+participant AccountController <<rest-controller>> order 20
+participant AccountServiceImpl as AccountService <<service>> order 30
+participant ECKeyPair order 40
+participant SpecialAccountServiceImpl as SpecialAccountService <<service>> order 50
+participant KrsClient <<feign-client>> order 50
+participant TransactionEncoder order 60
+participant SecretService <<service>> order 65
+participant "acct:AccountEntity" as AccountEntity <<entity>> order 70
+participant AccountRepository <<repository>> order 80
+participant DonationTokenContractServiceImpl as TokenContractService order 90
+
+box
+participant KRS order 200
+end box
+
+box "Blockchain Network"
+participant TrustedToken <<smart-contract>> order 300
+end box
+
+Client -> AccountController ++ : createAccount()
+
+AccountController -> AccountService ++ : createAccountIncludingProxy()
+  AccountService -> ECKeyPair **
+  AccountService -> SpecialAccountService : getKrsAdminAddress()
+  AccountService -> SpecialAccountService : getKrsRecoveryKeyAddress()
+  AccountService -> KrsClient ++ : prepareToCreateIdentity()
+    KrsClient -> KRS : GET /account/preparation/newInfo/from/{providerAddr}/OA/{ownerAddr}/recoveryKey/{recoveryKey}
+  AccountService <<-- KrsClient --: return unsingned tx
+  AccountService -> SpecialAccountService : getKrsAdminAccount()
+  AccountService -> TransactionEncoder : signMessage()
+  AccountService -> KrsClient ++ : createIdentity()
+    KrsClient -> KRS : POST /account/IA
+  AccountService <<-- KrsClient --
+  AccountService -> SecretService : encryptPrivateKey()
+  AccountService -> AccountEntity ** : new
+  AccountService -> AccountRepository : saveAndFlush(acct)
+AccountController <<-- AccountService -- : return ""acct""
+
+AccountController -> TokenContractService ++ : assignAccountType()
+TokenContractService -> TrustedToken : assignAccountType()
+AccountController <<-- TokenContractService --
+
+Client <<-- AccountController
+
+
+@enduml

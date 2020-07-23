@@ -1,0 +1,104 @@
+@startuml
+
+' MakerDAO DAI / CDP Database - vat.sol
+' https://github.com/makerdao/dss/blob/1.0.8/src/vat.sol
+
+
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+skinparam class {
+  DefaultFontName Lucida Console
+  ClassFontName "Lucida Console"
+  ClassAttributeFontName Lucida Console
+}
+
+class Vat {
+  +uint256 debt   //total dai issued
+  +uint256 vice   //total unbacked dai
+  +uint256 Line   //total debt ceiling
+  +uint256 live   //active flag
+  __
+  ..auth..
+  {method} +rely()
+  {method} +deny()
+  {method} +hope()
+  {method} +nope()
+  {method} +wish()
+  ..administration..
+  +init(byte32 ilk)   //add a new CDP type
+  +file(byte32 what, uint data)
+  +file(byte32 ilk, byte32 what, uint data)
+  ..fungibility..
+  +slip(byte32 ilk, address usr, int256 wad)
+
+}
+
+
+note bottom of Ilk: CDP Type
+
+class Ilk {
+  uint256 Art   //toal debt
+  uint256 rate  //accumulated rate
+  uint256 spot  //price with safety margin
+  uint256 line  //debt ceiling
+  uint256 dust  //debt floor
+}
+
+
+note bottom of Urn: CDP
+
+class Urn {
+  uint256 ink //locked collateral
+  uint256 art //debt
+}
+
+note bottom of Gem: Collateral Token
+
+class Gem {
+  {field} (byte32, address) key
+  uint value
+}
+
+note bottom of Dai: DAI (Fungible Token)
+
+class Dai {
+  address key
+  uint256 value
+}
+
+note bottom of Sin: Internal Anti-Coin
+
+Class Sin {
+  address key
+  uint256 value
+}
+
+Class Ward {
+  address key
+  uint value   //0 or 1 ?
+}
+
+Class Can {
+  {field} (address, address) key
+  uint value
+}
+
+
+Vat "[id]" *-- "ilks" Ilk
+
+Vat "[id, owner]" *-- "urns" Urn
+
+Vat *-- "gem" Gem
+
+Vat *-- "dai" Dai
+
+Vat *-- "sin" Sin
+
+Vat *-ri- "wards" Ward
+
+Vat *-ri- "can" Can
+
+
+@enduml
+
+
