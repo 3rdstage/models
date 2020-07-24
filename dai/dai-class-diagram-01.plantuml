@@ -12,6 +12,14 @@ skinparam class {
   ClassAttributeFontName Lucida Console
 }
 
+note as remarks
+  https://github.com/makerdao/dss/blob/1.0.8/src/vat.sol
+
+  ""slip()"" :
+  ""flux()"" : transfer collaterals
+  ""move()"" : transfer DAI
+end note
+
 class Vat {
   +uint256 debt   //total dai issued
   +uint256 vice   //total unbacked dai
@@ -23,14 +31,26 @@ class Vat {
   {method} +deny()
   {method} +hope()
   {method} +nope()
-  {method} +wish()
+  {method} -wish()
   ..administration..
-  +init(byte32 ilk)   //add a new CDP type
-  +file(byte32 what, uint data)
-  +file(byte32 ilk, byte32 what, uint data)
+    +init(bytes32 ilk)   //add a new CDP type
+    +file(bytes32 what, uint data)
+    +file(bytes32 ilk, bytes32 what, uint data)
   ..fungibility..
-  +slip(byte32 ilk, address usr, int256 wad)
-
+    +slip(bytes32 ilk, address usr, int256 wad)
+    +flux(bytes32 ilk, address src, address dst, uint256 wad)
+    +move(address src, address dst, uint256 rad)
+  ..CDP manipulation..
+    +frob(bytes32 i, address u, address v, address w, int dink, int dart)
+  ..CDP fungibility..
+    +fork(bytes32 ilk, address src, address dst, int dink, int dart)
+  ..CDP confiscation..
+    +grab(bytes32 i, address u, address v, address w, int dint, int dart)
+  ..settlement..
+    +heal(uint rad)
+    +suck(address u, address v, uint rad)
+  ..rates..
+    +fold(bytes32 i, address usr, int rate)
 }
 
 
