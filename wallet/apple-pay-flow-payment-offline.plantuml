@@ -1,0 +1,64 @@
+
+https://plantuml.com/sequence-diagram
+
+@startuml
+Hide Footbox
+Title Apple Pay - Pay Offline
+Skinparam Sequence {
+  GroupBorderThickness 1
+  GroupBorderShadowing false
+}
+Skinparam BoxPadding 100
+
+Actor "User" as user
+Box "Smart Phone"
+Participant "iOS" as ios
+Participant "Wallet" as wallet
+Participant "Secure\nElement" as se
+End Box
+Participant "Payment\nTerminal" as terminal
+Box "Card Network"
+Participant "Card\nIssuer" as issuer
+End Box
+
+user -> wallet ++ : Request payment
+  user <- wallet : Request authenticaion
+    user++
+    Alt "Touch ID"
+    user -> ios : Provide Touch ID
+      ios++
+        ios -> ios++ : Verify Touch ID
+        ios--
+      ios--
+    Else "Face ID"
+    user -> ios : Provide Face ID
+      ios++
+        ios -> ios++ : Verify Face ID
+        ios--
+      ios--
+    Else
+    user -> ios : Provide passcode
+      ios++
+        ios -> ios++ : Verify Passcode
+        ios--
+      ios--
+    End
+    user--
+
+  wallet -> se :
+    se++
+    se -> terminal : Provide device account number \nand transaction-specific dynamic security code
+      terminal++
+      se--
+      terminal -> issuer : Request payment approval \nwith device account number
+        issuer++
+        issuer -> issuer++: Verify payment
+          issuer--
+      terminal <-- issuer : Return approval
+      issuer--
+      wallet <-- terminal : Return approval
+      terminal--
+    wallet--
+
+
+@enduml

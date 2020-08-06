@@ -1,0 +1,45 @@
+
+https://plantuml.com/sequence-diagram
+
+@startuml
+Hide Footbox
+Title Apple Pay - Add a Card
+Skinparam Sequence {
+  GroupBorderThickness 1
+  GroupBorderShadowing false
+}
+Skinparam BoxPadding 100
+
+Actor "User" as user
+Box "Smart Phone"
+Participant "Wallet" as wallet
+Participant "Secure\nElement" as se
+End Box
+Participant "Apple Pay\nServer" as server
+Box "Card Network"
+Participant "Card\nIssuer" as issuer
+End Box
+
+user -> wallet ++ : Add a credit, debit, prepaid, or transit card
+  wallet -> wallet ++ : Encrypt card info.
+    wallet --
+  wallet -> server ++ : Send encrypted card info.
+    server -> server ++: Decrypt card info
+      server --
+    server -> server ++ : Determine card network
+      server --
+    server -> server ++ : Encrypt card info.
+      server --
+    server -> issuer ++ : Send card info
+      issuer -> issuer ++ : Verify card info
+        issuer --
+      issuer -> issuer ++ : Generate a new Device Account Number.
+        issuer --
+      issuer -> issuer ++ : Encrypt the device account number and a dynamic security code generation key
+        issuer --
+    server <-- issuer -- : Retrun encrypted data
+    wallet <-- server -- : Return encrypted data
+    wallet -> se : Store encrypted device account number.
+    wallet --
+
+@enduml
