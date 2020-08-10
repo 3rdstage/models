@@ -1,0 +1,157 @@
+@startuml
+
+' Compound Protocol / Token Contracts
+' https://github.com/compound-finance/compound-protocol/tree/v2.8.1/contracts
+
+' https://plantuml.com/en/class-diagram
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+skinparam class {
+  DefaultFontName Lucida Console
+  ClassFontName "Lucida Console"
+  ClassAttributeFontName Lucida Console
+}
+
+' self-contained borrowing and lending contracts
+
+class CTokenStorage <<storage>> {
+  -bool _notEntered
+  .. ERC20 ..
+  + string name
+  + string symbol
+  + uint8 decimals
+  ..
+  - uint borrowRateMaxMantissa
+  - uint reserveFactorMaxMantissa
+  ..
+  + address admin
+  + address pendingAdmin
+  ..
+  - uint initialExchangeRateMantissa
+  + uint reserveFactorMantissa
+  + uint accrualBlockNumber
+  + uint borrowIndex
+  + uint totalBorrows
+  + uint totalReserves
+  + uint totalSupply
+  ..
+  - mapping(address => uint) accountTokens
+  - mapping(address => mapping (address => uint)) transferAllowances
+}
+
+class ComptrollerInterface
+
+class InterestRateModel
+
+CTokenStorage *-right- "comptroller" ComptrollerInterface
+CTokenStorage *-right- InterestRateModel
+
+Class BorrowSnapshot <<struct>> {
+  uint principal
+  uint interestIndex
+}
+
+CTokenStorage *-left- "0..*" BorrowSnapshot
+
+class CTokenInterface extends CTokenStorage{
+  + bool isCToken
+  ---
+  event AccrueInterest()
+  event Mint()
+  event Redeem()
+  event Borrow()
+  event RepayBorrow()
+  event LiquidateBorrow()
+  ..
+  event NewPendingAdmin()
+  event NewAdmin()
+  ..
+  event NewComptroller()
+  event NewMarketInterestRateModel()
+  event NewReserveFactor()
+  event ReservesAdded()
+  event ReservesReduced()
+  event Transfer()
+  event Approval()
+  event Failure()
+  ---
+  + transfer(address dst, uint amount)
+  + transferFrom(address src, address dst, uint amount)
+  + approve(address spender, uint amount)
+  + allowance(address owner, address spender)
+  + balanceOf(address owner)
+  + balanceOfUnderlying(address owner)
+  + getAccountSnapshot(address account)
+  + borrowRatePerBlock()
+  + supplyRatePerBlock()
+  + totalBorrowsCurrent()
+  + borrowBalanceCurrent(address account)
+  + borrowBalanceStored(address account)
+  + exchangeRateCurrent()
+  + exchangeRateStored()
+  + getCash()
+  + accrueInterest()
+  + seize(address liquidator, address borrower, uint seizeTokens)
+  .. admin ..
+  + _setPendingAdmin(address newPendingAdmin)
+  + _acceptAdmin()
+  + _setComptroller(ComptrollerInterface newComptroller)
+  + _setReserveFactor(uint newReserveFactorMantissa)
+  + _reduceReserves(uint reduceAmount)
+  + _setInterestRateModel(InterestRateModel newInterestRateModel)
+}
+
+
+class CErc20Storage{
+  + address underlying
+}
+
+
+class CErc20Interface extends CErc20Storage{
+
+  + mint(uint mintAmount)
+  + redeem(uint redeemTokens)
+  + redeemUnderlying(uint redeemAmount)
+  + borrow(uint borrowAmount)
+  + repayBorrow(uint repayAmount)
+  + repayBorrowBehalf(address borrower, uint repayAmount)
+  + liquidateBorrow(address borrower, uint repayAmount, CTokenInterface cTokenCollateral)
+  .. admin ..
+  + _addReserves(uint addAmount)
+
+}
+
+class CDelegationStorage{
+  + address implementation
+}
+
+class CDelegatorInterface extends CDelegationStorage{
+
+  + event NewImplementation(address oldImpl, address newImpl)
+  ---
+  + _setImplementation(address impl, bool allowResign, bytes becomeImplData)
+
+}
+
+class CDelegateInterface extends CDelegationStorage{
+
+  + _becomeImplementation(bytes data)
+  + _resignImplementation()
+}
+
+
+class CToken extends CTokenInterface{
+
+  + initialize(ComptrollerInterface comptroller_, InterestRateModel interestRateModel_, uint initialExchangeRateMantissa_, string name_, string symbol_, uint8 decimals_)
+  - transferTokens(address spender, address src, address dst, uint tokens)
+  + transfer(address dst, uint256 amount)
+  + transferFrom(address src, address dst, uint256 amount)
+  + approve(address spender, uint256 amount)
+  + allowance(address owner, address spender) <<view>>
+  + balanceOf(address owner) <<view>>
+  + balanceOfUnderlying(address owner) <<view>>
+
+}
+
+
+@enduml
