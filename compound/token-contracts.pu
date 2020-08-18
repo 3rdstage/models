@@ -51,9 +51,9 @@ Class BorrowSnapshot <<struct>> {
   uint interestIndex
 }
 
-CTokenStorage *-left- "0..*" BorrowSnapshot
+BorrowSnapshot "accountBorrows" --left--* CTokenStorage
 
-class CTokenInterface extends CTokenStorage{
+abstract class CTokenInterface extends CTokenStorage{
   + bool isCToken
   ---
   event AccrueInterest()
@@ -75,30 +75,30 @@ class CTokenInterface extends CTokenStorage{
   event Approval()
   event Failure()
   ---
-  + transfer(address dst, uint amount)
-  + transferFrom(address src, address dst, uint amount)
-  + approve(address spender, uint amount)
-  + allowance(address owner, address spender)
-  + balanceOf(address owner)
-  + balanceOfUnderlying(address owner)
-  + getAccountSnapshot(address account)
-  + borrowRatePerBlock()
-  + supplyRatePerBlock()
-  + totalBorrowsCurrent()
-  + borrowBalanceCurrent(address account)
-  + borrowBalanceStored(address account)
-  + exchangeRateCurrent()
-  + exchangeRateStored()
-  + getCash()
-  + accrueInterest()
-  + seize(address liquidator, address borrower, uint seizeTokens)
+  + {abstract} transfer(address dst, uint amount)
+  + {abstract} transferFrom(address src, address dst, uint amount)
+  + {abstract} approve(address spender, uint amount)
+  + {abstract} allowance(address owner, address spender)
+  + {abstract} balanceOf(address owner)
+  + {abstract} balanceOfUnderlying(address owner)
+  + {abstract} getAccountSnapshot(address account)
+  + {abstract} borrowRatePerBlock()
+  + {abstract} supplyRatePerBlock()
+  + {abstract} totalBorrowsCurrent()
+  + {abstract} borrowBalanceCurrent(address account)
+  + {abstract} borrowBalanceStored(address account)
+  + {abstract} exchangeRateCurrent()
+  + {abstract} exchangeRateStored()
+  + {abstract} getCash()
+  + {abstract} accrueInterest()
+  + {abstract} seize(address liquidator, address borrower, uint seizeTokens)
   .. admin ..
-  + _setPendingAdmin(address newPendingAdmin)
-  + _acceptAdmin()
-  + _setComptroller(ComptrollerInterface newComptroller)
-  + _setReserveFactor(uint newReserveFactorMantissa)
-  + _reduceReserves(uint reduceAmount)
-  + _setInterestRateModel(InterestRateModel newInterestRateModel)
+  + {abstract} _setPendingAdmin(address newPendingAdmin)
+  + {abstract} _acceptAdmin()
+  + {abstract} _setComptroller(ComptrollerInterface newComptroller)
+  + {abstract} _setReserveFactor(uint newReserveFactorMantissa)
+  + {abstract} _reduceReserves(uint reduceAmount)
+  + {abstract} _setInterestRateModel(InterestRateModel newInterestRateModel)
 }
 
 
@@ -107,17 +107,17 @@ class CErc20Storage{
 }
 
 
-class CErc20Interface extends CErc20Storage{
+abstract class CErc20Interface extends CErc20Storage{
 
-  + mint(uint mintAmount)
-  + redeem(uint redeemTokens)
-  + redeemUnderlying(uint redeemAmount)
-  + borrow(uint borrowAmount)
-  + repayBorrow(uint repayAmount)
-  + repayBorrowBehalf(address borrower, uint repayAmount)
-  + liquidateBorrow(address borrower, uint repayAmount, CTokenInterface cTokenCollateral)
+  + {abstract} mint(uint mintAmount)
+  + {abstract} redeem(uint redeemTokens)
+  + {abstract} redeemUnderlying(uint redeemAmount)
+  + {abstract} borrow(uint borrowAmount)
+  + {abstract} repayBorrow(uint repayAmount)
+  + {abstract} repayBorrowBehalf(address borrower, uint repayAmount)
+  + {abstract} liquidateBorrow(address borrower, uint repayAmount, CTokenInterface cTokenCollateral)
   .. admin ..
-  + _addReserves(uint addAmount)
+  + {abstract} _addReserves(uint addAmount)
 
 }
 
@@ -125,18 +125,18 @@ class CDelegationStorage{
   + address implementation
 }
 
-class CDelegatorInterface extends CDelegationStorage{
+abstract class CDelegatorInterface extends CDelegationStorage{
 
   + event NewImplementation(address oldImpl, address newImpl)
   ---
-  + _setImplementation(address impl, bool allowResign, bytes becomeImplData)
+  + {abstract} _setImplementation(address impl, bool allowResign, bytes becomeImplData)
 
 }
 
-class CDelegateInterface extends CDelegationStorage{
+abstract class CDelegateInterface extends CDelegationStorage{
 
-  + _becomeImplementation(bytes data)
-  + _resignImplementation()
+  + {abstract} _becomeImplementation(bytes data)
+  + {abstract} _resignImplementation()
 }
 
 
@@ -150,8 +150,69 @@ class CToken extends CTokenInterface{
   + allowance(address owner, address spender) <<view>>
   + balanceOf(address owner) <<view>>
   + balanceOfUnderlying(address owner) <<view>>
+  + getAccountSnapshot(address account) <<view>>
+  - getBlockNumber() <<view>>
+  + borrowRatePerBlock() <<view>>
+  + supplyRatePerBlock() <<view>>
+  + exchangeRateCurrent()
+  + exchangeRateStored() <<view>>
+  - exchangeRateStoredInternal() <<view>>
+  + getCash() <<view>>
+  + accrueInterest()
+  - mintInternal(uint mintAmt) <<guarded>>
+  - mintFresh(address minter, uint mintAmt)
+  - redeemInternal(uint redeemTokens) <<guarded>>
+  - redeemUnderlyingInternal(uint redeemAmt) <<guarded>>
+  - redeemFresh(address redeemer, uint redeemTokensIn, uint redeemAmtIn)
+  - borrowInternal(uint borrowAmt) <<guarded>>
+  - borrowFresh(address borrower, uint borrowAmt)
 
 }
+
+class MintLocalVars <<struct>>{
+  Error err
+  MathError mathErr
+  ..
+  uint exchangeRateMantissa
+  uint mintTokens
+  uint totalSupplyNew
+  uint accountTokensNew
+  uint actualMintAmount
+}
+
+CToken +-left- MintLocalVars
+
+class RedeemLocalVars <<struct>>{
+  Error err
+  MathError mathErr
+  ..
+  uint exchangeRateMantissa
+  uint redeemTokens
+  uint redeemAmount
+  uint totalSupplyNew
+  uint accountTokensNew
+}
+
+CToken +-left- RedeemLocalVars
+
+class BorrowLocalVars <<struct>>{
+  MathError mathErr
+  ..
+  uint accountBorrows
+  uint accountBorrowsNew
+  uint totalBorrowsNew
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 @enduml
