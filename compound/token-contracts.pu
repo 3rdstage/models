@@ -75,9 +75,9 @@ abstract class CTokenInterface extends CTokenStorage{
   event Approval()
   event Failure()
   ---
-  + {abstract} transfer(address dst, uint amount)
-  + {abstract} transferFrom(address src, address dst, uint amount)
-  + {abstract} approve(address spender, uint amount)
+  + {abstract} transfer(address dst, uint amt)
+  + {abstract} transferFrom(address src, address dst, uint amt)
+  + {abstract} approve(address spender, uint amt)
   + {abstract} allowance(address owner, address spender)
   + {abstract} balanceOf(address owner)
   + {abstract} balanceOfUnderlying(address owner)
@@ -97,7 +97,7 @@ abstract class CTokenInterface extends CTokenStorage{
   + {abstract} _acceptAdmin()
   + {abstract} _setComptroller(ComptrollerInterface newComptroller)
   + {abstract} _setReserveFactor(uint newReserveFactorMantissa)
-  + {abstract} _reduceReserves(uint reduceAmount)
+  + {abstract} _reduceReserves(uint reduceAmt)
   + {abstract} _setInterestRateModel(InterestRateModel newInterestRateModel)
 }
 
@@ -109,15 +109,15 @@ class CErc20Storage{
 
 abstract class CErc20Interface extends CErc20Storage{
 
-  + {abstract} mint(uint mintAmount)
+  + {abstract} mint(uint mintAmt)
   + {abstract} redeem(uint redeemTokens)
-  + {abstract} redeemUnderlying(uint redeemAmount)
-  + {abstract} borrow(uint borrowAmount)
-  + {abstract} repayBorrow(uint repayAmount)
-  + {abstract} repayBorrowBehalf(address borrower, uint repayAmount)
-  + {abstract} liquidateBorrow(address borrower, uint repayAmount, CTokenInterface cTokenCollateral)
+  + {abstract} redeemUnderlying(uint redeemAmt)
+  + {abstract} borrow(uint borrowAmt)
+  + {abstract} repayBorrow(uint repayAmt)
+  + {abstract} repayBorrowBehalf(address borrower, uint repayAmt)
+  + {abstract} liquidateBorrow(address borrower, uint repayAmt, CTokenInterface cTokenCollateral)
   .. admin ..
-  + {abstract} _addReserves(uint addAmount)
+  + {abstract} _addReserves(uint addAmt)
 
 }
 
@@ -140,13 +140,13 @@ abstract class CDelegateInterface extends CDelegationStorage{
 }
 
 
-class CToken extends CTokenInterface{
+abstract class CToken extends CTokenInterface{
 
   + initialize(ComptrollerInterface comptroller_, InterestRateModel interestRateModel_, uint initialExchangeRateMantissa_, string name_, string symbol_, uint8 decimals_)
   - transferTokens(address spender, address src, address dst, uint tokens)
-  + transfer(address dst, uint256 amount)
-  + transferFrom(address src, address dst, uint256 amount)
-  + approve(address spender, uint256 amount)
+  + transfer(address dst, uint256 amt)
+  + transferFrom(address src, address dst, uint256 amt)
+  + approve(address spender, uint256 amt)
   + allowance(address owner, address spender) <<view>>
   + balanceOf(address owner) <<view>>
   + balanceOfUnderlying(address owner) <<view>>
@@ -166,6 +166,31 @@ class CToken extends CTokenInterface{
   - redeemFresh(address redeemer, uint redeemTokensIn, uint redeemAmtIn)
   - borrowInternal(uint borrowAmt) <<guarded>>
   - borrowFresh(address borrower, uint borrowAmt)
+  - repayBorrowInternal(uint repayAmt) <<guarded>>
+  - repayBorrowBehalfInternal(address borrower, uint repayAmt) <<guarded>>
+  - repayBorrowFresh(address payer, address borrower, uint repayAmt)
+  - liquidateBorrowInternal(address borrower, uint repayAmt, CTokenInterface cTokenCollateral) <<guarded>>
+  - liquidateBorrowFresh(address liquidator, address borrower, uint repayAmt, CTokenInterface cTokenCollateral)
+  + seize(address liquidator, address borrower, uint seizeTokens) <<guarded>>
+  - seizeInternal(address seizerToken, address liquidator, address borrower, uint seizeTokens)
+  ..
+  + _setPendingAdmin(address payable newPendingAdmin)
+  + _acceptAdmin()
+  + _setComptroller(ComptrollerInterface newComptroller)
+  + _setReserveFactor(uint newReserveFactorMantissa) <<guarded>>
+  - _setReserveFactorFresh(uint newReserveFactorMantissa)
+  - _addReservesInternal(uint addAmt) <<guarded>>
+  - _addReservesFresh(uint addAmt)
+  - _reduceReserves(uint reduceAmt) <<guarded>>
+  - _reduceReservesFresh(uint reduceAmt)
+  + _setInterestRateModel(InterestRateModel newInterestRateModel)
+  - _setInterestRateModelFresh(InterestRateModel newInterestRateModel)
+  ..
+  - {abstract} getCashPrior()
+  - {abstract} doTransferIn(address from, uint amt)
+  - {abstract} doTransferOut(address payable to, uint amt)
+  ..
+  - nonReentrant() <<modifier>>
 
 }
 
@@ -203,16 +228,36 @@ class BorrowLocalVars <<struct>>{
   uint totalBorrowsNew
 }
 
+class RepayBorrowLocalVars <<struct>>{
+  Error err
+  MathError mathErr
+  ..
+  uint repayAmount
+  uint borrowerIndex
+  uint accountBorrows
+  uint accountBorrowsNew
+  uint totalBorrowsNew
+  uint actualRepayAmount
+}
+
+CToken +-left- RepayBorrowLocalVars
 
 
-
-
-
-
-
-
-
-
+class CEther extends CToken{
+  + constructor(ComptrollerInterface comptroller_, InterestRateModel interestRateModel_, uint initExchangeRateMantissa_, string name_, string symbol_, uint8 decimals_, address admin_)
+  + mint()
+  + redeem(uint redeemTokens)
+  + redeemUnderlying(uint redeemAmt)
+  + borrow(uint borrowAmt)
+  + repayBorrow()
+  + repayBorrowBehalf(address borrower)
+  + liquidateBorrow(address borrower, CToken cTokenCollateral)
+  + () <<fallback>>
+  - getCashPrior()
+  - doTransferIn(address from, uint amt)
+  - doTransferOut(address payable to, uint amt)
+  - requireNoError(uint errCode, string message)
+}
 
 
 @enduml
