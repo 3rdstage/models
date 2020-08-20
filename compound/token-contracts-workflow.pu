@@ -1,0 +1,41 @@
+@startuml
+
+'https://plantuml.com/sequence-diagram
+
+
+Hide Footbox
+Title Compound Protocol
+Skinparam Sequence {
+  GroupBorderThickness 1
+  GroupBorderShadowing false
+}
+Skinparam BoxPadding 100
+
+
+Participant "cEther" as token
+Participant "interestRateModel" as interestRate
+Participant "comptroller" as comptroller
+
+
+
+[-> token : mint
+token ++
+  token -> token ++ : mintInternal(msg.value)
+    token -> token ++ : accrueInterest()
+      token -> interestRate ++ : getBorrowRate(cashPrior, borrowsPrior, reservesPrior)
+      token <-- interestRate --
+      token -> token ++ : mintFresh(msg.sender, mintAmount)
+        token -> comptroller ++ : mintAllowed(address(this), minter, mintAmount)
+        token <-- comptroller --
+        token -> token ++: exchangeRateStoredInternal()
+        token --
+        token -> token ++ : doTransferIn(minter, mintAmount)
+        token --
+        token -> comptroller ++ : mintVerify(address(this), minter, vars.actualMintAmount, vars.mintTokens)
+        comptroller --
+      token --
+    token --
+  token --
+[<-- token
+token --
+@enduml

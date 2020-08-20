@@ -15,46 +15,60 @@ skinparam class {
 ' self-contained borrowing and lending contracts
 
 class CTokenStorage <<storage>> {
-  -bool _notEntered
+  - _notEntered : bool
   .. ERC20 ..
-  + string name
-  + string symbol
-  + uint8 decimals
+  + name : string
+  + symbol : string
+  + decimals : uint8
   ..
-  - uint borrowRateMaxMantissa
-  - uint reserveFactorMaxMantissa
+  - borrowRateMaxMantissa : uint
+  - reserveFactorMaxMantissa : uint
   ..
-  + address admin
-  + address pendingAdmin
+  + admin : address
+  + pendingAdmin : address
   ..
-  - uint initialExchangeRateMantissa
-  + uint reserveFactorMantissa
-  + uint accrualBlockNumber
-  + uint borrowIndex
-  + uint totalBorrows
-  + uint totalReserves
-  + uint totalSupply
+  - initialExchangeRateMantissa : uint
+  + reserveFactorMantissa : uint
+  + accrualBlockNumber : uint
+  + borrowIndex : uint
+  + totalBorrows : uint
+  + totalReserves : uint
+  + totalSupply : uint
   ..
   - mapping(address => uint) accountTokens
   - mapping(address => mapping (address => uint)) transferAllowances
 }
 
-class ComptrollerInterface
-
-class InterestRateModel
-
-CTokenStorage *-right- "comptroller" ComptrollerInterface
-CTokenStorage *-right- InterestRateModel
-
 Class BorrowSnapshot <<struct>> {
-  uint principal
-  uint interestIndex
+  principal : uint
+  interestIndex : uint
 }
 
 BorrowSnapshot "accountBorrows" --left--* CTokenStorage
 
+
+class ComptrollerInterface
+
+class InterestRateModel
+
+
+class CErc20Storage{
+  + underlying : address
+}
+
+
+together {
+  class ComptrollerInterface
+  class InterestRateModel
+}
+
+CTokenStorage *-left- "comptroller" ComptrollerInterface
+CTokenStorage *-left- InterestRateModel
+
+
+
 abstract class CTokenInterface extends CTokenStorage{
-  + bool isCToken
+  + isCToken : bool
   ---
   event AccrueInterest()
   event Mint()
@@ -102,10 +116,6 @@ abstract class CTokenInterface extends CTokenStorage{
 }
 
 
-class CErc20Storage{
-  + address underlying
-}
-
 
 abstract class CErc20Interface extends CErc20Storage{
 
@@ -122,7 +132,7 @@ abstract class CErc20Interface extends CErc20Storage{
 }
 
 class CDelegationStorage{
-  + address implementation
+  + implementation : address
 }
 
 abstract class CDelegatorInterface extends CDelegationStorage{
@@ -140,9 +150,11 @@ abstract class CDelegateInterface extends CDelegationStorage{
 }
 
 
+' https://github.com/compound-finance/compound-protocol/blob/v2.8.1/contracts/CToken.sol
 abstract class CToken extends CTokenInterface{
 
-  + initialize(ComptrollerInterface comptroller_, InterestRateModel interestRateModel_, uint initialExchangeRateMantissa_, string name_, string symbol_, uint8 decimals_)
+  '+ initialize(ComptrollerInterface comptroller_, InterestRateModel interestRateModel_, uint initialExchangeRateMantissa_, string name_, string symbol_, uint8 decimals_)
+  + initialize(...)
   - transferTokens(address spender, address src, address dst, uint tokens)
   + transfer(address dst, uint256 amt)
   + transferFrom(address src, address dst, uint256 amt)
@@ -194,57 +206,67 @@ abstract class CToken extends CTokenInterface{
 
 }
 
-class MintLocalVars <<struct>>{
-  Error err
-  MathError mathErr
-  ..
-  uint exchangeRateMantissa
-  uint mintTokens
-  uint totalSupplyNew
-  uint accountTokensNew
-  uint actualMintAmount
-}
 
-CToken +-left- MintLocalVars
+class MintLocalVars <<struct>>{
+  err : Error
+  mathErr : MathError
+  ..
+  exchangeRateMantissa : uint
+  mintTokens : uint
+  totalSupplyNew : uint
+  accountTokensNew : uint
+  actualMintAmount : uint
+}
 
 class RedeemLocalVars <<struct>>{
-  Error err
-  MathError mathErr
+  err : Error
+  mathErr : MathError
   ..
-  uint exchangeRateMantissa
-  uint redeemTokens
-  uint redeemAmount
-  uint totalSupplyNew
-  uint accountTokensNew
+  exchangeRateMantissa : uint
+  redeemTokens : uint
+  redeemAmount : uint
+  totalSupplyNew : uint
+  accountTokensNew : uint
 }
 
-CToken +-left- RedeemLocalVars
 
 class BorrowLocalVars <<struct>>{
-  MathError mathErr
+  mathErr : MathError
   ..
-  uint accountBorrows
-  uint accountBorrowsNew
-  uint totalBorrowsNew
+  accountBorrows : uint
+  accountBorrowsNew : uint
+  totalBorrowsNew : uint
 }
 
 class RepayBorrowLocalVars <<struct>>{
-  Error err
-  MathError mathErr
+  err : Error
+  mathErr : MathError
   ..
-  uint repayAmount
-  uint borrowerIndex
-  uint accountBorrows
-  uint accountBorrowsNew
-  uint totalBorrowsNew
-  uint actualRepayAmount
+  repayAmount : uint
+  borrowerIndex : uint
+  accountBorrows : uint
+  accountBorrowsNew : uint
+  totalBorrowsNew : uint
+  actualRepayAmount : uint
 }
 
+
+together {
+  class MintLocalVars
+  class RedeemLocalVars
+  class BorrowLocalVars
+  class RepayBorrowLocalVars
+}
+
+CToken +-left- MintLocalVars
+CToken +-left- RedeemLocalVars
+CToken +-left- BorrowLocalVars
 CToken +-left- RepayBorrowLocalVars
 
-
+' https://github.com/compound-finance/compound-protocol/blob/v2.8.1/contracts/CEther.sol
 class CEther extends CToken{
-  + constructor(ComptrollerInterface comptroller_, InterestRateModel interestRateModel_, uint initExchangeRateMantissa_, string name_, string symbol_, uint8 decimals_, address admin_)
+  '+ constructor(ComptrollerInterface comptroller_, InterestRateModel interestRateModel_, uint initExchangeRateMantissa_, string name_, string symbol_, uint8 decimals_, address admin_)
+  + constructor(...)
   + mint()
   + redeem(uint redeemTokens)
   + redeemUnderlying(uint redeemAmt)
@@ -258,6 +280,14 @@ class CEther extends CToken{
   - doTransferOut(address payable to, uint amt)
   - requireNoError(uint errCode, string message)
 }
+
+
+' https://github.com/compound-finance/compound-protocol/blob/v2.8.1/contracts/CErc20.sol
+class CErc20 extends CToken, CErc20Interface {
+
+
+}
+
 
 
 @enduml
