@@ -39,7 +39,7 @@ class CTokenStorage <<storage>> {
   - mapping(address => mapping (address => uint)) transferAllowances
 }
 
-Class BorrowSnapshot <<struct>> {
+class BorrowSnapshot <<struct>> {
   principal : uint
   interestIndex : uint
 }
@@ -47,9 +47,22 @@ Class BorrowSnapshot <<struct>> {
 BorrowSnapshot "accountBorrows" --left--* CTokenStorage
 
 
-class ComptrollerInterface
+interface ComptrollerInterface {
+  + isComptroller : bool <<constant>>
+  --
+  + enterMarkets(address[] cTokens)
+  + exitMarket(address cToken)
+  .. policy hooks ..
+  + mintAllowed(address cToken, address minter, uint mintAmount)
+  + mintVerify(address cToken, address minter, uint mintAmount, uint mintTokens)
+}
 
-class InterestRateModel
+interface InterestRateModel {
+  + isInterestRateModel : bool <<constant>>
+  __
+  + getBorrowRate(uint cash, uint borrows, uint reserves) <<view>>
+  + getSupplyRate(uint cash, uint borrows, uint reserves, uint reserveFactorMantissa) <<view>>
+}
 
 
 class CErc20Storage{
@@ -69,7 +82,7 @@ CTokenStorage *-left- InterestRateModel
 
 abstract class CTokenInterface extends CTokenStorage{
   + isCToken : bool
-  ---
+  __
   event AccrueInterest()
   event Mint()
   event Redeem()
@@ -88,7 +101,7 @@ abstract class CTokenInterface extends CTokenStorage{
   event Transfer()
   event Approval()
   event Failure()
-  ---
+  __
   + {abstract} transfer(address dst, uint amt)
   + {abstract} transferFrom(address src, address dst, uint amt)
   + {abstract} approve(address spender, uint amt)
@@ -138,7 +151,7 @@ class CDelegationStorage{
 abstract class CDelegatorInterface extends CDelegationStorage{
 
   + event NewImplementation(address oldImpl, address newImpl)
-  ---
+  __
   + {abstract} _setImplementation(address impl, bool allowResign, bytes becomeImplData)
 
 }
