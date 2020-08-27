@@ -55,6 +55,7 @@ interface ComptrollerInterface {
   .. policy hooks ..
   + mintAllowed(address cToken, address minter, uint mintAmount)
   + mintVerify(address cToken, address minter, uint mintAmount, uint mintTokens)
+  + ...
 }
 
 interface InterestRateModel {
