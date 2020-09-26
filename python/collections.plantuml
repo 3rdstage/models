@@ -1,81 +1,139 @@
 @startuml
 
-' Compound Protocol / Token Contracts
-' https://github.com/compound-finance/compound-protocol/tree/v2.8.1/contracts
+' Python 3 Collections
+' https://github.com/python/cpython/blob/v3.8.5/Lib/_collections_abc.py
 
 ' https://plantuml.com/en/class-diagram
 ' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
 ' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
-skinparam class {
-  DefaultFontName Lucida Console
-  ClassFontName "Lucida Console"
-  ClassAttributeFontName Lucida Console
+
+skinparam {
+  'DefaultFontName Lucida Console
+  DefaultFontName Consolas
+  DefaultFontSize 12
+  DiagramBorderColor silver
+  DiagramBorderThickness 1
+  MinClassWidth 100
+  ClassFontStyle bold
 }
 
-' https://github.com/python/cpython/blob/v3.8.5/Lib/_collections_abc.py
+hide Circle
+'caption Python 3 Collections
 
 abstract class Iterable{
-  + {abstract} __iter__()
+  # {abstract} __iter__()
 }
 
 abstract class Iterator extends Iterable{
-  + __iter__()
-  + {abstract} __next__()
+  # __iter__()
+  # {abstract} __next__()
 } 
 
 abstract class Reversible extends Iterable{
-  + {abstract} __reversed__()
+  # {abstract} __reversed__()
 }
 
 abstract class Sized{
-  + {abstract} __len__()
+  # {abstract} __len__()
 }
 
 abstract class Container{
-  + {abstract} __contains__(x)
+  # {abstract} __contains__(x)
 }
 
-abstract class Collection extends Iterable, Sized, Container{
+abstract class Collection extends Iterable, Sized, Container
+
+abstract class Set <<immutable>> extends Collection{
+
+  # __le__(other)
+  # __lt__(other)
+  # __gt__(other)
+  # __ge__(other)
+  # __eq__(other)
+  # __and__(other)
+  + isdisjoint(other)
+  # __or__(other)
+  # __sub__(other)
+  # __rsub__(other)
+  # __xor__(other)
+  - _hash()
 }
 
-abstract class Sequence extends Reversible, Collection{
-  ==
-  + in
-  + not in
-  + +
-  + *
-  + [i]
-  + [i:j]
-  + [i:j:k]
-  + len(s)
-  + min(s)
-  + max(s)
-  ==
-  + {abstract} __getitem__(i)
-  + __iter__()
-  + __contains__(v)
-  + __reversed__()
-  + index(v, start, stop)
-  + count(v)
-  ==
+class frozenset <<immutable>> extends Set
+
+abstract class MutableSet <<mutable>> extends Set{
+
+  + {abstract} add(value)
+  + {abstract} discard(value)
+  + remove(value)
+  + pop()
+  + clear()
+  # __ior__(it)
+  # __iand__(it)
+  # __ixor__(it)
+  # __isub__(it)
 }
 
-class tuple extends Sequence{
+class set <<mutable>> extends MutableSet
+
+abstract class Mapping <<immutable>> extends Collection{
+  
+  # {abstract} __getitem__(key)
+  + get(key, default)
+  # __contains__(key)
+  + keys()
+  + items()
+  + values()
+  # __eq__(other)
 }
 
-class str extends Sequence{
+class mappingproxy <<immutable>> extends Mapping
+
+abstract class MutableMapping <<mutable>> extends Mapping{
+
+  # {abstract} __setitem__(key, value)
+  # {abstract} __delitem__(key)
+  + pop(key, value)
+  + popitem()
+  + clear()
+  + update(other)
 }
 
-class range extends Sequence{
+class dict <<mutable>> extends MutableMapping
+
+abstract class Sequence <<immutable>> extends Reversible, Collection {
+
+  # {abstract} __getitem__(index)
+  # __iter__()
+  # __contains__(value)
+  # __reversed__()
+  + index(value, start, stop)
+  + count(value)
 }
 
-class MutableSequence extends Sequence{
-  + {abstract} __setitem__(i, v)
-  + {abstract} __delitem__(i)
+class tuple <<immutable>> extends Sequence
+class str <<immutable>> extends Sequence
+class range <<immutable>> extends Sequence
+'class memoryview <<immutable>> extends Sequence
+
+class ByteString extends Sequence
+class bytes <<immutable>> extends ByteString
+class bytearray extends ByteString
+
+class MutableSequence <<mutable>> extends Sequence{
+  # {abstract} __setitem__(index, value)
+  # {abstract} __delitem__(index)
+  + {abstract} insert(index, value)
+  + append(value)
+  + clear()
+  + reverse()
+  + extend(values)
+  + pop(index)
+  + remove(value)
+  # __iadd__(values)
 }
 
-
-class list extends MutableSequence{
-}
+class list <<mutable>> extends MutableSequence
+class bytearray <<mutable>> extends MutableSequence
 
 @enduml
