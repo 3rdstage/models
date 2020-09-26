@@ -5,7 +5,7 @@
 
 Hide Footbox
 Title Compound Protocol
-Skinparam Sequence {
+Skinparam {
   GroupBorderThickness 1
   GroupBorderShadowing false
 }

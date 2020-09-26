@@ -6,10 +6,9 @@
 
 ' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
 ' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
-skinparam class {
-  DefaultFontName Lucida Console
-  ClassFontName "Lucida Console"
-  ClassAttributeFontName Lucida Console
+
+skinparam {
+  'DefaultFontName Lucida Console
 }
 
 note as remarks
