@@ -1,0 +1,81 @@
+@startuml
+
+' Compound Protocol / Token Contracts
+' https://github.com/compound-finance/compound-protocol/tree/v2.8.1/contracts
+
+' https://plantuml.com/en/class-diagram
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+skinparam class {
+  DefaultFontName Lucida Console
+  ClassFontName "Lucida Console"
+  ClassAttributeFontName Lucida Console
+}
+
+' https://github.com/python/cpython/blob/v3.8.5/Lib/_collections_abc.py
+
+abstract class Iterable{
+  + {abstract} __iter__()
+}
+
+abstract class Iterator extends Iterable{
+  + __iter__()
+  + {abstract} __next__()
+} 
+
+abstract class Reversible extends Iterable{
+  + {abstract} __reversed__()
+}
+
+abstract class Sized{
+  + {abstract} __len__()
+}
+
+abstract class Container{
+  + {abstract} __contains__(x)
+}
+
+abstract class Collection extends Iterable, Sized, Container{
+}
+
+abstract class Sequence extends Reversible, Collection{
+  ==
+  + in
+  + not in
+  + +
+  + *
+  + [i]
+  + [i:j]
+  + [i:j:k]
+  + len(s)
+  + min(s)
+  + max(s)
+  ==
+  + {abstract} __getitem__(i)
+  + __iter__()
+  + __contains__(v)
+  + __reversed__()
+  + index(v, start, stop)
+  + count(v)
+  ==
+}
+
+class tuple extends Sequence{
+}
+
+class str extends Sequence{
+}
+
+class range extends Sequence{
+}
+
+class MutableSequence extends Sequence{
+  + {abstract} __setitem__(i, v)
+  + {abstract} __delitem__(i)
+}
+
+
+class list extends MutableSequence{
+}
+
+@enduml
