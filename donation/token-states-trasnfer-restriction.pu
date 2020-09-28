@@ -1,0 +1,18 @@
+@startuml
+' https://plantuml.com/state-diagram
+
+skinparam class {
+  DefaultFontName Lucida Console
+  ClassFontName "Lucida Console"
+  ClassAttributeFontName Lucida Console
+}
+
+state Unrestricted
+state Restricted
+
+Unrestricted -> Restricted : addRestrictedRecipientType()
+Restricted -> Restricted : addRestrictedRecipientType()
+Restricted -> Unrestricted : removeRestrictedRecipientType()
+
+
+@enduml

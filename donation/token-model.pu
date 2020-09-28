@@ -1,0 +1,157 @@
+@startuml
+' https://plantuml.com/en/class-diagram
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+
+skinparam class {
+  DefaultFontName Lucida Console
+  ClassFontName "Lucida Console"
+  ClassAttributeFontName Lucida Console
+}
+
+hide private methods
+
+class AccessControl {
+  ..constants..
+  + DEFAULT_ADMIN_ROLE : bytes32
+  ..
+  - {field} _roles : mapping(bytes32 => RoleData)
+  ==events==
+  + RoleAdminChanged(bytes32, bytes32, bytes32)
+  + RoleGranted(bytes32, address, address)
+  + RoleRevoked(bytes32, address, address)
+  ==
+  + hasRole(bytes32 role, address acct) <<view>>
+  + getRoleMemberCount(bytes32 role) <<view>>
+  + getRoleMemeber(bytes32 role, uint256 index) <<view>>
+  + getRoleAdmin(bytes32 role) <<view>>
+  + grantRole(bytes32 role, address acct)
+  + revokeRole(bytes32 role, address acct)
+  + renounceRole(bytes32 role, address acct)
+  - _setupRole(bytes32 role, address acct)
+  - _setRoleAdmin(bytes32 role, bytes32 adminRole)
+  - _grantRole(bytes32 role, address acct)
+  - _revokeRole(bytes32 role, address acct)
+}
+
+class RoleData <<struct>> {
+  members : AddressSet
+  adminRole : bytes32
+}
+
+AccessControl +--left-- RoleData
+
+abstract class IERC20 {
+  + {abstract} totalSupply() <<view>>
+  + {abstract} balanceOf(address acct) <<view>>
+  + {abstract} transfer(address recipient, uint256 amt)
+  + {abstract} allowance(address owner, address spender)
+  + {abstract} approve(address spender, uint256 amt)
+  + {abstract} transferFrom(address sender, address recipient, uint256 amt)
+  ==events==
+  + Transfer(address from, address to, uint256 value)
+  + Approval(address owner, address spender, uint256 value)
+}
+
+
+class TrustedToken extends AccessControl, IERC20 {
+  ..constatns..
+  + ADMIN_ROLE : bytes32
+  + MINTER_ROLE : bytes32
+  + PAUSER_ROLE : bytes32
+  ..accounts..
+  - {field} _balances : mapping(address => uint256)
+  - {field} _allowances : mapping(address => mapping(address => uint256)
+  - {field} _transferRestrictions : mapping(bytes32 => TransferRestrcition)
+  - {field} _type : mapping(address => bytes32)
+  - {field} _deposits : mapping(address => uint256)
+  - {field} _fulfilled : mapping(address => uint256)
+  - _totalSupply : uint256
+  ..token meta..
+  - _name : string
+  - _symbol : string
+  - _decimals : uint8
+  ..state..
+  - _paused : bool
+  ==events==
+  + Paused(address)
+  + Unpaused(address)
+  + TransferRestrictionAdded(bytes32, bytes32[], uint256)
+  + TransferRestrictionRemoved(bytes32)
+  + AccountTypeAssigned(bytes32)
+  + RestrictedRecipientTypeAdded(bytes32, bytes32)
+  + RestrictedRecipientTypeRemoved(bytes32, bytes32)
+  + Deposited(address, address, uint256)
+  + Withdrawn(address, address, uint256)
+  + WithdrawAllowed(address, address, uint256)
+  + MintAndTransferFrom(address, address, address, uint256)
+  ==
+  + constructor(string name, string symbol)
+  ..meta..
+  + name() <<view>>
+  + symbol() <<view>>
+  + decimals() <<view>>
+  - _setupDecimals(uint8 decimals)
+  ..token..
+  + totalSupply() <<view>>
+  + balanceOf(address acct) <<view>>
+  + transfer(address recipient, uint256 amt)
+  + transferFrom(address sender, address recipient, uint256 amt)
+  + allowance(address owner, address spender) <<view>>
+  + approve(address spender, uint256 amount)
+  + increaseAllowance(address spender, uint256 added)
+  + decreaseAllowance(address spender, uint256 subtracted)
+  + mint(address acct, uint256 amt)
+  + burn(uint256 amt)
+  + burnFrom(address acct, uint256 amt)
+  - _transfer(address sender, address recipient, uint256 amt)
+  - _mint(address acct, uint256 amt)
+  - _burn(address acct, uint256 amt)
+  - _approve(address owner, address spender, uint256 amt)
+  - _beforeTokenTransfer(address from, address to, uint256 amt)
+  + mintAndTransferFrom(...)
+  + increaseAllowanceByAdmin(...)
+  ..restrictions..
+  + transferRestricted(...)
+  + transferLimitExceeded(...)
+  + addTransferRestrictions(...)
+  + removeTransferRestrictions(...)
+  + assignAccountType(bytes32 acctType, address acct)
+  + getAccountType(address acct) <<view>>
+  + addRestrictedRecipientType(...)
+  + removeRestrictedRecipientType(...)
+  + setTransferLimit(bytes32 acctType, uint256 amt)
+  + getTransferLimit(bytes32 acctType) <<view>>
+  - _assignAccountType(bytes32 acctType, address acct)
+  - _addRestrictedRecipientType(...)
+  - _removeRestrictedRecipientType(...)
+  ..escrow..
+  + depositsOf(address payee, address payer) <<view>>
+  + deposit(address payee, address payer, uint256 amt)
+  + allowWithdrawal(address payee, address payer, uint256 amt)
+  + withdraw(address payee, address payer, uint256 amt)
+  ..state..
+  + paused() <<view>>
+  - whenNotPaused() <<modifier>>
+  - whenPaused() <<modifier>>
+  + pause()
+  + unpause()
+  - _pause()
+  - _unpause()
+}
+
+
+class TransferRestriction <<struct>> {
+  {field} restricted : mapping(bytes32 => bool);
+  transferLimit : uint256;
+}
+
+
+TrustedToken +--left-- TransferRestriction
+
+
+@enduml
+
+
+
+
