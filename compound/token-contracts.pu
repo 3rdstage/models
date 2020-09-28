@@ -4,15 +4,13 @@
 ' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
 
 ' Compound Protocol / Token Contracts
+' self-contained borrowing and lending contracts
 ' https://github.com/compound-finance/compound-protocol/tree/v2.8.1/contracts
 
-skinparam class {
-  DefaultFontName Lucida Console
-  ClassFontName "Lucida Console"
-  ClassAttributeFontName Lucida Console
+skinparam {
+  'DefaultFontName Consolas
 }
 
-' self-contained borrowing and lending contracts
 class CTokenStorage <<storage>> {
   - _notEntered : bool
   .. ERC20 ..
@@ -300,7 +298,5 @@ class CErc20 extends CToken, CErc20Interface {
 
 
 }
-
-
 
 @enduml

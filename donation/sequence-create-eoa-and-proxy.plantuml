@@ -6,8 +6,8 @@ hide footbox
 
 ' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
 skinparam sequence {
-  GroupBorderThickness 1
-  GroupBorderShadowing false
+  GroupBorderThickness 5
+  GroupBorderShadowing true
 }
 
 participant Client order 10
