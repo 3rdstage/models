@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="350px" preserveAspectRatio="none" style="width:625px;height:350px;" version="1.1" viewBox="0 0 625 350" width="625px" zoomAndPan="magnify"><defs><filter height="300%" id="f11gyizude952i" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="none" height="348" style="stroke: #C0C0C0; stroke-width: 1.0;" width="623" x="0" y="0"/><!--MD5=[d38099636b0d2c5072691eef9d559015]
+cluster Basic--><polygon fill="#FFFFFF" filter="url(#f11gyizude952i)" points="180,24,218,24,225,44.1328,282,44.1328,282,99,180,99,180,24" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="180" x2="225" y1="44.1328" y2="44.1328"/><text fill="#000000" font-family="Consolas" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="32" x="184" y="37.6016">Basic</text><!--MD5=[b8a0232bcbb03ec0dc1a2a7c3d6edd79]
+cluster Delegated Transfer--><polygon fill="#FFFFFF" filter="url(#f11gyizude952i)" points="161,123,286,123,293,143.1328,301,143.1328,301,338,161,338,161,123" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="161" x2="293" y1="143.1328" y2="143.1328"/><text fill="#000000" font-family="Consolas" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="119" x="165" y="136.6016">Delegated Transfer</text><ellipse cx="230.8198" cy="69.9934" fill="#FEFECE" filter="url(#f11gyizude952i)" rx="34.8198" ry="12.9934" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="45" x="208.3198" y="73.5598">transfer</text><ellipse cx="230.9411" cy="168.9934" fill="#FEFECE" filter="url(#f11gyizude952i)" rx="36.9411" ry="12.9934" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="48" x="206.9411" y="172.5598">approve</text><ellipse cx="230.885" cy="239.1222" fill="#FEFECE" filter="url(#f11gyizude952i)" rx="40.885" ry="22.1222" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="Consolas" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="45" x="208.385" y="234.3705">«query»</text><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="56" x="202.885" y="248.5033">allowance</text><ellipse cx="231.1601" cy="309.232" fill="#FEFECE" filter="url(#f11gyizude952i)" rx="54.1601" ry="13.232" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="74" x="194.1601" y="312.7984">transferFrom</text><!--MD5=[55f2968de154b8cc740615bf6e5af92f]
+entity owner--><ellipse cx="61.5" cy="138.5" fill="#FEFECE" filter="url(#f11gyizude952i)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M61.5,146.5 L61.5,173.5 M48.5,154.5 L74.5,154.5 M61.5,173.5 L48.5,188.5 M61.5,173.5 L74.5,188.5 " fill="none" filter="url(#f11gyizude952i)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="86" x="18.5" y="207.1016">Account Owner</text><!--MD5=[cc7a358b912db65103bf656d5ff19894]
+entity spender--><ellipse cx="61.5" cy="266.5" fill="#FEFECE" filter="url(#f11gyizude952i)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M61.5,274.5 L61.5,301.5 M48.5,282.5 L74.5,282.5 M61.5,301.5 L48.5,316.5 M61.5,301.5 L74.5,316.5 " fill="none" filter="url(#f11gyizude952i)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="111" x="6" y="335.1016">Delegated Spender</text><path d="M392,58 L392,66 L266.21,70 L392,74 L392,82.1328 A0,0 0 0 0 392,82.1328 L566,82.1328 A0,0 0 0 0 566,82.1328 L566,68 L556,58 L392,58 A0,0 0 0 0 392,58 " fill="#FBFB77" filter="url(#f11gyizude952i)" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M556,58 L556,68 L566,68 L556,58 " fill="#FBFB77" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="153" x="398" y="74.6016">transfer his/her own token</text><path d="M345,293 L345,305 L285.08,309 L345,313 L345,325.1328 A0,0 0 0 0 345,325.1328 L613,325.1328 A0,0 0 0 0 613,325.1328 L613,303 L603,293 L345,293 A0,0 0 0 0 345,293 " fill="#FBFB77" filter="url(#f11gyizude952i)" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M603,293 L603,303 L613,303 L603,293 " fill="#FBFB77" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="Consolas" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="247" x="351" y="309.6016">transfer owner's tokens on behalf of owner</text><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 1.0,2.0;" x1="346" x2="612" y1="312.1328" y2="312.1328"/><!--MD5=[737b6c12a190afe1dce0e7c157eb68c0]
+link owner to transfer--><path d="M104.77,144.02 C137.2,124.85 180.73,99.12 207,83.59 " fill="none" id="owner-&gt;transfer" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="211.38,81,201.5971,82.1381,207.0762,83.5451,205.6693,89.0242,211.38,81" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[090144c4505278108f0392517a9acdfd]
+link owner to approve--><path d="M104.77,169 C130.57,169 163.4,169 188.98,169 " fill="none" id="owner-&gt;approve" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="193.99,169,184.99,165,188.99,169,184.99,173,193.99,169" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[105bf3a73460612f029eea0ec53a1c5d]
+link owner to allowance--><path d="M104.77,186.66 C132.05,198.06 167.18,212.75 193.29,223.66 " fill="none" id="owner-&gt;allowance" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="198.06,225.65,191.2986,218.4887,193.4467,223.7219,188.2136,225.87,198.06,225.65" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[a42739ce5297492853091b7c7f9cab24]
+link spender to allowance--><path d="M117.35,278.01 C141.47,269.65 169.25,260.04 191.18,252.44 " fill="none" id="spender-&gt;allowance" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="196.05,250.75,186.2372,249.9079,191.324,252.3826,188.8494,257.4694,196.05,250.75" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[13fccd6168c6df694a1359f4c583ad90]
+link spender to transferFrom--><path d="M117.35,300.93 C135.49,302.23 155.69,303.68 173.92,304.98 " fill="none" id="spender-&gt;transferFrom" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="179.01,305.35,170.3188,300.7172,174.0228,304.9927,169.7472,308.6967,179.01,305.35" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[e7646b0123d25013c7f35ff9882ea541]
+@startuml
+
+
+
+skinparam {
+DefaultFontName Consolas
+DefaultFontSize 12
+DiagramBorderColor silver
+DiagramBorderThickness 1
+MinClassWidth 100
+ClassFontStyle bold
+}
+
+left to right direction
+
+actor "Account Owner" as owner
+actor "Delegated Spender" as spender
+
+package "Basic"{
+usecase transfer
+}
+
+note right of (transfer)
+transfer his/her own token
+end note
+
+package "Delegated Transfer"{
+usecase approve
+usecase allowance <<query>>
+usecase transferFrom
+}
+
+note right of (transferFrom)
+transfer owner's tokens on behalf of owner
+...
+end note
+
+owner - -> transfer
+
+owner - -> approve
+owner - -> allowance
+spender - -> allowance
+spender - -> transferFrom
+
+@enduml
+
+PlantUML version 1.2019.11(Sun Sep 22 19:02:15 KST 2019)
+(EPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 11.0.7+8-LTS
+Operating System: Mac OS X
+Default Encoding: UTF-8
+Language: ko
+Country: KR
+--></g></svg>

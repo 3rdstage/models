@@ -1,0 +1,104 @@
+@startuml
+
+' OpenZeppelin v3.2 ERC-20 Token Contracts
+' https://github.com/OpenZeppelin/openzeppelin-contracts/tree/v3.2.0/contracts/token/ERC20
+
+' https://plantuml.com/en/class-diagram
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+
+skinparam {
+  DefaultFontName Lucida Console
+  'DefaultFontName Consolas Lucida Console
+  DefaultFontSize 12
+  DiagramBorderColor silver
+  DiagramBorderThickness 1
+  MinClassWidth 100
+  ClassFontStyle bold
+}
+
+hide Circle
+caption [[https://github.com/OpenZeppelin/openzeppelin-contracts/tree/v3.2.0/contracts/token/ERC20| OpenZeppelin v3.2 ERC-20 Token Contracts]]
+
+
+package utils{
+  class Pausable {
+    + paused() <<final, view>>
+    - _pause()
+  }
+}
+
+package access{
+  abstract class AccessControl <<abstract>>{
+    - _roles : mapping
+    + DEFAULT_ADMIN_ROLE : bytes32 = '0x00'
+    + hasRole(role, acct) <<final, view>>
+    + getRoleMemberCount(role) <<final, view>>
+    + getRoleMember(role, index) <<final, view>>
+    + getRoleAdmin(role) <<final, view>>
+    + grantRole(role, acct)
+    + revokeRole(role, acct)
+    + renounceRole(role, acct)
+  }
+}
+
+package token{
+  interface IERC20 <<interface>>{
+    + {abstract} totalSupply() <<view>>
+    + {abstract} balanceOf(acct) <<view>>
+    + {abstract} transfer(recipient, amt)
+    + {abstract} allowance(owner, spender) <<view>>
+    + {abstract} approve(spender, am)
+    + {abstract} transferFrom(sender, recipients, amt)
+  }
+
+  class ERC20 implements IERC20{
+    - _balances : mapping
+    - _allowances : mapping
+    - _totalSupply : uint256
+    + name() <<final, view>>
+    + symbol() <<final, view>>
+    + decimals() <<final, view>>
+    + totalSupply() <<final, view>>
+    + balanceOf(acct) <<final, view>>
+    + transfer(recipient, amt)
+    + allowance(owner, spender) <<view>>
+    + approve(spender, amt)
+    + transferFrom(recipient, amt)
+    + increaseAllowance(spender, delta)
+    + decreaseAllowance(spender, delta)
+    - _transfer(sender, recipient, amt)
+    - _mint(acct, amt)
+    - _burn(acct, amt)
+    - _beforeTransfer(from, to, amt)
+  }
+
+  abstract class ERC20Bunrable <<abstract>> extends ERC20{
+    + burn(amt)
+    + burnFrom(owner, amt)
+  }
+
+  abstract class ERC20Pausable <<abstract>> extends ERC20, Pausable{
+
+  }
+
+  abstract class ERC20Capped <<abstract>> extends ERC20{
+    + cap() <<final, view>>
+  }
+}
+
+package presets {
+
+  class ERC20PresetMinterPauser extends ERC20Bunrable, ERC20Pausable, AccessControl{
+    + MINTER_ROLE : bytes32
+    + PAUSER_ROLE : bytes32
+    + mint(to, amt)
+    + pause()
+    + unpause()
+  }
+
+
+}
+
+
+@enduml

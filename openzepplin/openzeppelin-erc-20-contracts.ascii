@@ -1,0 +1,63 @@
+                                                            ,--------------------------------------.
+                                                            |IERC20                                |
+                                                            |--------------------------------------|
+                                                            |--------------------------------------|
+                                                            |+totalSupply() «view»                 |
+                                                            |+balanceOf(acct) «view»               |
+                                                            |+transfer(recipient, amt)             |
+                                                            |+allowance(owner, spender) «view»     |
+                                                            |+approve(spender, am)                 |
+                                                            |+transferFrom(sender, recipients, amt)|
+                                                            `--------------------------------------'
+                                                                                |
+                                                                                |
+                                                              ,----------------------------------.
+                                                              |ERC20                             |
+                                                              |----------------------------------|
+                                                              |-_balances : mapping              |
+                                                              |-_allowances : mapping            |
+                                                              |-_totalSupply : uint256           |
+                                                              |----------------------------------|
+                                                              |+name() «final, view»             |
+,-----------------------.                                     |+symbol() «final, view»           |
+|Pausable               |                                     |+decimals() «final, view»         |
+|-----------------------|                                     |+totalSupply() «final, view»      |
+|-----------------------|                                     |+balanceOf(acct) «final, view»    |
+|+paused() «final, view»|                                     |+transfer(recipient, amt)         |
+|-_pause()              |                                     |+allowance(owner, spender) «view» |
+`-----------------------'                                     |+approve(spender, amt)            |
+            |                                                 |+transferFrom(recipient, amt)     |
+            |                                                 |+increaseAllowance(spender, delta)|
+            |                                                 |+decreaseAllowance(spender, delta)|
+            |                                                 |-_transfer(sender, recipient, amt)|
+            |                                                 |-_mint(acct, amt)                 |
+            |                                                 |-_burn(acct, amt)                 |
+            |                                                 |-_beforeTransfer(from, to, amt)   |
+            |                                                 `----------------------------------'
+            |                                                                   |
+            |         ,-----------------------------------------.               |
+            |         |AccessControl                            |               |
+            |         |-----------------------------------------|               |
+            |         |-_roles : mapping                        |               |
+            |         |+DEFAULT_ADMIN_ROLE : bytes32 = '0x00'   |   ,---------------------.   ,--------------------.
+     ,-------------.  |-----------------------------------------|   |ERC20Bunrable        |   |ERC20Capped         |
+     |ERC20Pausable|  |+hasRole(role, acct) «final, view»       |   |---------------------|   |--------------------|
+     |-------------|  |+getRoleMemberCount(role) «final, view»  |   |---------------------|   |--------------------|
+     |-------------|  |+getRoleMember(role, index) «final, view»|   |+burn(amt)           |   |+cap() «final, view»|
+     `-------------'  |+getRoleAdmin(role) «final, view»        |   |+burnFrom(owner, amt)|   `--------------------'
+                      |+grantRole(role, acct)                   |   `---------------------'
+                      |+revokeRole(role, acct)                  |
+                      |+renounceRole(role, acct)                |
+                      `-----------------------------------------'
+                                            |
+
+                               ,-----------------------.
+                               |ERC20PresetMinterPauser|
+                               |-----------------------|
+                               |+MINTER_ROLE : bytes32 |
+                               |+PAUSER_ROLE : bytes32 |
+                               |-----------------------|
+                               |+mint(to, amt)         |
+                               |+pause()               |
+                               |+unpause()             |
+                               `-----------------------'

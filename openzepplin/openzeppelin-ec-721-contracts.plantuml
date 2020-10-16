@@ -1,0 +1,143 @@
+@startuml
+
+' OpenZeppelin v3.2 ERC-20 Token Contracts
+' https://github.com/OpenZeppelin/openzeppelin-contracts/tree/v3.2.0/contracts/token/ERC20
+
+' https://plantuml.com/en/class-diagram
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+
+skinparam {
+  DefaultFontName Lucida Console
+  'DefaultFontName Consolas Lucida Console
+  DefaultFontSize 12
+  DiagramBorderColor silver
+  DiagramBorderThickness 1
+  MinClassWidth 100
+  ClassFontStyle bold
+}
+
+allowmixing
+hide Circle
+caption [[https://github.com/OpenZeppelin/openzeppelin-contracts/tree/v3.2.0/contracts/token/ERC721| OpenZeppelin v3.2 ERC-721 Token Contracts]]
+
+
+
+package utils{
+  class Pausable {
+    + paused() <<final, view>>
+    - _pause()
+  }
+}
+
+package introspection{
+
+  interface IERC165 <<interface>>{
+    + {abstract} supportsInterface(iterfaceId) <<view>>
+  }
+
+  class ERC165 implements IERC165{
+    + supportsInterface(iterfaceId) <<final, view>>
+  }
+
+}
+
+introspection -[hidden]--> utils
+
+package access{
+  abstract class AccessControl <<abstract>> {
+    - _roles : mapping
+    + DEFAULT_ADMIN_ROLE : bytes32 = '0x00'
+    + hasRole(role, acct) <<final, view>>
+    + getRoleMemberCount(role) <<final, view>>
+    + getRoleMember(role, index) <<final, view>>
+    + getRoleAdmin(role) <<final, view>>
+    + grantRole(role, acct)
+    + revokeRole(role, acct)
+    + renounceRole(role, acct)
+  }
+}
+
+
+package token{
+  interface IERC721 <<interface>>{
+    + {abstract} balanceOf(owner) <<view>>
+    + {abstract} ownerOf(tokenId) <<view>>
+    + {abstract} approve(to, tokenId)
+    + {abstract} getApproved(tokenId) <<view>>
+    + {abstract} setApprovalForAll(operator, approved)
+    + {abstract} isApprovedForAll(owner, operator) <<view>>
+    + {abstract} transferFrom(from, to, tokenId)
+    + {abstract} safeTransferFrom(from, to, tokenId)
+    + {abstract} safeTransferFrom(from, to, tokenId, data)
+  }
+
+  interface IERC721Metadata <<interface>>{
+    + {abstract} name() <<view>>
+    + {abstract} symbol() <<view>>
+    + {abstract} tokenURI(tokenId) <<view>>
+  }
+
+  interface IERC721Enumerable <<interface>>{
+    + {abstract} totalSupply() <<view>>
+    + {abstract} tokenOfOwnerByIndex(owner, index) <<view>>
+    + {abstract} tokenByIndex(index) <<view>>
+  }
+
+  class ERC721 extends ERC165 implements IERC721, IERC721Metadata, IERC721Enumerable {
+    - _holderTokens
+    - _tokenOwners
+    - _tokenApprovals
+    - _operatorApprovals
+    + balanceOf(owner) <<final, view>>
+    + ownerOf(tokenId) <<final, view>>
+    + name() <<final, view>>
+    + symbol() <<final, view>>
+    + tokenURI(tokenId) <<final, view>>
+    + tokenOfOwnerByIndex(owner, index) <<final, view>>
+    + totalSupply() <<final, view>>
+    + tokenByIndex(index) <<final, view>>
+    + approve(to, tokenId)
+    + getApproved(tokenId) <<final, view>>
+    + setApprovalForAll(operator, approved)
+    + isApprovedForAll(owner, operator) <<final, view>>
+    + transferFrom(from, to, tokenId)
+    + safeTransferFrom(from, to, tokenId)
+    + safeTransferFrom(from, to, tokenId, data)
+    - _safeTransfer(from, to, tokenId, data)
+    - _exists(tokenId) <<final, view>>
+    - _safeMint(to, tokenId)
+    - _safeMint(to, tokenId, data)
+    - _mint(to, tokenId)
+    - _burn(tokenId)
+    - _transfer(from, to, tokenId)
+    - _approve(to, tokenId)
+    - _beforeTokenTransfer(from, to, tokenId)
+  }
+
+  abstract class ERC721Burnable <<abstract>> extends ERC721{
+    + burn(tokenId)
+  }
+
+  abstract class ERC721Pausable <<abstract>> extends ERC721, Pausable{
+    - _beforeTokenTransfer(from, to, tokenId)
+  }
+}
+
+IERC721Metadata -[hidden]> ERC721
+
+package presets {
+
+  ' https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/presets/ERC721PresetMinterPauserAutoId.sol
+  class ERC721PresetMinterPauserAutoId extends AccessControl, ERC721Burnable, ERC721Pausable{
+    + MINTER_ROLE : bytes32
+    + PAUSER_ROLE : bytes32
+    + mint(to)
+    + pause()
+    + unpause()
+    - _beforeTokenTransfer(from, to, tokenId)
+  }
+}
+
+
+@enduml

@@ -1,0 +1,51 @@
+@startuml
+
+' Python 3 Collections
+' https://github.com/python/cpython/blob/v3.8.5/Lib/_collections_abc.py
+
+' https://plantuml.com/en/class-diagram
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+
+skinparam {
+  'DefaultFontName Lucida Console
+  DefaultFontName Consolas
+  DefaultFontSize 12
+  DiagramBorderColor silver
+  DiagramBorderThickness 1
+  MinClassWidth 100
+  ClassFontStyle bold
+}
+
+left to right direction
+
+actor "Account Owner" as owner
+actor "Delegated Spender" as spender
+
+package "Basic"{
+  usecase transfer
+}
+
+note right of (transfer)
+  transfer his/her own token
+end note
+
+package "Delegated Transfer"{
+ usecase approve
+ usecase allowance <<query>>
+ usecase transferFrom
+}
+
+note right of (transferFrom)
+  transfer owner's tokens on behalf of owner
+...
+end note
+
+owner --> transfer
+
+owner --> approve
+owner --> allowance
+spender --> allowance
+spender --> transferFrom
+
+@enduml
