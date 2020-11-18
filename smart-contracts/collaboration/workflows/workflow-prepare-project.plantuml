@@ -1,0 +1,64 @@
+@startuml
+ 
+' Python 3 Collections
+' https://github.com/python/cpython/blob/v3.8.5/Lib/_collections_abc.py
+ 
+' https://plantuml.com/class-diagram
+' https://plantuml.com/sequence-diagram
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+ 
+skinparam {
+  DefaultFontName Monaco
+  'DefaultFontName Consolas
+  MinClassWidth 75
+  ClassFontStyle bold
+  ParticipantPadding 20
+  BoxPadding 300
+  GroupBorderThickness 1
+  GroupBorderShadowing false
+  PageMargin 10
+}
+ 
+hide Circle
+hide Footbox
+caption Create Project / Register Contribution
+
+Actor "Admin" as admin 
+Participant "ProjectManager" as pm <<contract>>
+Participant "Project" as prj <<contract>>
+Participant "Contributions" as cntrb <<contract>>
+
+
+admin -> pm ++ : createProject()
+admin++
+  pm -> pm ++ : hasRole(DEFAULT_ADMIN_ROLE)
+  pm --
+  pm -> prj **
+    prj ++
+      prj -> prj ++ : _setRewardPot()
+        prj -->>] : emit RewardPotUpdated
+      prj --
+    pm <-- prj
+    prj --
+  admin <-- pm --
+admin --
+
+...
+
+admin -> cntrb ++ : addOrUpdateContribution()
+admin ++
+  cntrb -> cntrb ++ : hasRole(DEFAULT_ADMIN_ROLE)
+  cntrb --
+  cntrb -> prj ++ : isRewarded()
+  prj --
+    alt {previous}
+      cntrb -->>] : emit ContributionUpdated
+    else
+      cntrb -->>] : emit ContributionAdded
+    end
+  admin <-- cntrb --
+admin --
+...
+ 
+@enduml

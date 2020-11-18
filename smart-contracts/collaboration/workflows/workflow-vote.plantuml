@@ -1,0 +1,67 @@
+@startuml
+ 
+' Python 3 Collections
+' https://github.com/python/cpython/blob/v3.8.5/Lib/_collections_abc.py
+ 
+' https://plantuml.com/class-diagram
+' https://plantuml.com/sequence-diagram
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+ 
+skinparam {
+  DefaultFontName Monaco
+  'DefaultFontName Consolas
+  MinClassWidth 75
+  ClassFontStyle bold
+  ParticipantPadding 20
+  BoxPadding 300
+  GroupBorderThickness 1
+  GroupBorderShadowing false
+  PageMargin 10
+}
+ 
+hide Circle
+hide Footbox
+caption Vote
+
+Actor "voter:Voter" as vtr 
+Participant "vts:Votes" as vt <<contract>>
+Participant "RegularERC20TokenL" as tkn <<contract>>
+Participant "pm:ProjectManager" as pm <<contract>>
+Participant "Project" as prj <<contract>>
+Participant "Contributions" as cntrb <<contract>>
+
+vtr -> tkn ++ : approve(_pm, _amt)
+  tkn -->>] : emit Approval
+vtr ++
+vtr <-- tkn --
+vtr --
+
+...
+
+vtr  -> vt ++ : vote(_votee, _amt)
+vtr ++
+  vt -> prj ++ : isRewarded()
+  prj --> vt --
+  vt -> prj ++ : hasVoter(voter)
+  prj --> vt --
+  vt -> cntrb ++ : hasContribution(_votee)
+  cntrb --> vt --
+  vt -> tkn ++ : allowance(voter, pm)
+  tkn --> vt --
+  vt -> pm ++ : collectFrom(voter)
+    pm -> tkn ++ : transferFrom(voter, _amt)
+      tkn -->>] : emit Transfer
+    tkn --> pm --
+    pm -> tkn ++ : approve(vts, _amt)
+      tkn -->>] : emit Approval
+    tkn --> pm --
+    pm -->>] : emit TokenCollected
+  vt <-- pm --
+  vt -->>] : emit Voted
+vtr <-- vt --
+vtr --
+
+... 
+ 
+@enduml

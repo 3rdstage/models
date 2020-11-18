@@ -1,0 +1,57 @@
+@startuml
+ 
+' Python 3 Collections
+' https://github.com/python/cpython/blob/v3.8.5/Lib/_collections_abc.py
+ 
+' https://plantuml.com/class-diagram
+' https://plantuml.com/sequence-diagram
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+ 
+skinparam {
+  DefaultFontName Monaco
+  'DefaultFontName Consolas
+  MinClassWidth 75
+  ClassFontStyle bold
+  ParticipantPadding 20
+  BoxPadding 300
+  GroupBorderThickness 1
+  GroupBorderShadowing false
+  PageMargin 10
+}
+ 
+hide Circle
+hide Footbox
+caption Distribute Rewards
+
+Actor "Admin" as admin 
+Participant "ProjectManager" as pm <<contract>>
+Participant "Project" as prj <<contract>>
+Participant "RegularERC20TokenL" as tkn <<contract>>
+
+admin -> pm ++ : distributeRewards()
+admin ++
+  pm -> pm ++ : hasRole(DEFAULT_ADMIN_ROLE)
+  pm --
+  pm -> prj ++ : setRewarded()
+  note right : reverts, if already rewarded
+  pm <-- prj --
+  pm -> pm ++ : _simulateRewards()
+  pm --
+  loop votees.length
+    pm -> tkn ++ : mint(_votee, _reward)
+    pm <-- tkn --
+    pm -->>] : emit VoteeRewarded
+  end
+  loop voters.length
+    pm -> tkn ++ : mint(_voter, _reward)
+    pm <-- tkn --
+    pm -->>] : emit VoterRewarded
+  end
+  pm -> tkn ++ : mint(pm, _remainder)
+  pm <-- tkn --
+pm --> admin --
+
+...
+    
+@enduml

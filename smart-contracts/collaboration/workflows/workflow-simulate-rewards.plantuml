@@ -1,0 +1,59 @@
+@startuml
+ 
+' Python 3 Collections
+' https://github.com/python/cpython/blob/v3.8.5/Lib/_collections_abc.py
+ 
+' https://plantuml.com/class-diagram
+' https://plantuml.com/sequence-diagram
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+ 
+skinparam {
+  DefaultFontName Monaco
+  'DefaultFontName Consolas
+  MinClassWidth 75
+  ClassFontStyle bold
+  ParticipantPadding 20
+  BoxPadding 300
+  GroupBorderThickness 1
+  GroupBorderShadowing false
+  PageMargin 10
+}
+ 
+hide Circle
+hide Footbox
+caption Simulate Rewards
+
+Actor "Admin" as admin 
+Participant "ProjectManager" as pm <<contract>>
+Participant "Votes" as vts <<contract>>
+Participant "Project" as prj <<contract>>
+Participant "ProportionalRewardModel" as mdl <<contract>>
+
+admin -> pm ++ : simulateRewardsArrayRetuns()
+admin ++
+  pm -> pm ++ : _simulateRewards()
+    pm -> vts ++ : getVotesByProject()
+    pm <-- vts --
+    pm -> vts ++ : getScoresByProject()
+    pm <-- vts --
+    pm -> prj ++ : getRewardPot()
+    pm <-- prj --
+    pm -> mdl ++ : calcRewards()
+      mdl -> mdl ++ : _calcVoteeRewards()
+      mdl --
+      mdl -> mdl ++ : _calcVoterRewards()
+      mdl --
+      loop 2 times
+        mdl -> mdl ++ : _floor()
+        mdl --
+      end
+      mdl -> mdl ++ : _calcRemainder()
+    pm <-- mdl --
+    mdl --
+  pm --
+pm --> admin --
+
+...
+    
+@enduml
