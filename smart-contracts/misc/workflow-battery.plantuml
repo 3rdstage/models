@@ -12,7 +12,6 @@ skinparam {
   DefaultFontName Monaco
   'DefaultFontName Consolas
   'DefaultMonospacedFontName Consolas
-  DefaultFontSize 14
   DefaultFontStyle bold
   BackgroundColor transparent
   BoxPadding 300
@@ -34,49 +33,47 @@ skinparam Group{
   BorderThickness 1
   BorderShadowing false
 }
+
  
 hide Circle
 hide Footbox
-caption Vote
+caption Create Project / Register Battery Info
 
-Actor "voter:Voter" as vtr 
-Participant "vts:Votes" as vt <<contract>>
-Participant "RegularERC20TokenL" as tkn <<contract>>
-Participant "pm:ProjectManager" as pm <<contract>>
+Actor "Rentcar Admin" as admin 
+Participant "ProjectManager" as pm <<contract>>
 Participant "Project" as prj <<contract>>
-Participant "Contributions" as cntrb <<contract>>
+Participant "Battery Infos" as cntrb <<contract>>
 
-vtr -> tkn ++ : approve(_pm, _amt)
-  tkn -->>] : emit Approval
-vtr ++
-vtr <-- tkn --
-vtr --
+
+admin -> pm ++ : createProject()
+admin++
+  pm -> pm ++ : hasRole(DEFAULT_ADMIN_ROLE)
+  pm --
+  pm -> prj **
+    prj ++
+      prj -> prj ++ : _setRewardPot()
+        prj -->>] : emit RewardPotUpdated
+      prj --
+    pm <-- prj
+    prj --
+  admin <-- pm --
+admin --
 
 ...
 
-vtr  -> vt ++ : vote(_votee, _amt)
-vtr ++
-  vt -> prj ++ : isRewarded()
-  prj --> vt --
-  vt -> prj ++ : hasVoter(voter)
-  prj --> vt --
-  vt -> cntrb ++ : hasContribution(_votee)
-  cntrb --> vt --
-  vt -> tkn ++ : allowance(voter, pm)
-  tkn --> vt --
-  vt -> pm ++ : collectFrom(voter)
-    pm -> tkn ++ : transferFrom(voter, _amt)
-      tkn -->>] : emit Transfer
-    tkn --> pm --
-    pm -> tkn ++ : approve(vts, _amt)
-      tkn -->>] : emit Approval
-    tkn --> pm --
-    pm -->>] : emit TokenCollected
-  vt <-- pm --
-  vt -->>] : emit Voted
-vtr <-- vt --
-vtr --
-
-... 
+admin -> cntrb ++ : addOrUpdateBatteryInfo()
+admin ++
+  cntrb -> cntrb ++ : hasRole(DEFAULT_ADMIN_ROLE)
+  cntrb --
+  cntrb -> prj ++ : isRewarded()
+  prj --
+    alt {previous}
+      cntrb -->>] : emit BatteryInfoUpdated
+    else
+      cntrb -->>] : emit BatteryInfoAdded
+    end
+  admin <-- cntrb --
+admin --
+...
  
 @enduml

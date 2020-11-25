@@ -1,6 +1,9 @@
 CVS/
 .svn/
+.hg
+.gradle/
 /.idea/
+/.vscode/
 /bin/
 /target/
 /build/
@@ -16,10 +19,10 @@ CVS/
 /log/
 /logs/
 /test-output/
-.mtj.tmp/
 /reports/
 /_site/
 .apt_generated/
+.atp_generated_tests/
 package-lock.json
 config.gypi
 npm-debug.log
@@ -28,6 +31,7 @@ npm-debug.log
 .jekyll-metadata
 Gemfile.lock
 packer_cache/
+.DS_Store
 *.log
 *.bak
 .~*
@@ -35,4 +39,5 @@ packer_cache/
 .cache*
 .*.swp
 *.md.html
-hs_err_pid*
+.lock-wscript
+.wafpickle-N

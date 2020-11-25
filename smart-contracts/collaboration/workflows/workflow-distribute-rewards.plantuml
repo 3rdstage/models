@@ -11,13 +11,28 @@
 skinparam {
   DefaultFontName Monaco
   'DefaultFontName Consolas
+  'DefaultMonospacedFontName Consolas
+  DefaultFontSize 14
+  DefaultFontStyle bold
+  BackgroundColor transparent
+  BoxPadding 300
+  PageMargin 10
+  ArrowThickness 2
   MinClassWidth 75
   ClassFontStyle bold
   ParticipantPadding 20
-  BoxPadding 300
-  GroupBorderThickness 1
-  GroupBorderShadowing false
-  PageMargin 10
+}
+
+skinparam Sequence{
+  DividerBorderThickness 2
+  LifeLineBorderThickness 2
+  ParticipantBorderThicknessa 2
+  ReferenceBorderThickness 2
+}
+
+skinparam Group{
+  BorderThickness 1
+  BorderShadowing false
 }
  
 hide Circle
