@@ -1,0 +1,87 @@
+@startuml
+ 
+' Python 3 Collections
+' https://github.com/python/cpython/blob/v3.8.5/Lib/_collections_abc.py
+ 
+' https://plantuml.com/class-diagram
+' https://plantuml.com/sequence-diagram
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+ 
+skinparam {
+  DefaultFontName Consolas
+  'DefaultFontName Monaco
+  'DefaultFontName Lucida Console
+  'DefaultMonospacedFontName Consolas
+  DefaultFontStyle bold
+  BackgroundColor transparent
+  BoxPadding 300
+  PageMargin 10
+  ArrowThickness 1
+  MinClassWidth 75
+  ClassFontStyle bold
+  ParticipantPadding 20
+}
+ 
+skinparam Sequence{
+  DividerBorderThickness 2
+  LifeLineBorderThickness 2
+  ParticipantBorderThicknessa 2
+  ReferenceBorderThickness 2
+  MessageAlignment right
+}
+ 
+skinparam Group{
+  BorderThickness 1
+  BorderShadowing false
+}
+ 
+hide Circle
+hide Footbox
+caption CErc20
+ 
+ 
+
+participant "cErc20::CErc20" as cerc20
+participant "EIP20NonStandardInterface" as eip20ns
+participant "EIP20Interface" as eip20
+participant "underlying::Erc20" as erc20
+participant "comptroller::ComptrollerInterface" as comptroller
+
+
+[-> cerc20 : initialize()
+
+[-> cerc20 : mint()
+cerc20 ++
+  cerc20 -> cerc20 ++ : mintInternal()
+    cerc20 -> cerc20 ++ : accrueInterest()
+      cerc20 --
+    cerc20 -> cerc20 ++ : mintFresh()
+      cerc20 -> comptroller ++ : mintAllowed()
+        cerc20 <-- comptroller -- 
+      cerc20 -> cerc20 ++ : exchangeRateStoredInternal()
+        cerc20 --
+      cerc20 -> cerc20 ++ : doTransferIn()
+        cerc20 -> eip20ns **
+        cerc20 -> eip20ns ++ : balanceOf()
+          eip20ns -> erc20 ++ : balanceOf()
+            eip20ns <-- erc20 --
+          cerc20 <-- eip20ns --
+        cerc20 -> eip20ns ++ : transferFrom()
+          eip20ns -> erc20 ++ : transferFrom()
+            eip20ns <-- erc20 --
+          cerc20 <-- eip20ns --
+        cerc20 -> eip20 **
+        cerc20 -> eip20 ++ : balanceOf()
+          eip20 -> erc20 ++ : balanceOf()
+            eip20 <-- erc20 --
+          cerc20 <-- eip20 --
+        cerc20 --
+      cerc20 -> comptroller ++ : mintVerify()
+        cerc20 <-- comptroller --
+      cerc20 --
+    cerc20 --
+  [<-- cerc20
+cerc20 --
+
+@enduml
