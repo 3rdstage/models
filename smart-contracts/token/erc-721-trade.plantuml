@@ -1,0 +1,97 @@
+@startuml
+
+' Python 3 Collections
+' https://github.com/python/cpython/blob/v3.8.5/Lib/_collections_abc.py
+
+' https://plantuml.com/class-diagram
+' https://plantuml.com/sequence-diagram
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+
+skinparam {
+  DefaultFontName Consolas
+  'DefaultFontName Monaco
+  'DefaultFontName Lucida Console
+  'DefaultMonospacedFontName Consolas
+  'DefaultFontStyle bold
+  BoxPadding 100
+  PageMargin 10
+  ArrowThickness 1
+  MinClassWidth 75
+  ClassFontStyle bold
+  ParticipantPadding 20
+}
+
+skinparam Sequence{
+  DividerBorderThickness 2
+  LifeLineBorderThickness 2
+  ParticipantBorderThicknessa 2
+  ReferenceBorderThickness 2
+  MessageAlignment right
+
+  BoxBackgroundColor transparent
+  BoxBorderColor transparent
+  
+  GroupBorderThickness 1.5
+  GroupBorderColor green 
+  GroupBodyBackgroundColor lightgreen
+
+}
+
+skinparam Group{
+  BorderThickness 1
+  BorderShadowing false
+}
+
+hide Circle
+hide Footbox
+
+box
+Actor "foo:Seller" as seller
+Actor "bar:Buyer" as buyer
+end box
+Participant "ERC721" as erc721 <<contract>>
+Participant "ERC20" as erc20 <<contract>>
+Participant "broker:Broker" as broker <<contract>>
+
+||| 
+
+seller -> erc721 ++ : <color red>**approve(broker, a:NFT)**</color>
+note right : delegate to smart contract (not human)
+seller ++
+  seller <-- erc721 --
+seller --
+
+seller -> broker ++ : offer(a:NFT, price)
+seller ++
+  broker -> erc721 ++ : <color red>**ownerOf(a)**</color>  
+  broker <-- erc721 -- : return 'foo'
+  seller <-- broker --
+seller --
+
+|||
+|||
+
+buyer -> erc20 ++ : <color red>**approve(broker, price)**</color>
+note right : delegate to smart contract (not human)
+buyer ++
+  buyer <-- erc20 --
+buyer --
+
+buyer -> broker ++ : buy(a:NFT, price)
+buyer ++
+  note over erc721, erc20 : tamper-proof, unhackable, never comopromising 
+  group atomic/secure
+    erc20 <- broker ++ : <color red>**transferFrom(bar, foo, price)**</color>
+    erc20 --> broker --
+    erc721 <- broker ++ : <color red>**transferFrom(foo, bar, a:NFT)**</color>
+    erc721 --> broker --
+    |||
+  end
+  |||
+  buyer <-- broker --
+buyer --
+
+|||
+
+@enduml
