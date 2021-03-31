@@ -14,7 +14,7 @@ skinparam {
   'DefaultFontName Lucida Console
   'DefaultMonospacedFontName Consolas
   'DefaultFontStyle bold
-  
+
   BackgroundColor transparent  
   PageMargin 10
   BoxPadding 100
@@ -50,8 +50,8 @@ skinparam Sequence{
   BoxBorderColor transparent
   
   GroupBorderThickness 1.3
-  GroupBorderColor DarkBlue
-  GroupBodyBackgroundColor Azure
+  GroupBorderColor Indigo
+  GroupBodyBackgroundColor LavenderBlush
 }
 
 skinparam Group{
@@ -62,44 +62,35 @@ skinparam Group{
 hide Circle
 hide Footbox
 
+box
 Actor "foo:Seller" as seller
 Actor "bar:Buyer" as buyer
-Participant "ERC721/NFT" as erc721 <<contract>>
-Participant "ERC20/FT" as erc20 <<contract>>
-Participant "broker:Broker" as broker <<contract>>
+end box
+Participant "broker:Broker" as broker
 
 ||| 
 
-seller -> erc721 ++ : <color blue>**approve(broker, a:NFT)**</color>
-note right : delegate to smart contract (not human)
+seller -> broker ++ : offer(a:Asset, price)
 seller ++
-  seller <-- erc721 --
-seller --
-
-seller -> broker ++ : offer(a:NFT, price)
-seller ++
-  broker -> erc721 ++ : <color blue>**ownerOf(a)**</color>  
-  broker <-- erc721 -- : return 'foo'
-  seller <-- broker --
+  seller <-- broker -- 
 seller --
 
 |||
 |||
 
-buyer -> erc20 ++ : <color blue>**approve(broker, price)**</color>
-note right : delegate to smart contract (not human)
+buyer -> broker ++ : buy(a:Asset, price)
 buyer ++
-  buyer <-- erc20 --
-buyer --
-
-buyer -> broker ++ : buy(a:NFT, price)
-buyer ++
-  note over erc721, erc20 : tamper-proof, unhackable, never comopromising 
-  group atomic/secure
-    erc20 <- broker ++ : <color blue>**transferFrom(bar, foo, price)**</color>
-    erc20 --> broker --
-    erc721 <- broker ++ : <color blue>**transferFrom(foo, bar, a:NFT)**</color>
-    erc721 --> broker --
+  note over seller, buyer : vulnerable by nature, high cost for security and trust
+  group critical
+    buyer -> seller ++ : <color FireBrick>**pay(price)**</color>
+    buyer ++
+    buyer <-- seller --
+    buyer --
+  
+    seller -> buyer ++ : <color FireBrick>**handover(a:Asset)**</color>
+    seller ++
+    seller <-- buyer --
+    seller --
     |||
   end
   |||

@@ -32,8 +32,8 @@ class CTokenStorage <<storage>> {
   + totalReserves : uint
   + totalSupply : uint
   ..
-  - mapping(address => uint) accountTokens
-  - mapping(address => mapping (address => uint)) transferAllowances
+  - accountTokens : mapping(address => uint) 
+  - transferAllowances : mapping(address => mapping (address => uint)) 
 }
 
 class BorrowSnapshot <<struct>> {
