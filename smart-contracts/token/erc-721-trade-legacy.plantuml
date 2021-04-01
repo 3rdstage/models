@@ -67,11 +67,21 @@ Actor "foo:Seller" as seller
 Actor "bar:Buyer" as buyer
 end box
 Participant "broker:Broker" as broker
+Participant "Registry" as reg
+Participant "Escrow" as escrow
+
+note over registry, escrow : Trust with High Cost
 
 ||| 
 
-seller -> broker ++ : offer(a:Asset, price)
+seller -> reg ++ : register(a:Asset)
 seller ++
+  seller <-- reg --
+seller --
+seller -> broker ++ : offer(a:Asset,price)
+seller ++
+  broker -> reg ++ : owner(a:Asset)
+  broker <-- reg -- : return 'foo'
   seller <-- broker -- 
 seller --
 
@@ -80,17 +90,37 @@ seller --
 
 buyer -> broker ++ : buy(a:Asset, price)
 buyer ++
-  note over seller, buyer : vulnerable by nature, high cost for security and trust
+  |||
+  note over buyer, broker : Vulnerable by nature, High cost for security and trust
   group critical
-    buyer -> seller ++ : <color FireBrick>**pay(price)**</color>
+    buyer -> escrow ++ : deposit(foo,price)
     buyer ++
-    buyer <-- seller --
+      seller <<- escrow ++ : notifiy
+      escrow ++
+      seller --
+      escrow --
+    buyer <-- escrow -- :
     buyer --
-  
-    seller -> buyer ++ : <color FireBrick>**handover(a:Asset)**</color>
+    
+    seller -> reg ++ : handover(a:Asset,bar)
     seller ++
-    seller <-- buyer --
+    seller <-- reg --
     seller --
+
+    buyer -> reg ++ : takeover(a:Asset)
+    buyer ++
+    buyer <-- reg --
+    buyer --
+    
+    buyer -> escrow ++ : send(foo,price)
+    buyer ++
+      seller <<- escrow ++ : pay(price)
+      escrow ++
+      seller --
+      escrow --
+      
+    buyer <-- escrow --
+    buyer --
     |||
   end
   |||

@@ -64,46 +64,48 @@ hide Footbox
 
 Actor "foo:Seller" as seller
 Actor "bar:Buyer" as buyer
+Participant "broker:Broker" as broker <<contract>>
 Participant "ERC721/NFT" as erc721 <<contract>>
 Participant "ERC20/FT" as erc20 <<contract>>
-Participant "broker:Broker" as broker <<contract>>
+
+note over broker, erc20 : **High Trust with Low Cost**
 
 ||| 
 
-seller -> erc721 ++ : <color blue>**approve(broker, a:NFT)**</color>
-note right : delegate to smart contract (not human)
+note over erc721 : delegate to smart contract (not human)
+seller -> erc721 ++ : <color blue>**approve(broker,a:NFT)**</color>
 seller ++
-  seller <-- erc721 --
+  seller <<-- erc721 --
 seller --
 
-seller -> broker ++ : offer(a:NFT, price)
+seller -> broker ++ : offer(a:NFT,price)
 seller ++
   broker -> erc721 ++ : <color blue>**ownerOf(a)**</color>  
-  broker <-- erc721 -- : return 'foo'
-  seller <-- broker --
+  broker <<-- erc721 -- : return 'foo'
+  seller <<-- broker --
 seller --
 
 |||
 |||
 
-buyer -> erc20 ++ : <color blue>**approve(broker, price)**</color>
-note right : delegate to smart contract (not human)
+note over erc721 : delegate to smart contract (not human)
+buyer -> erc20 ++ : <color blue>**approve(broker,price)**</color>
 buyer ++
-  buyer <-- erc20 --
+  buyer <<-- erc20 --
 buyer --
 
-buyer -> broker ++ : buy(a:NFT, price)
+buyer -> broker ++ : buy(a:NFT,price)
 buyer ++
-  note over erc721, erc20 : tamper-proof, unhackable, never comopromising 
+  note over erc721, erc20 : Tamper-proof, Unhackable, Never Comopromising 
   group atomic/secure
-    erc20 <- broker ++ : <color blue>**transferFrom(bar, foo, price)**</color>
-    erc20 --> broker --
-    erc721 <- broker ++ : <color blue>**transferFrom(foo, bar, a:NFT)**</color>
-    erc721 --> broker --
+    erc20 <- broker ++ : <color blue>**transferFrom(bar,foo,price)**</color>
+    erc20 -->> broker --
+    erc721 <- broker ++ : <color blue>**transferFrom(foo,bar,a:NFT)**</color>
+    erc721 -->> broker --
     |||
   end
   |||
-  buyer <-- broker --
+  buyer <<-- broker --
 buyer --
 
 |||
