@@ -114,7 +114,7 @@ abstract class Sequence <<immutable>> extends Reversible, Collection {
 class tuple <<immutable>> extends Sequence
 class str <<immutable>> extends Sequence
 class range <<immutable>> extends Sequence
-'class memoryview <<immutable>> extends Sequence
+class memoryview <<immutable>> extends Sequence
 
 class ByteString extends Sequence
 class bytes <<immutable>> extends ByteString
