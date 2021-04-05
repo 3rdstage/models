@@ -1,5 +1,13 @@
 ### Decentraland Contracts
 
+#### Concepts
+
+    ```
+    
+    
+    
+    ```
+
 #### Land Contracts
 
 ![](./decentraland-contracts.svg)
