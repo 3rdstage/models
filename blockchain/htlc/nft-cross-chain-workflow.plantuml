@@ -1,0 +1,81 @@
+@startuml
+
+' Python 3 Collections
+' https://github.com/python/cpython/blob/v3.8.5/Lib/_collections_abc.py
+
+' https://plantuml.com/class-diagram
+' https://plantuml.com/sequence-diagram
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+' https://plantuml.com/creole
+' https://www.w3schools.com/colors/colors_names.asp
+
+skinparam {
+  'DefaultFontName Consolas
+  DefaultFontName Monaco
+  'DefaultFontName Lucida Console
+  'DefaultMonospacedFontName Consolas
+  'DefaultFontStyle bold
+  
+  BackgroundColor transparent
+  PageMargin 10
+  BoxPadding 100
+  ParticipantPadding 20
+
+  ArrowFontSize 16
+  ArrowThickness 1
+  MinClassWidth 75
+  ClassFontStyle bold
+  
+  NoteBackgroundColor SeaShell
+  NoteBorderColor transparent
+  NoteShadowing false
+}
+
+skinparam Sequence{
+  DividerBorderThickness 1.5
+  ReferenceBorderThickness 1.5
+  MessageAlignment right
+
+  ArrowColor DarkSlateGray
+  ArrowThickness 1.3
+  LifeLineBorderColor DarkSlateGray
+  LifeLineBorderThickness 1.3
+
+  ActorBorderColor DarkSlateGray
+  ActorBackgroundColor GhostWhite
+  ParticipantBorderColor DarkSlateGray
+  ParticipantBorderThickness 1.5
+  ParticipantBackgroundColor GhostWhite
+
+  BoxBackgroundColor transparent
+  BoxBorderColor transparent
+  
+  GroupBorderThickness 1.3
+  GroupBorderColor DarkBlue
+  GroupBodyBackgroundColor Azure
+}
+
+skinparam Group{
+  BorderThickness 1.3
+  BorderShadowing true
+}
+
+hide Circle
+hide Footbox
+'caption Python 3 Collections
+
+
+Actor Owner as owner
+Participant "Asset Contract 1" as cntr1 <<contract>>
+Participant "Bridge" as bridge
+Participant "Asset Contract 2" as cntr2 <<contract>>
+
+
+owner -> cntr1 ++ : export(assetId, address, hash)
+  cntr1 -> cntr1 : checkOwner(assetId, msg.sender)
+
+
+
+
+@enduml
