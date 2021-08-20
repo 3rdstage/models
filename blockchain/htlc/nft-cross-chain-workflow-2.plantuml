@@ -68,19 +68,26 @@ Participant "Asset Contract 1" as cntr1 <<contract>>
 Participant "Bridge" as bridge
 Participant "Asset Contract 2" as cntr2 <<contract>>
 
-
-owner -> cntr1 ++ : exporting(assetId, targetContract, targetOwner, hash)
-  cntr1 -> cntr1 : checkOwner(assetId, msg.sender)
-  cntr1 -> cntr1 : isExporting(assetId)
-  cntr1 -> cntr1 : setExporting(assetId, timeout, hash)
-  cntr1 ->> bridge : AssetExporting(assetId, targetContract, targetOwner, hash, signature)
-  cntr1 --> owner --
+owner -> cntr2 ++ : import(assetId, exportContract, signature)
+  note left
+    * //""signature""// : ...
+  end note
+  cntr2 -> cntr2 : ownerOf(assetId)
+    note right 
+      *  Check the specified asset is already owned 
+      *  ""false"" is expected
+    end note
+  cntr2 -> cntr2 : isImporting(assetId)
+    note right 
+      * Check the specified asset is already being imported 
+      * ""false"" is expected
+    end note
+  cntr2 -> cntr2 : setImporting(assetId, msg.sender, timeout)
+  cntr2 ->> bridge : AssetImporting(contract, assetId, signature, timeout)
+  cntr2 --
+  bridge ++
+  bridge -> cntr1 : export(assetId, signature, timeout)
+  bridge --
+  cntr1 ++
   
-bridge -> cntr2 ++ : importing(assetId, targetOnwer, timeout, hash)
-
-...
-...
-
-
-
 @enduml
