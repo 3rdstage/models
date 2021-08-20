@@ -81,6 +81,4 @@ bridge -> cntr2 ++ : importing(assetId, targetOnwer, timeout, hash)
 ...
 ...
 
-
-
 @enduml

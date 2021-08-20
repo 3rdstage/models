@@ -68,7 +68,7 @@ Participant "Asset Contract 1" as cntr1 <<contract>>
 Participant "Bridge" as bridge
 Participant "Asset Contract 2" as cntr2 <<contract>>
 
-owner -> cntr2 ++ : import(assetId, exportContract, signature)
+owner -> cntr2 ++ : attemptImport(assetId, exportContract, signature)
   note left
     * //""signature""// : ...
   end note
@@ -89,5 +89,16 @@ owner -> cntr2 ++ : import(assetId, exportContract, signature)
   bridge -> cntr1 : export(assetId, signature, timeout)
   bridge --
   cntr1 ++
+  cntr1 -> cntr1 : addr = recover(signature)
+  cntr1 -> cntr1 : ownerOf(assetId)
+  cntr1 -> cntr1 : setExporting(assetId)
+  cntr1 -> cntr1 : checkTimeout(timeout)
+  cntr1 ->> bridge : AssetExported(assetId, signature)
+  cntr1 --
+  bridge ++
+  bridge -> cntr2 ++ : confirmImport(assetId, signature)
+  
+...
+...
   
 @enduml
