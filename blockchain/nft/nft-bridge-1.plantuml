@@ -66,7 +66,9 @@ caption NFT Bridging
 Actor Owner as owner
 Participant "n1:NFT A" as nft1 <<contract>>
 Participant "b1:Bridge A" as brd1 <<contract>>
+Participant ":ExportRequested" as ev1 <<event>>
 Participant ":Controlloer" as cntrl <<off-chain>>
+Participant ":ImportCompleted" as ev2 <<event>>
 Participant "b2:Bridge B" as brd2 <<contract>>
 Participant "n2:NFT B" as nft2 <<contract>>
 
@@ -77,14 +79,18 @@ nft1 --
 owner -> brd1 ++ : requestExport(m, n2.addr, owner.addr2)
   brd1 -> nft1 ++ : transferFrom(owner.addr1, b1.addr, m)
     nft1 --
-  brd1 ->> cntrl ++ : ExportRequested(n1.addr, m, owner.addr1, n2.addr, owner.addr2)
-    brd1 --
+  brd1 -> ev1 **
+  brd1 --
+  cntrl -> ev1 : <<consume>>
+    cntrl ++
     cntrl -> brd2 ++ : requestImport(n2.addr, m, owner.addr2)
       cntrl --
       brd2 -> nft2 ++ : transferFrom(b2.addr, owner.addr2, m)
         nft2 --
-      brd2 ->> cntrl ++ : ImportCompleted(b2.addr, owner.addr2, m)
-        brd2 --
+      brd2 -> ev2 **
+      brd2 --
+      cntrl -> ev2 : <<consume>>
+        cntrl ++ 
         cntrl -> brd1 ++ : completeExport
           brd1 --
         cntrl --
