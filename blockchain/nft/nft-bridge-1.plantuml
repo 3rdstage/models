@@ -1,6 +1,5 @@
 @startuml
 
-
 ' https://plantuml.com/class-diagram
 ' https://plantuml.com/sequence-diagram
 ' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
@@ -71,22 +70,26 @@ Participant ":Controlloer" as cntrl <<off-chain>>
 Participant "b2:Bridge B" as brd2 <<contract>>
 Participant "n2:NFT B" as nft2 <<contract>>
 
-owner -> nft1 : approve(b1.addr, m)
-owner -> brd1 : requestMoveOut(m, n2, owner.addr2)
 
-brd1 -> cntrl : notify(MoveInRequested)
-cntrl -> brd1 : acceptMoveOut
-brd1 -> nft1 : transferFrom(owner.addr1, b1.addr, m)
+owner -> nft1 ++ : approve(b1.addr, m)
+nft1 --
 
-brd1 -> cntrl : notify(MoveInAccepted)
-cntrl -> brd2 : requestMoveIn
-brd2 -> nft2 : transferFrom
-brd2 -> brd2 : moveInCompleted
+owner -> brd1 ++ : requestExport(m, n2.addr, owner.addr2)
+  brd1 -> nft1 ++ : transferFrom(owner.addr1, b1.addr, m)
+    nft1 --
+  brd1 ->> cntrl ++ : ExportRequested(n1.addr, m, owner.addr1, n2.addr, owner.addr2)
+    brd1 --
+    cntrl -> brd2 ++ : requestImport(n2.addr, m, owner.addr2)
+      cntrl --
+      brd2 -> nft2 ++ : transferFrom(b2.addr, owner.addr2, m)
+        nft2 --
+      brd2 ->> cntrl ++ : ImportCompleted(b2.addr, owner.addr2, m)
+        brd2 --
+        cntrl -> brd1 ++ : completeExport
+          brd1 --
+        cntrl --
 
-brd2 -> cntrl : notify(MoveInCompleted)
-cntrl -> brd1 : completeMoveOut
-
-owner -> nft2 : ownerOf
+owner -> nft2 : ownerOf(m)
 
 ...
 ...
@@ -94,7 +97,11 @@ owner -> nft2 : ownerOf
 legend
   * token[mirrored].ownr = bridge-contract
 
+  * owner.addr1 : owner's address at network 1
+  * owner.addr2 : owner'2 address at network 2
+  
   * timer based roll-back
+  * status checking
   * optimistic verification
 end legend
 
