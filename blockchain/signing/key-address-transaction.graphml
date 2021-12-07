@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+  <!--Created by yEd 3.21.1-->
+  <key attr.name="Description" attr.type="string" for="graph" id="d0"/>
+  <key for="port" id="d1" yfiles.type="portgraphics"/>
+  <key for="port" id="d2" yfiles.type="portgeometry"/>
+  <key for="port" id="d3" yfiles.type="portuserdata"/>
+  <key attr.name="url" attr.type="string" for="node" id="d4"/>
+  <key attr.name="description" attr.type="string" for="node" id="d5"/>
+  <key for="node" id="d6" yfiles.type="nodegraphics"/>
+  <key for="graphml" id="d7" yfiles.type="resources"/>
+  <key attr.name="url" attr.type="string" for="edge" id="d8"/>
+  <key attr.name="description" attr.type="string" for="edge" id="d9"/>
+  <key for="edge" id="d10" yfiles.type="edgegraphics"/>
+  <graph edgedefault="directed" id="G">
+    <data key="d0"/>
+    <node id="n0">
+      <data key="d6">
+        <y:SVGNode>
+          <y:Geometry height="50.0" width="50.0" x="327.23855667114276" y="242.88970947265625"/>
+          <y:Fill color="#000000" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="2.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="58.0" horizontalTextPosition="center" iconTextGap="4" modelName="sandwich" modelPosition="s" textColor="#000000" verticalTextPosition="bottom" visible="true" width="89.0" x="-19.5" xml:space="preserve" y="54.0">&lt;html&gt;
+&lt;p align='center'&gt;
+Private Key&lt;br/&gt;
+K&lt;sub&gt;n&lt;/sub&gt;
+&lt;/p&gt;
+&lt;/html&gt;</y:NodeLabel>
+          <y:SVGNodeProperties usingVisualBounds="true"/>
+          <y:SVGModel svgBoundsPolicy="0">
+            <y:SVGContent refid="1"/>
+          </y:SVGModel>
+        </y:SVGNode>
+      </data>
+    </node>
+    <node id="n1">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="130.0" width="130.0" x="548.8548195838928" y="243.0"/>
+          <y:Fill color="#E1F0FE" transparent="false"/>
+          <y:BorderStyle color="#D0DEEB" raised="false" type="line" width="2.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="2.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="58.0" horizontalTextPosition="center" iconTextGap="4" modelName="sandwich" modelPosition="s" textColor="#000000" verticalTextPosition="bottom" visible="true" width="64.0" x="33.0" xml:space="preserve" y="132.0">&lt;html&gt;
+&lt;p align='center'&gt;
+Account&lt;br/&gt;
+A&lt;sub&gt;n&lt;/sub&gt;
+&lt;/p&gt;
+&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n2">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="20.0" width="20.0" x="563.6" y="257.88970947265625"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle color="#666666" raised="false" type="line" width="2.0"/>
+          <y:NodeLabel alignment="right" autoSizePolicy="content" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="26.296875" horizontalTextPosition="center" iconTextGap="4" modelName="sides" modelPosition="e" textColor="#000000" verticalTextPosition="bottom" visible="true" width="66.53125" x="24.0" xml:space="preserve" y="-3.1484375">Address</y:NodeLabel>
+          <y:Shape type="ellipse"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n3">
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="20.0" width="20.0" x="563.6" y="298.0"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle color="#666666" raised="false" type="line" width="2.0"/>
+          <y:NodeLabel alignment="right" autoSizePolicy="content" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="26.296875" horizontalTextPosition="center" iconTextGap="4" modelName="sides" modelPosition="e" textColor="#000000" verticalTextPosition="bottom" visible="true" width="60.203125" x="24.0" xml:space="preserve" y="-3.1484375">Balance</y:NodeLabel>
+          <y:Shape type="ellipse"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n4">
+      <data key="d6">
+        <y:GenericNode configuration="com.yworks.flowchart.document">
+          <y:Geometry height="250.0" width="200.0" x="760.1096391677856" y="59.7794189453125"/>
+          <y:Fill color="#CCCC00" transparent="false"/>
+          <y:BorderStyle color="#808000" type="line" width="2.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="2.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="26.296875" horizontalTextPosition="center" iconTextGap="4" modelName="sides" modelPosition="n" textColor="#000000" verticalTextPosition="bottom" visible="true" width="130.265625" x="34.8671875" xml:space="preserve" y="-28.296875">ERC-20 Contract</y:NodeLabel>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n5">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="60.0" x="781.2192783355713" y="99.5"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="35.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="22.0" x="19.0" xml:space="preserve" y="-2.5">&lt;html&gt;A&lt;sub&gt;1&lt;/sub&gt;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n6">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="100.0" x="841.2192783355713" y="99.5"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="26.296875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="r" textColor="#000000" verticalTextPosition="bottom" visible="true" width="44.9296875" x="50.0703125" xml:space="preserve" y="1.8515625">1,000</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n7">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="60.0" x="781.2192783355713" y="129.5"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="35.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="25.0" x="17.5" xml:space="preserve" y="-2.5">&lt;html&gt;A&lt;sub&gt;2&lt;/sub&gt;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n8">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="100.0" x="841.2192783355713" y="129.5"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="26.296875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="r" textColor="#000000" verticalTextPosition="bottom" visible="true" width="67.0234375" x="27.9765625" xml:space="preserve" y="1.8515625">500,000</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n9">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="60.0" x="781.2192783355713" y="159.5"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="27.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="20.0" x="20.0" xml:space="preserve" y="1.5">&lt;html&gt;&amp;#8943;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n10">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="100.0" x="841.2192783355713" y="159.5"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="27.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="r" textColor="#000000" verticalTextPosition="bottom" visible="true" width="20.0" x="75.0" xml:space="preserve" y="1.5">&lt;html&gt;&amp;#8943;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n11">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="60.0" x="781.2192783355713" y="189.5"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="35.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="23.0" x="18.5" xml:space="preserve" y="-2.5">&lt;html&gt;A&lt;sub&gt;n&lt;/sub&gt;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n12">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="100.0" x="841.2192783355713" y="189.5"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="26.296875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="r" textColor="#000000" verticalTextPosition="bottom" visible="true" width="57.2578125" x="37.7421875" xml:space="preserve" y="1.8515625">20,000</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n13">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="60.0" x="781.2192783355713" y="219.5"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="27.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="20.0" x="20.0" xml:space="preserve" y="1.5">&lt;html&gt;&amp;#8943;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n14">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="100.0" x="841.2192783355713" y="219.5"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="27.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="r" textColor="#000000" verticalTextPosition="bottom" visible="true" width="20.0" x="75.0" xml:space="preserve" y="1.5">&lt;html&gt;&amp;#8943;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n15">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="60.0" x="781.2192783355713" y="69.5"/>
+          <y:Fill color="#808000" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="26.296875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#FFFFFF" verticalTextPosition="bottom" visible="true" width="48.1875" x="5.90625" xml:space="preserve" y="1.8515625">owner</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n16">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="100.0" x="841.2192783355713" y="69.5"/>
+          <y:Fill color="#808000" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="26.296875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#FFFFFF" verticalTextPosition="bottom" visible="true" width="59.609375" x="20.1953125" xml:space="preserve" y="1.8515625">balance</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n17">
+      <data key="d6">
+        <y:GenericNode configuration="com.yworks.flowchart.document">
+          <y:Geometry height="300.0" width="200.0" x="840.1096391677856" y="384.2794189453125"/>
+          <y:Fill color="#CCCC00" transparent="false"/>
+          <y:BorderStyle color="#808000" type="line" width="2.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="2.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="26.296875" horizontalTextPosition="center" iconTextGap="4" modelName="sides" modelPosition="n" textColor="#000000" verticalTextPosition="bottom" visible="true" width="137.46875" x="31.265625" xml:space="preserve" y="-28.296875">ERC-721 Contract</y:NodeLabel>
+        </y:GenericNode>
+      </data>
+    </node>
+    <node id="n18">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="60.0" x="861.2192783355713" y="429.2794189453125"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="35.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="20.0" x="20.0" xml:space="preserve" y="-2.5">&lt;html&gt;A&lt;sub&gt;i&lt;/sub&gt;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n19">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="100.0" x="921.2192783355713" y="429.2794189453125"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="35.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="21.0" x="39.5" xml:space="preserve" y="-2.5">&lt;html&gt;S&lt;sub&gt;1&lt;/sub&gt;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n20">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="60.0" x="861.2192783355713" y="459.2794189453125"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="35.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="22.0" x="19.0" xml:space="preserve" y="-2.5">&lt;html&gt;A&lt;sub&gt;j&lt;/sub&gt;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n21">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="100.0" x="921.2192783355713" y="459.2794189453125"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="35.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="24.0" x="38.0" xml:space="preserve" y="-2.5">&lt;html&gt;S&lt;sub&gt;2&lt;/sub&gt;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n22">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="60.0" x="861.2192783355713" y="489.2794189453125"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="27.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="20.0" x="20.0" xml:space="preserve" y="1.5">&lt;html&gt;&amp;#8943;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n23">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="100.0" x="921.2192783355713" y="489.2794189453125"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="27.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="20.0" x="40.0" xml:space="preserve" y="1.5">&lt;html&gt;&amp;#8943;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n24">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="60.0" x="861.2192783355713" y="519.2794189453125"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="35.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="23.0" x="18.5" xml:space="preserve" y="-2.5">&lt;html&gt;A&lt;sub&gt;n&lt;/sub&gt;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n25">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="100.0" x="921.2192783355713" y="519.2794189453125"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="35.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="22.0" x="39.0" xml:space="preserve" y="-2.5">&lt;html&gt;S&lt;sub&gt;p&lt;/sub&gt;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n26">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="60.0" x="861.2192783355713" y="399.2794189453125"/>
+          <y:Fill color="#808000" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="26.296875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#FFFFFF" verticalTextPosition="bottom" visible="true" width="48.1875" x="5.90625" xml:space="preserve" y="1.8515625">owner</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n27">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="100.0" x="921.2192783355713" y="399.2794189453125"/>
+          <y:Fill color="#808000" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="26.296875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#FFFFFF" verticalTextPosition="bottom" visible="true" width="44.0703125" x="27.96484375" xml:space="preserve" y="1.8515625">asset</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n28">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="60.0" x="861.2192783355713" y="549.2794189453125"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="35.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="23.0" x="18.5" xml:space="preserve" y="-2.5">&lt;html&gt;A&lt;sub&gt;n&lt;/sub&gt;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n29">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="100.0" x="921.2192783355713" y="549.2794189453125"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="35.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="22.0" x="39.0" xml:space="preserve" y="-2.5">&lt;html&gt;S&lt;sub&gt;q&lt;/sub&gt;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n30">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="60.0" x="861.2192783355713" y="579.2794189453125"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="27.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="20.0" x="20.0" xml:space="preserve" y="1.5">&lt;html&gt;&amp;#8943;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n31">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="100.0" x="921.2192783355713" y="579.2794189453125"/>
+          <y:Fill color="#F6F6E4" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="27.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="20.0" x="40.0" xml:space="preserve" y="1.5">&lt;html&gt;&amp;#8943;&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n32">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="30.0" width="100.0" x="413.04668812751777" y="238.358837890625"/>
+          <y:Fill hasColor="false" transparent="false"/>
+          <y:BorderStyle hasColor="false" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="35.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#000000" verticalTextPosition="bottom" visible="true" width="126.0" x="-13.0" xml:space="preserve" y="-2.5">&lt;html&gt;Tx(A&lt;sub&gt;n&lt;/sub&gt;, A&lt;sub&gt;m&lt;/sub&gt;, 500)&lt;/html&gt;</y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <node id="n33">
+      <data key="d4" xml:space="preserve"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="706.0" width="511.60000000000014" x="539.1999999999997" y="27.100000000000023"/>
+          <y:Fill hasColor="false" transparent="false"/>
+          <y:BorderStyle color="#808000" raised="false" type="dashed" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="tl" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="5.0" y="5.0"/>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
+    <edge id="e0" source="n0" target="n2">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#808080" type="line" width="2.0"/>
+          <y:Arrows source="circle" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e1" source="n2" target="n11">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#808080" type="line" width="2.0"/>
+          <y:Arrows source="none" target="circle"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e2" source="n2" target="n24">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="4.851957503356914" sy="3.2967494726563586" tx="0.0" ty="0.0">
+            <y:Point x="807.8289175033569" y="534.2794189453125"/>
+          </y:Path>
+          <y:LineStyle color="#808080" type="line" width="2.0"/>
+          <y:Arrows source="none" target="circle"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e3" source="n2" target="n28">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.2644375033569304" sy="5.590509472656322" tx="0.0" ty="0.0">
+            <y:Point x="789.8289175033569" y="564.2794189453125"/>
+          </y:Path>
+          <y:LineStyle color="#808080" type="line" width="2.0"/>
+          <y:Arrows source="none" target="circle"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+  </graph>
+  <data key="d7">
+    <y:Resources>
+      <y:Resource id="1" xml:space="preserve">&lt;?xml version="1.0" ?&gt;&lt;svg height="32px" version="1.1" viewBox="0 0 32 32" width="32px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;&lt;title/&gt;&lt;desc/&gt;&lt;defs/&gt;&lt;g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"&gt;&lt;g fill="#157EFB" id="icon-25-key"&gt;&lt;path d="M17.0336552,13.3678662 C16.3812449,12.407675 16,11.2483598 16,10 C16,6.68629134 18.6862913,4 22,4 C25.3137087,4 28,6.68629134 28,10 C28,13.3137087 25.3137087,16 22,16 C20.7464539,16 19.5826937,15.6155808 18.6201766,14.9581994 L14.5381635,19.0381635 L16.5,21 L15,22.5 L13.037787,20.537787 L10.0370339,23.5370339 L12.5,26 L11,27.5 L8.53665732,25.0366573 L5.8870599,27.6849248 C5.45252802,28.1192385 4.76199383,28.1128958 4.33377865,27.6816824 L4.31539123,27.6631662 C3.88827138,27.2330558 3.88810647,26.5337787 4.31746937,26.1037506 L17.0336552,13.3678662 L17.0336552,13.3678662 L17.0336552,13.3678662 Z M13,22 L11.5,23.5 L11.5,23.5 L14,26 L11,29 L8.5,26.5 L6.62453677,28.3754632 C5.78317976,29.2168202 4.42053288,29.2205817 3.58239782,28.3824466 L3.61755335,28.4176022 C2.78072202,27.5807709 2.78254488,26.2174551 3.62453677,25.3754632 L15.7819315,13.2180685 C15.2822882,12.2545997 15,11.1602658 15,10 C15,6.13400656 18.1340066,3 22,3 C25.8659934,3 29,6.13400656 29,10 C29,13.8659934 25.8659934,17 22,17 C20.8397342,17 19.7454003,16.7177118 18.7819315,16.2180685 L18.7819315,16.2180685 L16,19 L18,21 L15,24 L13,22 L13,22 L13,22 Z M22,14 C24.2091391,14 26,12.2091391 26,10 C26,7.79086089 24.2091391,6 22,6 C19.7908609,6 18,7.79086089 18,10 C18,12.2091391 19.7908609,14 22,14 L22,14 L22,14 Z M22,13 C23.6568543,13 25,11.6568543 25,10 C25,8.34314567 23.6568543,7 22,7 C20.3431457,7 19,8.34314567 19,10 C19,11.6568543 20.3431457,13 22,13 L22,13 L22,13 Z" id="key"/&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;</y:Resource>
+    </y:Resources>
+  </data>
+</graphml>
