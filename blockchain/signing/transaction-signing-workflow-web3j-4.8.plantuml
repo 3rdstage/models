@@ -14,7 +14,8 @@ skinparam {
   DefaultMonospacedFontName Consolas
   'DefaultFontStyle bold
 
-  BackgroundColor transparent
+  'BackgroundColor transparent
+  BackgroundColor white
   PageMargin 10
   BoxPadding 100
   ParticipantPadding 20
