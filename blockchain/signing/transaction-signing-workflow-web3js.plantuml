@@ -51,8 +51,8 @@ skinparam Sequence{
   ParticipantBorderThickness 1.5
   ParticipantBackgroundColor GhostWhite
 
-  BoxBackgroundColor transparent
-  BoxBorderColor transparent
+  'BoxBackgroundColor transparent
+  'BoxBorderColor transparent
 
   GroupBorderThickness 1.3
   GroupBorderColor DarkBlue
