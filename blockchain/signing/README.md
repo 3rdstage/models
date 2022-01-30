@@ -10,6 +10,9 @@
 
 #### web3.js/ethereumjs
 
+| ![Web3.js Signing Workflow](./transaction-signing-workflow-web3js.svg) |
+| ------ |
+
 * [`Accounts.prototype.signTransaction(tx, privateKey, callback)`](https://github.com/ChainSafe/web3.js/blob/v1.7.0/packages/web3-eth-accounts/src/index.js#L146)
     * [`signed(tx)`](https://github.com/ChainSafe/web3.js/blob/v1.7.0/packages/web3-eth-accounts/src/index.js#L182)
         * [`static TransactionFactory.fromTxData(txData, txOptions)`](https://github.com/ethereumjs/ethereumjs-monorepo/blob/%40ethereumjs/tx%403.4.0/packages/tx/src/transactionFactory.ts#L22)

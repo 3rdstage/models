@@ -8,12 +8,12 @@
 ' https://www.w3schools.com/colors/colors_names.asp
 
 skinparam {
-  'DefaultFontName Consolas
-  DefaultFontName Monaco
+  DefaultFontName Consolas
+  'DefaultFontName Monaco
   'DefaultFontName Lucida Console
   'DefaultMonospacedFontName Consolas
   'DefaultFontStyle bold
-  
+
   BackgroundColor transparent
   PageMargin 10
   BoxPadding 100
@@ -23,7 +23,7 @@ skinparam {
   ArrowThickness 1
   MinClassWidth 75
   ClassFontStyle bold
-  
+
   NoteBackgroundColor SeaShell
   NoteBorderColor transparent
   NoteShadowing false
@@ -47,7 +47,7 @@ skinparam Sequence{
 
   BoxBackgroundColor transparent
   BoxBorderColor transparent
-  
+
   GroupBorderThickness 1.3
   GroupBorderColor DarkBlue
   GroupBodyBackgroundColor Azure
@@ -75,7 +75,7 @@ owner -> cntr1 ++ : exporting(assetId, targetContract, targetOwner, hash)
   cntr1 -> cntr1 : setExporting(assetId, timeout, hash)
   cntr1 ->> bridge : AssetExporting(assetId, targetContract, targetOwner, hash, signature)
   cntr1 --> owner --
-  
+
 bridge -> cntr2 ++ : importing(assetId, targetOnwer, timeout, hash)
 
 ...
