@@ -15,7 +15,7 @@ skinparam {
   'DefaultFontStyle bold
 
   'BackgroundColor transparent
-  BackgroundColor white
+  BackgroundColor #eeeeee
   PageMargin 10
   BoxPadding 100
   ParticipantPadding 20
