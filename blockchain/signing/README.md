@@ -15,16 +15,23 @@
 
 * [`Accounts.prototype.signTransaction(tx, privateKey, callback)`](https://github.com/ChainSafe/web3.js/blob/v1.7.0/packages/web3-eth-accounts/src/index.js#L146)
     * [`signed(tx)`](https://github.com/ChainSafe/web3.js/blob/v1.7.0/packages/web3-eth-accounts/src/index.js#L182)
-        * [`static TransactionFactory.fromTxData(txData, txOptions)`](https://github.com/ethereumjs/ethereumjs-monorepo/blob/%40ethereumjs/tx%403.4.0/packages/tx/src/transactionFactory.ts#L22)
-        * [`BaseTransaction.sign(privateKey: Buffer)`](https://github.com/ethereumjs/ethereumjs-monorepo/blob/%40ethereumjs/tx%403.4.0/packages/tx/src/baseTransaction.ts#L289)
-            * [`LegacyTransaction.getMessageToSign(hashMessage)`](https://github.com/ethereumjs/ethereumjs-monorepo/blob/%40ethereumjs/tx%403.4.0/packages/tx/src/legacyTransaction.ts#L210)
-                * [`util.rlphash(a)`](https://github.com/ethereumjs/ethereumjs-monorepo/blob/ethereumjs-util%407.1.0/packages/util/src/hash.ts#L157)
-                    * [`rlp.encode(input)`](https://github.com/ethereumjs/rlp/blob/v2.2.6/src/index.ts#L14)
-                * [`util.keccak(a: Buffer, bits: number = 256)`](https://github.com/ethereumjs/ethereumjs-monorepo/blob/cc9872972a657583eb1e3ef8d04b9f5b72562466/packages/util/src/hash.ts#L12) 
-            * [`ecsign(msgHash: Buffer, privateKey: Buffer, chainId: any)`](https://github.com/ethereumjs/ethereumjs-monorepo/blob/ethereumjs-util%407.1.3/packages/util/src/signature.ts#L25)
+        * [`TransactionFactory.fromTxData(txData, txOptions)`](https://github.com/ethereumjs/ethereumjs-monorepo/blob/@ethereumjs/tx@3.3.2/packages/tx/src/transactionFactory.ts#L22)
+        * [`tx.sign(privateKey: Buffer)`](https://github.com/ethereumjs/ethereumjs-monorepo/blob/@ethereumjs/tx@3.3.2/packages/tx/src/baseTransaction.ts#L282)
+            * [`tx.getMessageToSign(true)`](https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/tx/src/legacyTransaction.ts#L210)
+                * [`util.hash.rlphash(input)`](https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/util/src/hash.ts#L157)
+                    * [`rlp.encode(input)`](https://github.com/ethereumjs/rlp/blob/a0fc75b76e08939d9db5162640ba4363f6ce296e/src/index.ts#L14)
+                * [`util.hash.keccak(a: Buffer)`](https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/util/src/hash.ts#L12)
+            * [`util.signature.ecsign(msgHash, privateKey, chainId)`](https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/util/src/signature.ts#L25)
                 * `const v = chainId ? recovery + (chainId * 2 + 35) : recovery + 27`
+            * [`tx._processSignature(v, r, s)`](https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/tx/src/legacyTransaction.ts#L301)
+                * `v = v+ chainId * 2 + 8
+                * [`Transaction.fromTxData(txData, opts)`](https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/tx/src/legacyTransaction.ts#L33)
+
 
 ##### Web3j
+
+| ![Web3j Signing Workflow](./transaction-signing-workflow-web3j-4.8.svg) |
+| ------ |
 
 * [`org.web3j.tx.RawTransactionManager.sendTransaction()`](https://github.com/web3j/web3j/blob/v4.8.8/core/src/main/java/org/web3j/tx/RawTransactionManager.java#L111)
 * [`org.web3j.crypto.RawTransaction.createTransaction()`](https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/RawTransaction.java#L85)

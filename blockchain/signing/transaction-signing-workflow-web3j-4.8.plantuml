@@ -15,7 +15,7 @@ skinparam {
   'DefaultFontStyle bold
 
   'BackgroundColor transparent
-  BackgroundColor white
+  BackgroundColor #fdfdfd
   PageMargin 10
   BoxPadding 100
   ParticipantPadding 20
@@ -64,6 +64,7 @@ skinparam Group{
   BorderShadowing true
 }
 
+scale max 1536 width
 hide Circle
 hide Footbox
 title Web3j Transaction Signing\n\n
@@ -81,6 +82,7 @@ participant "signature3::SignatureData" as signature3
 participant Sign as sign
 participant Hash as hash
 participant ECKeyPair as keypair
+participant ECDSASigner as ecdsaSigner
 participant "signature2::SignatureData" as signature2
 
 url of rawTxMgr is [[https://github.com/web3j/web3j/blob/v4.8.8/core/src/main/java/org/web3j/tx/RawTransactionManager.java]]
@@ -91,29 +93,30 @@ url of sign is [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java
 url of hash is [[https://github.com/web3j/web3j/blob/v4.8.8/utils/src/main/java/org/web3j/crypto/Hash.java]]
 url of keypair is [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/ECKeyPair.java]]
 url of signature2 is [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/mai/java/org/web3j/crypto/Sign.java#L340]]
+url of ecdsaSigner is [[https://github.com/bcgit/bc-java/blob/b9891bd460a7a938cf642444a0164d5e5c94fba2/core/src/main/java/org/bouncycastle/crypto/signers/ECDSASigner.java]]
 
 ||100||
 
-client -> rawTxMgr [[https://github.com/web3j/web3j/blob/v4.8.8/core/src/main/java/org/web3j/tx/RawTransactionManager.java#L111]] : sendTransaction(\n   gasPrice, \n   gasLimit, \n   to, \n   data, \n   value)
+client -> rawTxMgr [[https://github.com/web3j/web3j/blob/v4.8.8/core/src/main/java/org/web3j/tx/RawTransactionManager.java#L111]] : sendTransaction(\n   //gasPrice//, \n   //gasLimit//, \n   //to//, \n   //data//, \n   //value//)
   rawTxMgr ++
   rawTxMgr -> rawTxMgr ++ : getNonce()
-    rawTxMgr --
-  rawTxMgr -> rawTx ++ [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/RawTransaction.java#L85]] : createTransaction(nonce, gasPrice, \ngasLimit, to, value, data)
-    rawTx -> legacyTx ++ [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/transaction/type/LegacyTransaction.java#L128]] : createTransaction(nonce, \n   gasPrice, gasLimit, to, value, data)
+    rawTxMgr <-- rawTxMgr -- : <font:courier>return</font> nonce
+  rawTxMgr -> rawTx ++ [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/RawTransaction.java#L85]] : createTransaction(\n   nonce, \n   gasPrice, \n   gasLimit, \n   to, \n   value, \n   data)
+    rawTx -> legacyTx ++ [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/transaction/type/LegacyTransaction.java#L128]] : createTransaction(nonce, gasPrice, \ngasLimit, to, value, data)
       legacyTx -> legacyTx2 **
       rawTx <-- legacyTx --
     rawTx -> rawTx2 **
-    rawTxMgr <-- rawTx -- : rawTx
+    rawTxMgr <-- rawTx -- : <font:courier>return</font> rawTx
 
   rawTxMgr -> rawTxMgr ++ [[https://github.com/web3j/web3j/blob/v4.8.8/core/src/main/java/org/web3j/tx/RawTransactionManager.java#L193]] : signAndSend(rawTx)
     rawTxMgr -> rawTxMgr ++ [[https://github.com/web3j/web3j/blob/v4.8.8/core/src/main/java/org/web3j/tx/RawTransactionManager.java#L180]] : sign(rawTx)
-      rawTxMgr -> txEncoder ++ [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/TransactionEncoder.java#L42]] : signMessage(rawTx, chainId, credcredentials)
+      rawTxMgr -> txEncoder ++ [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/TransactionEncoder.java#L42]] : signMessage(rawTx, //chainId//, //credcredentials//)
 
         group 1st serialization
         txEncoder -> txEncoder ++ [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/TransactionEncoder.java#L83]] : encode(rawTx, chainId)
           txEncoder -> signature **
           txEncoder -> txEncoder ++ [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/TransactionEncoder.java#L94]] : encode(rawTx, signature)
-            txEncoder -> txEncoder ++ [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/TransactionEncoder.java#L113]] : asRlpValues(rawTx, signature)
+            txEncoder -> txEncoder ++ [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/TransactionEncoder.java#L113]] : asRlpValues(rawTx, \n   signature)
                 txEncoder -> rawTx2 ++ [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/RawTransaction.java#L147]] : getTransaction()
                   txEncoder <-- rawTx2 -- : legacyTx
                 txEncoder -> legacyTx2 ++ [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/transaction/type/LegacyTransaction.java#L70]] : asRlpValues(signature)
@@ -124,13 +127,21 @@ client -> rawTxMgr [[https://github.com/web3j/web3j/blob/v4.8.8/core/src/main/ja
         end
 
         group signing
-        txEncoder -> sign ++ [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/Sign.java#L73]] : signMessage(message, keyPair)
+        txEncoder -> sign ++ [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/Sign.java#L73]] : signMessage(//message//, //keyPair//)
           sign -> sign ++ [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/Sign.java#L77]] : signMessage(message, \n   keyPair, true)
             sign -> hash ++ [[https://github.com/web3j/web3j/blob/v4.8.8/utils/src/main/java/org/web3j/crypto/Hash.java#L81]] : sha3(message)
-              hash -> hash ++ [[https://github.com/web3j/web3j/blob/v4.8.8/utils/src/main/java/org/web3j/crypto/Hash.java#L69]] : sha3(message, \n   offset, length)
+              hash -> hash ++ [[https://github.com/web3j/web3j/blob/v4.8.8/utils/src/main/java/org/web3j/crypto/Hash.java#L69]] : sha3(message, \n   //offset//, //length//)
                 hash --
-              sign <-- hash -- : <font:courier>return KECCAK hashed message</font>
-            sign -> keypair ++ [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/ECKeyPair.java#L52]] : sign(hash)
+              sign <-- hash -- : <font:courier>return KECCAK hash</font> \n<font:courier>of serialized transaction</font>
+            sign -> keypair ++ [[https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/ECKeyPair.java#L52]] : sign(//hash//)
+              keypair -> ecdsaSigner **
+              keypair -> ecdsaSigner ++ [[https://github.com/bcgit/bc-java/blob/b9891bd460a7a938cf642444a0164d5e5c94fba2/core/src/main/java/org/bouncycastle/crypto/signers/ECDSASigner.java#L52]] : init(true, //privKey//)
+                keypair <-- ecdsaSigner --
+              keypair -> ecdsaSigner ++ [[https://github.com/bcgit/bc-java/blob/b9891bd460a7a938cf642444a0164d5e5c94fba2/core/src/main/java/org/bouncycastle/crypto/signers/ECDSASigner.java#L93]] : generateSignature(hash)
+                keypair <-- ecdsaSigner -- : <font:courier>return ECDSA signature</font>
+                note right
+                Normalized(canonicalized) or not?  
+                end note
               sign <-- keypair -- : <font:courier>return ECDSA signature</font>
             sign -> signature2 **
             sign <-- sign -- : <font:courier>return signature</font>

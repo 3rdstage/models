@@ -15,7 +15,7 @@ skinparam {
   'DefaultFontStyle bold
 
   'BackgroundColor transparent
-  BackgroundColor #eeeeee
+  BackgroundColor #fdfdfd
   PageMargin 10
   BoxPadding 100
   ParticipantPadding 20
@@ -64,17 +64,16 @@ skinparam Group{
   BorderShadowing true
 }
 
-
+scale max 1536 width
 hide Circle
 hide Footbox
 title Web3.js/ethereumjs Transaction Signing\n\n
 'caption
 
-
 participant client
 participant "web3.eth.accounts" as accts
 participant "tx.TransactionFactory" as factory <<ethereumjs>>
-participant "tx.Transaction" as tx <<ethereumjs>>
+participant "tx::tx.Transaction" as tx <<ethereumjs>>
 participant "util.hash" as hash <<ethereumjs>>
 participant "rlp" as rlp <<ethereumjs>>
 participant "util.signature" as signature <<ethereumjs>>
@@ -123,10 +122,6 @@ client -> accts ++ [[https://github.com/ChainSafe/web3.js/blob/v1.7.0/packages/w
         tx -> tx ++ [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/tx/src/legacyTransaction.ts#L33]] : fromTxData(//txData//, //opts//)
           tx --
         tx --
-
-
-
-
 
 
 ||100||
