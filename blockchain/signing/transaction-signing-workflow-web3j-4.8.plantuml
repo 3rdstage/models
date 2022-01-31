@@ -1,11 +1,14 @@
 @startuml
 
-' https://plantuml.com/class-diagram
-' https://plantuml.com/sequence-diagram
-' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
-' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
-' https://plantuml.com/creole
-' https://www.w3schools.com/colors/colors_names.asp
+' Useful references
+/'
+https://plantuml.com/class-diagram
+https://plantuml.com/sequence-diagram
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+https://plantuml.com/creole
+https://www.w3schools.com/colors/colors_names.asp
+'/
 
 skinparam {
   'DefaultFontName Consolas
@@ -140,7 +143,7 @@ client -> rawTxMgr [[https://github.com/web3j/web3j/blob/v4.8.8/core/src/main/ja
               keypair -> ecdsaSigner ++ [[https://github.com/bcgit/bc-java/blob/b9891bd460a7a938cf642444a0164d5e5c94fba2/core/src/main/java/org/bouncycastle/crypto/signers/ECDSASigner.java#L93]] : generateSignature(hash)
                 keypair <-- ecdsaSigner -- : <font:courier>return ECDSA signature</font>
                 note right
-                Normalized(canonicalized) or not?  
+                Normalized(canonicalized) or not?
                 end note
               sign <-- keypair -- : <font:courier>return ECDSA signature</font>
             sign -> signature2 **

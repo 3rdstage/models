@@ -8,6 +8,15 @@
     * Compute the ECDSA signature, signing the hash with the originating EOA’s private key.
     * Append the ECDSA signature’s computed v, r, and s values to the transaction.
 
+* Ethereum signature
+    * `v` of the signature **MUST** be set to `{0,1} + CHAIN_ID * 2 + 35` where `{0,1}` is the parity of the `y` value of the curve point
+for which `r` is the x-value in the secp256k1 signing process. ([EIP-155](https://eips.ethereum.org/EIPS/eip-155))
+    * It is assumed that `v` is the ‘recovery identifier’. The recovery identifier is a 1 byte value
+specifying the parity and finiteness of the coordinates of the curve point for which `r` is the x-value; this
+value is in the range of `[0, 3]`, however we declare the upper two possibilities, representing infinite values, invalid. The
+value `0` represents an **even y** value and `1` represents an **odd y** value. ([Ethereum White Paper - Berlin Version](https://ethereum.github.io/yellowpaper/paper.pdf))
+
+
 #### web3.js/ethereumjs
 
 | ![Web3.js Signing Workflow](./transaction-signing-workflow-web3js.svg) |
@@ -24,7 +33,7 @@
             * [`util.signature.ecsign(msgHash, privateKey, chainId)`](https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/util/src/signature.ts#L25)
                 * `const v = chainId ? recovery + (chainId * 2 + 35) : recovery + 27`
             * [`tx._processSignature(v, r, s)`](https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/tx/src/legacyTransaction.ts#L301)
-                * `v = v+ chainId * 2 + 8
+                * `v = v+ chainId * 2 + 8`
                 * [`Transaction.fromTxData(txData, opts)`](https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/tx/src/legacyTransaction.ts#L33)
 
 

@@ -1,11 +1,14 @@
 @startuml
 
-' https://plantuml.com/class-diagram
-' https://plantuml.com/sequence-diagram
-' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
-' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
-' https://plantuml.com/creole
-' https://www.w3schools.com/colors/colors_names.asp
+' Useful references
+/'
+https://plantuml.com/class-diagram
+https://plantuml.com/sequence-diagram
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+https://plantuml.com/creole
+https://www.w3schools.com/colors/colors_names.asp
+'/
 
 skinparam {
   'DefaultFontName Consolas
@@ -74,15 +77,17 @@ participant client
 participant "web3.eth.accounts" as accts
 participant "tx.TransactionFactory" as factory <<ethereumjs>>
 participant "tx::tx.Transaction" as tx <<ethereumjs>>
+participant "signedTx::tx.Transaction" as signedTx <<ethereumjs>>
 participant "util.hash" as hash <<ethereumjs>>
 participant "rlp" as rlp <<ethereumjs>>
 participant "util.signature" as signature <<ethereumjs>>
-participant "secp256k1-node" as secp256k1
-participant "ec:EC" as ec
+participant "secp256k1" as secp256k1 <<secp256k1-node>>
+participant "ec:EC" as ec <<eclliptic>>
 
 url of accts is [[https://github.com/ChainSafe/web3.js/blob/v1.7.0/packages/web3-eth-accounts/src/index.js]]
 url of factory is [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/tx/src/transactionFactory.ts]]
 url of tx is [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/tx/src/legacyTransaction.ts]]
+url of signedTx is [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/tx/src/legacyTransaction.ts]]
 url of hash is [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/util/src/hash.ts]]
 url of rlp is [[https://github.com/ethereumjs/rlp/blob/a0fc75b76e08939d9db5162640ba4363f6ce296e/src/index.ts]]
 url of signature is [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/util/src/signature.ts]]
@@ -91,9 +96,9 @@ url of ec is [[https://github.com/indutny/elliptic/blob/43ac7f230069bd1575e1e4a5
 
 client -> accts ++ [[https://github.com/ChainSafe/web3.js/blob/v1.7.0/packages/web3-eth-accounts/src/index.js#L146]] : signTransaction(//tx//, //privateKey//, //callback//)
   accts -> accts ++ [[https://github.com/ChainSafe/web3.js/blob/v1.7.0/packages/web3-eth-accounts/src/index.js#L182]] : signed(//tx//)
-    accts -> factory ++ [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/@ethereumjs/tx@3.3.2/packages/tx/src/transactionFactory.ts#L22]] : fromTxData(//txData//, //txOptions//)
+    accts -> factory ++ [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/@ethereumjs/tx@3.3.2/packages/tx/src/transactionFactory.ts#L22]] : fromTxData(//txData//, \n//txOptions//)
       accts <-- factory -- : <font:courier>return</font> transaction object
-    accts -> tx ++ [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/@ethereumjs/tx@3.3.2/packages/tx/src/baseTransaction.ts#L282]] : sign(//privateKey//: Buffer)
+    accts -> tx ++ [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/@ethereumjs/tx@3.3.2/packages/tx/src/baseTransaction.ts#L282]] : sign(privateKey: Buffer)
       tx -> tx ++ [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/tx/src/legacyTransaction.ts#L210]] : getMessageToSign(true)
         tx -> tx ++ [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/tx/src/legacyTransaction.ts#L176]] : _getMessageToSign()
           tx --
@@ -105,8 +110,8 @@ client -> accts ++ [[https://github.com/ChainSafe/web3.js/blob/v1.7.0/packages/w
           tx <-- hash -- : <font:courier>return hashed serialized tx</font>
         tx <-- tx -- : <font:courier>return hashed serialized tx</font>
       tx -> signature ++ [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/util/src/signature.ts#L25]] : ecsign(//msgHash//, //privateKey//, //chainId//)
-        signature -> secp256k1 ++ [[https://github.com/cryptocoinjs/secp256k1-node/blob/f73cd3a2b95ec6f549a2feabfbf2b8f17b30dcc7/lib/index.js#L252]] :  ecdsaSign (msgHash, privateKey)
-          secp256k1 -> secp256k1 ++ [[https://github.com/cryptocoinjs/secp256k1-node/blob/f73cd3a2b95ec6f549a2feabfbf2b8f17b30dcc7/lib/elliptic.js#L302]] : ecdsaSign (//obj//, \n   msgHash, privateKey)
+        signature -> secp256k1 ++ [[https://github.com/cryptocoinjs/secp256k1-node/blob/f73cd3a2b95ec6f549a2feabfbf2b8f17b30dcc7/lib/index.js#L252]] :  ecdsaSign(msgHash, \nprivateKey)
+          secp256k1 -> secp256k1 ++ [[https://github.com/cryptocoinjs/secp256k1-node/blob/f73cd3a2b95ec6f549a2feabfbf2b8f17b30dcc7/lib/elliptic.js#L302]] : ecdsaSign(//obj//, \n   msgHash, privateKey)
             secp256k1 -> ec ++ [[https://github.com/indutny/elliptic/blob/43ac7f230069bd1575e1e4a58394a512303ba803/lib/elliptic/ec/index.js#L91]] : sign(msgHash, privateKey, \n   {canonical: true})
               secp256k1 <-- ec -- : <font:courier>return</font> {r, s, recoveryParam}
             secp256k1 <-- secp256k1 -- : <font:courier>return</font> 0 <font:courier>or</font> 1
@@ -120,10 +125,25 @@ client -> accts ++ [[https://github.com/ChainSafe/web3.js/blob/v1.7.0/packages/w
         ""if(EIP155) v = v + chainId x 2 + 8
         end note
         tx -> tx ++ [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/tx/src/legacyTransaction.ts#L33]] : fromTxData(//txData//, //opts//)
-          tx --
-        tx --
+          tx -> signedTx **
+          tx <-- tx -- : <font:courier>return</font> signedTx
+        tx <-- tx -- : <font:courier>return</font> signedTx
+      accts <-- tx -- : <font:courier>return</font> signedTx
+    accts -> signedTx ++ [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/tx/src/baseTransaction.ts#L149]] : validate(true)
+      accts <-- signedTx -- : <font:courier>return</font> true
+    accts -> signedTx ++ [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/tx/src/legacyTransaction.ts#L172]] : serialize()
+      signedTx -> signedTx ++ [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/tx/src/legacyTransaction.ts#L149]] : raw()
+        signedTx --
+      signedTx -> rlp ++ [[https://github.com/ethereumjs/rlp/blob/a0fc75b76e08939d9db5162640ba4363f6ce296e/src/index.ts#L14]] : encode(a: Input)
+        signedTx <-- rlp -- : <font:courier>return ""rawTx""(serialized signed tx)</font>
+      accts <-- signedTx -- : <font:courier>return ""rawTx""(serialized signed tx)</font>
+    accts -> hash ++ [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/util/src/hash.ts#L37]]: keccak256(rawTx)
+      hash -> hash ++ [[https://github.com/ethereumjs/ethereumjs-monorepo/blob/6e41fb32a4916cff53ec940d94e3c238f3c20d5f/packages/util/src/hash.ts#L12]] : keccak(rawTx, 256)
+        hash --
+      accts <-- hash -- : <font:courier>return ""txHash"" (KECCAK hash of serialized signed tx)</font>
 
-
+    accts <-- accts -- : <font:courier>return</font> {msgHash, \n   v, r, s, rawTx, txHash} /' return of signed() function '/
+  client <-- accts -- : <font:courier>return</font> {msgHash, v, r, s, \n   rawTx, txHash}
 ||100||
 
 @enduml
