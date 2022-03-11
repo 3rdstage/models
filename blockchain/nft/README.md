@@ -23,4 +23,14 @@
 
 ### Features
 
-* Uploads assets' media files into IPFS. 
+* Uploads assets' media files into IPFS.
+
+
+
+### Special Topics
+
+#### Token Bridge
+
+* `Contract.setExportAllowed(unint256 id, bool allowed)`
+** paired with `Contract.isExportAllowed(uint256 id) returns (bool)`
+** more generally `Contract.setActionAllowed(uint256 id, enum action, bool allowed)`
