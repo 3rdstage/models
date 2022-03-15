@@ -1,0 +1,37 @@
+
+@startuml
+
+' https://plantuml.com/state-diagram
+
+
+state Open {
+  state Placed
+}
+
+state Closed {
+  state Rejected
+  state Accepted
+  state Abandoned
+  state Paid
+}
+
+[*] --> Placed
+Placed -right-> Canceled
+Canceled -right-> [*]
+Placed --> Rejected
+Placed --> Accepted
+
+Rejected -right-> Canceled
+Rejected --> Accepted
+
+note left on link
+  when an accepted bidder has abandoned it
+end note
+Accepted --> Paid
+Accepted -right--> Abandoned
+Abandoned -right--> [*]
+Paid -right--> [*]
+
+
+
+@enduml

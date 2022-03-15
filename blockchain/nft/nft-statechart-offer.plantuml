@@ -1,0 +1,32 @@
+@startuml
+
+' https://plantuml.com/state-diagram
+' https://plantuml.com/creole
+
+state "Planned" as planned
+planned : ""now < offer.start""
+
+state "In Progress" as progress
+progress : ""offer.start <= now < offer.end""
+
+state "Paused" as paused
+
+state "Resuming" as resuming <<choice>>
+
+state "Canceled" as canceled
+
+state "Closed" as closed
+closed : ""now >= offer.end""
+
+[*] --> planned : Seller placed a new offer
+planned -down-> progress : Offer's start date has passed
+planned -right-> canceled : Seller canceled this offer
+progress -right-> paused
+paused -down-> resuming : Seller resumed this offer
+resuming --> progress : [now < offer.end]
+resuming --> closed : [now >= offer.end]
+
+progress --> closed : Offer's end date has passed
+
+
+@enduml

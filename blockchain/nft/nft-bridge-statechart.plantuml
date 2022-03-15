@@ -1,0 +1,38 @@
+
+@startuml
+
+' https://plantuml.com/state-diagram
+
+state Normal {
+  state Owned
+  state Offered
+  state Bidded
+}
+
+state Transient {
+  state Exporting
+}
+
+state Removed {
+  state Exported
+}
+
+[*] --> Owned : mint
+Owned --> Offered : offer
+Offered --> Bidded : bid
+Bidded --> Bidded : bid
+Bidded --> Owned : transfer
+Owned --> Exporting : exporting
+Exporting --> Exported : exported
+Exported --> Owned : import
+
+
+legend
+  * Exporting or exported token can not be traded(offered, bidded or transferred).
+  * Exporting state is expected not to last long.
+  * Exported token is expected not to count into total supply.
+  * Exported token is expected not to be exposed to market places such as OpenSea.
+end legend
+
+
+@enduml
