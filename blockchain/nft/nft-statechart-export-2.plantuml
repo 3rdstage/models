@@ -1,0 +1,98 @@
+
+@startuml
+
+' https://plantuml.com/state-diagram
+
+skinparam {
+  'DefaultFontName Consolas
+  DefaultFontName Monaco
+  'DefaultFontName Lucida Console
+  'DefaultMonospacedFontName Consolas
+  'DefaultFontStyle bold
+  
+  'BackgroundColor transparent
+  BackgroundColor #eeeeee
+  PageMargin 10
+  BoxPadding 50
+  ParticipantPadding 20
+
+  ArrowFontSize 16
+  ArrowThickness 1
+  ResponseMessageBelowArrow true
+  
+  MinClassWidth 75
+  ClassFontStyle bold
+  
+  NoteFontName Courier
+  NoteBackgroundColor SeaShell
+  NoteBorderColor transparent
+  NoteShadowing false
+}
+
+
+state Normal {
+  state Owned
+  state Offered
+  state Bidded
+}
+
+state Transient {
+  state Exporting
+}
+
+state Removed {
+  state Exported
+}
+
+[*] --> Owned : mint
+Owned --> Offered : offer
+Offered --> Bidded : bid
+Bidded --> Bidded : bid
+Bidded --> Owned : transfer
+
+Owned --> Exporting : exporting
+note on link
+  pre:
+  post:
+end note
+
+
+Exporting --> Exported : exported
+note on link
+  pre:
+  post:
+end note
+
+Exporting --> Owned : unexporting
+note on link
+  pre:
+  post:
+end note
+
+
+note right of Owned
+  contract.statedTokens[Exporting]->excludes(token)
+  contract.statedTokens[Exported]->exlcudes(token)
+end note
+
+note right of Exporting
+  contract.statedTokens[Exporting]->includes(token)
+  contract.statedTokens[Exported]->exlcudes(token)
+end note
+
+
+note right of Exported
+  contract.statedTokens[Exporting]->excludes(token)
+  contract.statedTokens[Exported]->inlcudes(token)
+end note
+
+
+legend
+  * Exporting or exported token can not be traded(offered, bidded or transferred).
+  * Exporting state is expected not to last long.
+  * Exported token is expected not to count into total supply.
+  * Exported token is expected not to be exposed to market places such as OpenSea.
+end legend
+
+
+@enduml

@@ -3,7 +3,8 @@ CVS/
 .hg
 .gradle/
 /.idea/
-/.vscode/
+/.vscode/*
+!/.vscode/settings.json
 /bin/
 /target/
 /build/

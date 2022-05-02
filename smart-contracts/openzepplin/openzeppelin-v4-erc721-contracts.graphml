@@ -35,15 +35,15 @@
       <data key="d5"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="120.0" width="200.0" x="764.0" y="59.0"/>
+          <y:Geometry height="120.0" width="220.0" x="756.0" y="59.0"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Tahoma" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.8984375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="130.396484375" x="34.8017578125" xml:space="preserve" y="26.484375">IERC721Enumerable<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Tahoma" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.8984375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="130.396484375" x="44.8017578125" xml:space="preserve" y="26.484375">IERC721Enumerable<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="interface" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve"/>
-            <y:MethodLabel xml:space="preserve">+ totalSupply() &lt;&lt;view&gt;&gt;
-+ tokenOfOwnerByIndex() &lt;&lt;view&gt;&gt;
-+ tokenByIndex() &lt;&lt;view&gt;&gt;</y:MethodLabel>
+            <y:MethodLabel xml:space="preserve">+ totalSupply() : uint256
++ tokenOfOwnerByIndex() :  uint256
++ tokenByIndex() : uint256</y:MethodLabel>
           </y:UML>
         </y:UMLClassNode>
       </data>
@@ -53,15 +53,15 @@
       <data key="d5"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="120.0" width="200.0" x="495.0" y="59.0"/>
+          <y:Geometry height="120.0" width="150.0" x="520.0" y="59.0"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Tahoma" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.8984375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="114.4072265625" x="42.79638671875" xml:space="preserve" y="26.484375">IERC721Metadata<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Tahoma" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.8984375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="114.4072265625" x="17.79638671875" xml:space="preserve" y="26.484375">IERC721Metadata<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="interface" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve"/>
-            <y:MethodLabel xml:space="preserve">+ name() &lt;&lt;view&gt;&gt;
-+ symbol() &lt;&lt;view&gt;&gt;
-+ tokenURI() &lt;&lt;view&gt;&gt;</y:MethodLabel>
+            <y:MethodLabel xml:space="preserve">+ name() : string
++ symbol() : string
++ tokenURI() : string</y:MethodLabel>
           </y:UML>
         </y:UMLClassNode>
       </data>
@@ -87,13 +87,14 @@
       <data key="d5"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="70.0" width="220.0" x="351.0" y="542.5"/>
+          <y:Geometry height="100.0" width="220.0" x="351.0" y="548.5"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Tahoma" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.8984375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="212.181640625" x="3.9091796875" xml:space="preserve" y="3.0">ERC721PresetMinterPauserAutoId<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve"/>
-            <y:MethodLabel xml:space="preserve"/>
+            <y:MethodLabel xml:space="preserve">+ pause()
++ unpause()</y:MethodLabel>
           </y:UML>
         </y:UMLClassNode>
       </data>
@@ -151,13 +152,13 @@
       <data key="d5"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="70.0" width="150.0" x="122.0" y="243.75"/>
+          <y:Geometry height="100.0" width="150.0" x="122.0" y="228.75"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Tahoma" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.8984375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="58.7763671875" x="45.61181640625" xml:space="preserve" y="26.484375">Pausable<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:UML clipContent="false" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="abstract" use3DEffect="false">
             <y:AttributeLabel xml:space="preserve"/>
-            <y:MethodLabel xml:space="preserve"/>
+            <y:MethodLabel xml:space="preserve">+ paused() : bool</y:MethodLabel>
           </y:UML>
         </y:UMLClassNode>
       </data>
