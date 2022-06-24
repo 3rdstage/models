@@ -17,7 +17,6 @@ hide circle
 show empty fields
 show empty methods
 ' hide stereotypes
-hide type
 
 
 interface IERC165
