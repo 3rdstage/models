@@ -1,0 +1,85 @@
+@startuml
+
+' Useful references
+/'
+https://plantuml.com/class-diagram
+https://plantuml.com/sequence-diagram
+https://plantuml.com/creole
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/color-names.html
+https://www.w3schools.com/colors/colors_names.asp
+https://plantuml.com/color
+'/
+
+
+hide circle
+show empty fields
+show empty methods
+' hide stereotypes
+hide type
+
+
+interface IERC165
+interface Context
+interface IERC721Metadata
+
+
+IERC165 <|-- IERC721
+interface IERC721 {
+  .. events ..
+  Transfer(address from, address to, uint256 tokenId)
+  Approval(address owner, address approved, uint256 tokenId)
+  Approval(address owner, address approved, uint256 tokenId)
+
+  .. functions ..
+  + uint256 balanceOf(address owner)
+  + address ownerOf(uint256 tokenId)
+  + void safeTransferFrom(address from, address to, uint256 tokenId, bytes data)
+  + void safeTransferFrom(address from, address to, uint256 tokenId)
+  + void transferFrom(address from, address to, uint256 tokenId)
+  + void approve(address to, uint256 tokenId)
+  + void setApprovalForAll(address operator, bool _approved)
+  + address getApproved(uint256 tokenId)
+  + address isApprovedForAll(address owner, address operator)
+}
+
+Context <|-- ERC721
+ERC165 <|-- ERC721
+IERC721 <|-- ERC721
+IERC721Metadata <|-- ERC721
+
+class ERC721 {
+  .. states ..
+  - _name : string
+  - _symbol : string
+  - {field} _owners : mapping(uint256 => address)
+  - {field} _balances : mapping(address => uint256)
+  - {field} _tokenApprovals : mapping(uint256 => address)
+  - {field} _operatorApprovals : mapping(address => mapping(address => bool))
+  .. functions ..
+  + constructor(name_ : string, symbol_ : string)
+  + **supportsInterface**(interfaceId : bytes4) : bool
+  + **balanceOf**(owner : addres) : uint256
+  + **ownerOf**(tokenId : uint256) : address
+  + **name**() : string
+  + **symbol**() : string
+  + **tokenURI**(tokenId : uint256) : string
+  # _baseURI() : string
+  + **approve**(to : address, tokenId : uint256)
+  + **getApproved**(tokenId : uint256) : address
+  + **setApprovalForAll**(operator : address, approved : bool)
+  + **isApprovedForAll**(owner : address, operator : address) : bool
+  + **transferFrom**(from : address, to : address, tokenId : uint256)
+  + **safeTransferFrom**(from : address, to : address, tokenId : uint256)
+  + **safeTransferFrom**(from : address, to : address, tokenId : uint256, _data : bytes)
+  # _safeTransfer(from : address, to : address, tokenId : uint256, _data : bytes)
+  # _exists(tokenId : uint256) : bool
+  # _isApprovedOrOwner(spender : address, tokenId : uint256) : bool
+  # _safeMint(address to, uint256 tokenId)
+  
+}
+
+
+
+@enduml

@@ -1,0 +1,36 @@
+@startuml
+
+' https://plantuml.com/state-diagram
+
+scale max 2048 width
+
+state Main {
+  state "Draft" as draft
+  state "Review" as review
+  state "Last Call" as call
+  state "Final" as final
+}
+state "Stagnant" as stagnant
+state "Withdrawn" as withdrawn
+state "Living" as living
+
+[*] --> living
+[*] --> draft
+draft --> review
+review --> call
+call --> review
+call --> final
+final --> [*]
+
+draft --> stagnant
+review --> stagnant
+stagnant --> draft
+
+stagnant --> withdrawn
+draft --> withdrawn
+review --> withdrawn
+call --> withdrawn
+withdrawn --> [*]
+
+
+@enduml
