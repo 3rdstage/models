@@ -1,0 +1,106 @@
+@startuml
+
+' Useful references
+/'
+https://plantuml.com/class-diagram
+https://plantuml.com/sequence-diagram
+https://plantuml.com/creole
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/color-names.html
+https://www.w3schools.com/colors/colors_names.asp
+https://plantuml.com/color
+'/
+
+
+hide circle
+show empty fields
+show empty methods
+' hide stereotypes
+
+!$baseUrl = "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts"
+
+abstract class Context {
+  # _msgSender() : address
+  # _msgData() : bytes
+}
+
+abstract class Pausable extends Context{
+  .. events ..
+  Paused(account : address)
+  Unpaused(account : address)
+  .. states ..
+  - _paused : bool
+  .. functions ..
+  + paused() : bool
+  # _pause()
+  # _unpause()
+}
+
+interface IERC165 {
+  + supportsInterface(interfaceId : bytes4) : bool
+  
+}
+
+abstract class ERC165 implements IERC165 {
+  + **supportsInterface**(interfaceId : bytes4) : bool
+}
+
+
+
+interface "[[$baseUrl/access/IAccessControl.sol IAccessControl]]" as IAccessControl{
+  .. events ..
+  RoleAdminChanged(role : bytes32, previousAdminRole : bytes32,  newAdminRole : bytes32)
+  RoleGranted(role : bytes32, account : address, sender : address)
+  RoleRevoked(role : bytes32, account : address, sender : address)
+  .. functions ..
+  + hasRole(role : bytes32, account : address) : bool
+  + getRoleAdmin(role : bytes32) : bytes32
+  + grantRole(role : bytes32, account : address)
+  + revokeRole(role : bytes32, account : address)
+  + renounceRole(role : bytes32, account : address)
+}
+
+interface "[[$baseUrl/access/IAccessControlEnumerable.sol IAccessControlEnumerable]]" as IAccessControlEnumerable extends IAccessControl{
+  + getRoleMember(role : bytes32, index : uint256) : address
+  + getRoleMemberCount(role : bytes32) : uint256
+}
+
+abstract class "[[$baseUrl/access/AccessControl.sol AccessControl]]" as AccessControl extends Context, ERC165 implements IAccessControl{
+  .. states ..
+  + DEFAULT_ADMIN_ROLE : bytes32
+  - _roles : mapping(bytes32 => RoleData)
+  .. functions ..
+  + **supportsInterface**(interfaceId : bytes4) : bool
+  + **hasRole**(role : bytes32, account : address) : bool
+  # _checkRole(role : bytes32)
+  # _checkRole(role : bytes32, account : address)
+  + **getRoleAdmin**(role : bytes32) : bytes32
+  + **grantRole**(role : bytes32, account : address)
+  + **revokeRole**(role : bytes32, account : address)
+  + **renounceRole**(role : bytes32, account : address)
+  # _setupRole(role : bytes32, account : address)
+  # _setRoleAdmin(role : bytes32, adminRole : bytes32)
+  # _grantRole(role : bytes32, account : address)
+  # _revokeRole(role : bytes32, account : address)
+}
+
+class RoleData <<struct>> {
+  + members : mapping(address => bool)
+  + adminRole : bytes32
+}
+
+AccessControl --> RoleData
+
+abstract class "[[$baseUrl/access/AccessControlEnumerable.sol AccessControlEnumerable]]" as AccessControlEnumerable extends AccessControl implements IAccessControlEnumerable {
+  .. states ..
+  - _roleMembers : mapping(bytes32 => EnumerableSet.AddressSet)
+  .. functions ..
+  + **supportsInterface**(bytes4 interfaceId) : bool
+  + **getRoleMember**(bytes32 role, uint256 index) : address
+  + **getRoleMemberCount**(bytes32 role) : uint256
+  # **_grantRole**(bytes32 role, address account)
+  # **_revokeRole**(bytes32 role, address account)
+}
+
+@enduml

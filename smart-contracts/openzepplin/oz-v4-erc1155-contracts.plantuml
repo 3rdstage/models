@@ -13,28 +13,17 @@ https://plantuml.com/color
 '/
 
 
+!include oz-v4-common-contracts.plantuml
+
 hide circle
 show empty fields
 show empty methods
 ' hide stereotypes
+hide IAccessControl members
 
 
-interface IERC165 {
-  + supportsInterface(interfaceId : bytes4) : bool
-  
-}
 
-abstract class ERC165 implements IERC165 {
-  + **supportsInterface**(interfaceId : bytes4) : bool
-}
-
-abstract class Context {
-  # _msgSender() : address
-  # _msgData() : bytes
-}
-
-
-interface IERC1155 extends IERC165 {
+interface "[[$baseUrl/token/ERC1155/IERC1155.sol IERC1155]]" as IERC1155 extends IERC165 {
   .. events ..
   TransferSingle(operator : address, from : address, to : address, id : uint25, value : uint256)
   TransferBatch(operator : address, from : address, to : address, ids : uint256[], values : uint256[])
@@ -55,13 +44,14 @@ interface IERC1155MetadataURI extends IERC1155 {
 }
 
 
-class ERC1155 extends Context, ERC165 implements IERC1155, IERC1155MetadataURI {
+class "[[$baseUrl/token/ERC1155/ERC1155.sol ERC1155]]" as ERC1155 extends Context, ERC165 implements IERC1155, IERC1155MetadataURI {
   .. states ..
   - _balances : mapping(uint256 => mapping(address => uint256))
   - _operatorApprovals : mapping(address => mapping(address => bool))
   - _uri : string
   .. function ..
   + constructor(uri_ : string)
+  + **supportsInterface**(interfaceId : bytes4) : bool
   + **uri**(uint256 id) : string
   + **balanceOf**(account : address, id : uint256) : uint256
   + **balanceOfBatch**(accounts : address[], ids : uint256[]) : uint256[]
@@ -84,24 +74,46 @@ class ERC1155 extends Context, ERC165 implements IERC1155, IERC1155MetadataURI {
 }
 
 abstract class ERC1155Burnable extends ERC1155 {
-
-}
-
-abstract class Pausable extends Context{
-
+  + burn(account : address, id : uint256, value : uint256)
+  + burnBatch(account : address, ids : uint256[], values : uint256[])
 }
 
 abstract class ERC1155Pausable extends ERC1155, Pausable {
-
+  # **_beforeTokenTransfer**(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)
 }
 
 abstract class ERC1155Supply extends ERC1155 {
+  .. states ..
+  - _totalSupply : mapping(uint256 => uint256)
+  .. functions ..
+  + totalSupply(id : uint256) : uint256
+  + exists(id : uint256) : bool
+  # **_beforeTokenTransfer**(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)
 
 }
 
-class ERC1155PresetMinterPauser extends Context, AccessControlEnumerable, ERC1155Burnable, ERC1155Pausable {
+abstract class ERC1155URIStorage extends ERC1155 {
+  .. states ..
+  - _baseURI : string
+  - _tokenURIs : mapping(uint256 => string)
+  .. functions ..
+  + **uri**(tokenId : uint256) : string
+  # _setURI(tokenId : uint256, tokenURI : string)
+  # _setBaseURI(baseURI : string)
+}
 
 
+class "ERC1155PresetMinterPauser" as ERC1155PresetMinterPauser extends Context, AccessControlEnumerable, ERC1155Burnable, ERC1155Pausable {
+  .. states ..
+  + MINTER_ROLE : bytes32
+  + PAUSER_ROLE : bytes32
+  .. functions ..
+  + mint(to : address, id : uint256, amount : uint256, data : bytes)
+  + mintBatch(to : address, ids : uint256[], amounts : uint256[], data : bytes)
+  + pause()
+  + unpause()
+  + **supportsInterface**(interfaceId : bytes4) : bool
+  # **_beforeTokenTransfer**(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)
 }
 
 
