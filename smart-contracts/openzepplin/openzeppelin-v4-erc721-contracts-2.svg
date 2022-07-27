@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="817px" preserveAspectRatio="none" style="width:807px;height:817px;" version="1.1" viewBox="0 0 807 817" width="807px" zoomAndPan="magnify"><defs><filter height="300%" id="fcmoljzyzkmtj" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[685ed278ab01dac59ebabcbb0d7fc7cd]
+class IERC165--><rect codeLine="21" fill="#FEFECE" filter="url(#fcmoljzyzkmtj)" height="40.1328" id="IERC165" style="stroke:#A80036;stroke-width:1.5;" width="56" x="200.5" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="50" x="203.5" y="23.6016">IERC165</text><line style="stroke:#A80036;stroke-width:1.5;" x1="201.5" x2="255.5" y1="31.1328" y2="31.1328"/><line style="stroke:#A80036;stroke-width:1.5;" x1="201.5" x2="255.5" y1="39.1328" y2="39.1328"/><!--MD5=[6754354365917abf8f1a56af1b7e344c]
+class Context--><rect codeLine="22" fill="#FEFECE" filter="url(#fcmoljzyzkmtj)" height="40.1328" id="Context" style="stroke:#A80036;stroke-width:1.5;" width="50" x="485.5" y="204"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="44" x="488.5" y="220.6016">Context</text><line style="stroke:#A80036;stroke-width:1.5;" x1="486.5" x2="534.5" y1="228.1328" y2="228.1328"/><line style="stroke:#A80036;stroke-width:1.5;" x1="486.5" x2="534.5" y1="236.1328" y2="236.1328"/><!--MD5=[db67a08bac41aa3c758a25fd924f0433]
+class IERC721Metadata--><rect codeLine="23" fill="#FEFECE" filter="url(#fcmoljzyzkmtj)" height="40.1328" id="IERC721Metadata" style="stroke:#A80036;stroke-width:1.5;" width="110" x="570.5" y="204"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="104" x="573.5" y="220.6016">IERC721Metadata</text><line style="stroke:#A80036;stroke-width:1.5;" x1="571.5" x2="679.5" y1="228.1328" y2="228.1328"/><line style="stroke:#A80036;stroke-width:1.5;" x1="571.5" x2="679.5" y1="236.1328" y2="236.1328"/><!--MD5=[da9201bf88e7e9e30d39ca756998a336]
+class IERC721--><rect codeLine="27" fill="#FEFECE" filter="url(#fcmoljzyzkmtj)" height="234.459" id="IERC721" style="stroke:#A80036;stroke-width:1.5;" width="443" x="7" y="107"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="50" x="203.5" y="123.6016">IERC721</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="449" y1="131.1328" y2="131.1328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="280" x="13" y="162.7227">Transfer(address from, address to, uint256 tokenId)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="330" x="13" y="175.6777">Approval(address owner, address approved, uint256 tokenId)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="330" x="13" y="188.6328">Approval(address owner, address approved, uint256 tokenId)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="16" y="201.5879"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="8" x2="211" y1="145.6104" y2="145.6104"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="35" x="211" y="149.2676">events</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="246" x2="449" y1="145.6104" y2="145.6104"/><ellipse cx="18" cy="227.8633" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="186" x="27" y="231.498">uint256 balanceOf(address owner)</text><ellipse cx="18" cy="240.8184" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="185" x="27" y="244.4531">address ownerOf(uint256 tokenId)</text><ellipse cx="18" cy="253.7734" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="417" x="27" y="257.4082">void safeTransferFrom(address from, address to, uint256 tokenId, bytes data)</text><ellipse cx="18" cy="266.7285" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="356" x="27" y="270.3633">void safeTransferFrom(address from, address to, uint256 tokenId)</text><ellipse cx="18" cy="279.6836" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="331" x="27" y="283.3184">void transferFrom(address from, address to, uint256 tokenId)</text><ellipse cx="18" cy="292.6387" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="226" x="27" y="296.2734">void approve(address to, uint256 tokenId)</text><ellipse cx="18" cy="305.5938" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="314" x="27" y="309.2285">void setApprovalForAll(address operator, bool _approved)</text><ellipse cx="18" cy="318.5488" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="209" x="27" y="322.1836">address getApproved(uint256 tokenId)</text><ellipse cx="18" cy="331.5039" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="326" x="27" y="335.1387">address isApprovedForAll(address owner, address operator)</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="8" x2="203" y1="214.3857" y2="214.3857"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="51" x="203" y="218.043">functions</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="254" x2="449" y1="214.3857" y2="214.3857"/><!--MD5=[9d0211bfc5f0fd156b775d64814c04ec]
+class ERC721--><rect codeLine="50" fill="#FEFECE" filter="url(#fcmoljzyzkmtj)" height="402.875" id="ERC721" style="stroke:#A80036;stroke-width:1.5;" width="451" x="342" y="401"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="47" x="544" y="417.6016">ERC721</text><line style="stroke:#A80036;stroke-width:1.5;" x1="343" x2="792" y1="425.1328" y2="425.1328"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="350" y="450.0879"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="76" x="362" y="456.7227">_name : string</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="350" y="463.043"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="86" x="362" y="469.6777">_symbol : string</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="350" y="475.998"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="218" x="362" y="482.6328">_owners : mapping(uint256 =&gt; address)</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="350" y="488.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="226" x="362" y="495.5879">_balances : mapping(address =&gt; uint256)</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="350" y="501.9082"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="264" x="362" y="508.543">_tokenApprovals : mapping(uint256 =&gt; address)</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="350" y="514.8633"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="385" x="362" y="521.498">_operatorApprovals : mapping(address =&gt; mapping(address =&gt; bool))</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="343" x2="551.5" y1="439.6104" y2="439.6104"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="32" x="551.5" y="443.2676">states</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="583.5" x2="792" y1="439.6104" y2="439.6104"/><ellipse cx="353" cy="547.7734" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="240" x="362" y="551.4082">constructor(name_ : string, symbol_ : string)</text><ellipse cx="353" cy="560.7285" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="98" x="362" y="564.3633">supportsInterface</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="143" x="460" y="564.3633">(interfaceId : bytes4) : bool</text><ellipse cx="353" cy="573.6836" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="56" x="362" y="577.3184">balanceOf</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="138" x="418" y="577.3184">(owner : addres) : uint256</text><ellipse cx="353" cy="586.6387" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="48" x="362" y="590.2734">ownerOf</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="151" x="410" y="590.2734">(tokenId : uint256) : address</text><ellipse cx="353" cy="599.5938" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="30" x="362" y="603.2285">name</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="49" x="392" y="603.2285">() : string</text><ellipse cx="353" cy="612.5488" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="41" x="362" y="616.1836">symbol</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="49" x="403" y="616.1836">() : string</text><ellipse cx="353" cy="625.5039" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="51" x="362" y="629.1387">tokenURI</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="140" x="413" y="629.1387">(tokenId : uint256) : string</text><polygon fill="#FFFF44" points="353,633.459,357,637.459,353,641.459,349,637.459" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="98" x="362" y="642.0938">_baseURI() : string</text><ellipse cx="353" cy="651.4141" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="45" x="362" y="655.0488">approve</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="168" x="407" y="655.0488">(to : address, tokenId : uint256)</text><ellipse cx="353" cy="664.3691" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="71" x="362" y="668.0039">getApproved</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="151" x="433" y="668.0039">(tokenId : uint256) : address</text><ellipse cx="353" cy="677.3242" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="101" x="362" y="680.959">setApprovalForAll</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="197" x="463" y="680.959">(operator : address, approved : bool)</text><ellipse cx="353" cy="690.2793" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="98" x="362" y="693.9141">isApprovedForAll</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="231" x="460" y="693.9141">(owner : address, operator : address) : bool</text><ellipse cx="353" cy="703.2344" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="73" x="362" y="706.8691">transferFrom</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="252" x="435" y="706.8691">(from : address, to : address, tokenId : uint256)</text><ellipse cx="353" cy="716.1895" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="100" x="362" y="719.8242">safeTransferFrom</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="252" x="462" y="719.8242">(from : address, to : address, tokenId : uint256)</text><ellipse cx="353" cy="729.1445" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="100" x="362" y="732.7793">safeTransferFrom</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="325" x="462" y="732.7793">(from : address, to : address, tokenId : uint256, _data : bytes)</text><polygon fill="#FFFF44" points="353,737.0996,357,741.0996,353,745.0996,349,741.0996" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="399" x="362" y="745.7344">_safeTransfer(from : address, to : address, tokenId : uint256, _data : bytes)</text><polygon fill="#FFFF44" points="353,750.0547,357,754.0547,353,758.0547,349,754.0547" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="170" x="362" y="758.6895">_exists(tokenId : uint256) : bool</text><polygon fill="#FFFF44" points="353,763.0098,357,767.0098,353,771.0098,349,767.0098" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="351" x="362" y="771.6445">_isApprovedOrOwner(spender : address, tokenId : uint256) : bool</text><polygon fill="#FFFF44" points="353,775.9648,357,779.9648,353,783.9648,349,779.9648" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="207" x="362" y="784.5996">_safeMint(address to, uint256 tokenId)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="365" y="797.5547"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="343" x2="542" y1="534.2959" y2="534.2959"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="51" x="542" y="537.9531">functions</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="593" x2="792" y1="534.2959" y2="534.2959"/><!--MD5=[fd9a54cb0d58c1b3b426d9fd51215ee4]
+class ERC165--><rect fill="#FEFECE" filter="url(#fcmoljzyzkmtj)" height="40.1328" id="ERC165" style="stroke:#A80036;stroke-width:1.5;" width="53" x="716" y="204"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="47" x="719" y="220.6016">ERC165</text><line style="stroke:#A80036;stroke-width:1.5;" x1="717" x2="768" y1="228.1328" y2="228.1328"/><line style="stroke:#A80036;stroke-width:1.5;" x1="717" x2="768" y1="236.1328" y2="236.1328"/><!--MD5=[f505925c2fe66b7f79cef4ab3551e23b]
+reverse link IERC165 to IERC721--><path codeLine="26" d="M228.5,67.24 C228.5,79.07 228.5,92.7 228.5,106.88 " fill="none" id="IERC165-backto-IERC721" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="221.5,67.05,228.5,47.05,235.5,67.05,221.5,67.05" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[baa41a6041b65922683e10f474df7dd1]
+reverse link Context to ERC721--><path codeLine="45" d="M516.47,264.42 C521.54,297.94 529.24,348.8 537.13,400.92 " fill="none" id="Context-backto-ERC721" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="509.48,265.01,513.41,244.19,523.32,262.92,509.48,265.01" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[4e103a8f1cc547eeeda1a82bbef90997]
+reverse link ERC165 to ERC721--><path codeLine="46" d="M729.11,263.28 C720.85,286.09 709.73,315.47 698.5,341 C689.89,360.58 680.56,380.79 670.97,400.89 " fill="none" id="ERC165-backto-ERC721" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="722.63,260.62,735.93,244.13,735.81,265.32,722.63,260.62" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[c9e9d0758cd20e35cd4b99e500d09c6d]
+reverse link IERC721 to ERC721--><path codeLine="47" d="M346.49,356.04 C359.63,370.63 373.22,385.73 386.91,400.94 " fill="none" id="IERC721-backto-ERC721" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="341.16,360.58,332.98,341.03,351.56,351.21,341.16,360.58" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[7065d7bc4501c187f72480944f4ee6e4]
+reverse link IERC721Metadata to ERC721--><path codeLine="48" d="M619.43,264.42 C614.26,297.94 606.43,348.8 598.4,400.92 " fill="none" id="IERC721Metadata-backto-ERC721" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="612.58,262.89,622.54,244.19,626.42,265.02,612.58,262.89" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[2bdd9a9cd0d2439ab4620f9fd4fdb55e]
+@startuml
+
+' Useful references
+/'
+https://plantuml.com/class-diagram
+https://plantuml.com/sequence-diagram
+https://plantuml.com/creole
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/color-names.html
+https://www.w3schools.com/colors/colors_names.asp
+https://plantuml.com/color
+'/
+
+
+hide circle
+show empty fields
+show empty methods
+' hide stereotypes
+
+
+interface IERC165
+interface Context
+interface IERC721Metadata
+
+
+IERC165 <|- - IERC721
+interface IERC721 {
+  .. events ..
+  Transfer(address from, address to, uint256 tokenId)
+  Approval(address owner, address approved, uint256 tokenId)
+  Approval(address owner, address approved, uint256 tokenId)
+
+  .. functions ..
+  + uint256 balanceOf(address owner)
+  + address ownerOf(uint256 tokenId)
+  + void safeTransferFrom(address from, address to, uint256 tokenId, bytes data)
+  + void safeTransferFrom(address from, address to, uint256 tokenId)
+  + void transferFrom(address from, address to, uint256 tokenId)
+  + void approve(address to, uint256 tokenId)
+  + void setApprovalForAll(address operator, bool _approved)
+  + address getApproved(uint256 tokenId)
+  + address isApprovedForAll(address owner, address operator)
+}
+
+Context <|- - ERC721
+ERC165 <|- - ERC721
+IERC721 <|- - ERC721
+IERC721Metadata <|- - ERC721
+
+class ERC721 {
+  .. states ..
+  - _name : string
+  - _symbol : string
+  - {field} _owners : mapping(uint256 => address)
+  - {field} _balances : mapping(address => uint256)
+  - {field} _tokenApprovals : mapping(uint256 => address)
+  - {field} _operatorApprovals : mapping(address => mapping(address => bool))
+  .. functions ..
+  + constructor(name_ : string, symbol_ : string)
+  + **supportsInterface**(interfaceId : bytes4) : bool
+  + **balanceOf**(owner : addres) : uint256
+  + **ownerOf**(tokenId : uint256) : address
+  + **name**() : string
+  + **symbol**() : string
+  + **tokenURI**(tokenId : uint256) : string
+  # _baseURI() : string
+  + **approve**(to : address, tokenId : uint256)
+  + **getApproved**(tokenId : uint256) : address
+  + **setApprovalForAll**(operator : address, approved : bool)
+  + **isApprovedForAll**(owner : address, operator : address) : bool
+  + **transferFrom**(from : address, to : address, tokenId : uint256)
+  + **safeTransferFrom**(from : address, to : address, tokenId : uint256)
+  + **safeTransferFrom**(from : address, to : address, tokenId : uint256, _data : bytes)
+  # _safeTransfer(from : address, to : address, tokenId : uint256, _data : bytes)
+  # _exists(tokenId : uint256) : bool
+  # _isApprovedOrOwner(spender : address, tokenId : uint256) : bool
+  # _safeMint(address to, uint256 tokenId)
+  
+}
+
+
+
+@enduml
+
+@startuml
+
+
+
+hide circle
+show empty fields
+show empty methods
+
+
+interface IERC165
+interface Context
+interface IERC721Metadata
+
+
+IERC165 <|- - IERC721
+interface IERC721 {
+  .. events ..
+  Transfer(address from, address to, uint256 tokenId)
+  Approval(address owner, address approved, uint256 tokenId)
+  Approval(address owner, address approved, uint256 tokenId)
+
+  .. functions ..
+  + uint256 balanceOf(address owner)
+  + address ownerOf(uint256 tokenId)
+  + void safeTransferFrom(address from, address to, uint256 tokenId, bytes data)
+  + void safeTransferFrom(address from, address to, uint256 tokenId)
+  + void transferFrom(address from, address to, uint256 tokenId)
+  + void approve(address to, uint256 tokenId)
+  + void setApprovalForAll(address operator, bool _approved)
+  + address getApproved(uint256 tokenId)
+  + address isApprovedForAll(address owner, address operator)
+}
+
+Context <|- - ERC721
+ERC165 <|- - ERC721
+IERC721 <|- - ERC721
+IERC721Metadata <|- - ERC721
+
+class ERC721 {
+  .. states ..
+  - _name : string
+  - _symbol : string
+  - {field} _owners : mapping(uint256 => address)
+  - {field} _balances : mapping(address => uint256)
+  - {field} _tokenApprovals : mapping(uint256 => address)
+  - {field} _operatorApprovals : mapping(address => mapping(address => bool))
+  .. functions ..
+  + constructor(name_ : string, symbol_ : string)
+  + **supportsInterface**(interfaceId : bytes4) : bool
+  + **balanceOf**(owner : addres) : uint256
+  + **ownerOf**(tokenId : uint256) : address
+  + **name**() : string
+  + **symbol**() : string
+  + **tokenURI**(tokenId : uint256) : string
+  # _baseURI() : string
+  + **approve**(to : address, tokenId : uint256)
+  + **getApproved**(tokenId : uint256) : address
+  + **setApprovalForAll**(operator : address, approved : bool)
+  + **isApprovedForAll**(owner : address, operator : address) : bool
+  + **transferFrom**(from : address, to : address, tokenId : uint256)
+  + **safeTransferFrom**(from : address, to : address, tokenId : uint256)
+  + **safeTransferFrom**(from : address, to : address, tokenId : uint256, _data : bytes)
+  # _safeTransfer(from : address, to : address, tokenId : uint256, _data : bytes)
+  # _exists(tokenId : uint256) : bool
+  # _isApprovedOrOwner(spender : address, tokenId : uint256) : bool
+  # _safeMint(address to, uint256 tokenId)
+  
+}
+
+
+
+@enduml
+
+PlantUML version 1.2021.5(Sun Apr 25 20:20:28 KST 2021)
+(EPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ko
+Country: KR
+--></g></svg>

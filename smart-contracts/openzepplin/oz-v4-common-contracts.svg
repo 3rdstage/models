@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="814px" preserveAspectRatio="none" style="width:1023px;height:814px;" version="1.1" viewBox="0 0 1023 814" width="1023px" zoomAndPan="magnify"><defs><filter height="300%" id="f5lwmyicjd4ny" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[6754354365917abf8f1a56af1b7e344c]
+class Context--><rect codeLine="22" fill="#FEFECE" filter="url(#f5lwmyicjd4ny)" height="66.043" id="Context" style="stroke:#A80036;stroke-width:1.5;" width="152" x="17.5" y="172"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="44" x="71.5" y="188.6016">Context</text><line style="stroke:#A80036;stroke-width:1.5;" x1="18.5" x2="168.5" y1="196.1328" y2="196.1328"/><line style="stroke:#A80036;stroke-width:1.5;" x1="18.5" x2="168.5" y1="204.1328" y2="204.1328"/><polygon fill="#FFFF44" points="28.5,210.1328,32.5,214.1328,28.5,218.1328,24.5,214.1328" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="126" x="37.5" y="218.7676">_msgSender() : address</text><polygon fill="#FFFF44" points="28.5,223.0879,32.5,227.0879,28.5,231.0879,24.5,227.0879" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="37.5" y="231.7227">_msgData() : bytes</text><!--MD5=[ae2d50f48df0b91d6e6d8bb9570007bd]
+class Pausable--><rect codeLine="27" fill="#FEFECE" filter="url(#f5lwmyicjd4ny)" height="160.7285" id="Pausable" style="stroke:#A80036;stroke-width:1.5;" width="169" x="9" y="393"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="52" x="67.5" y="409.6016">Pausable</text><line style="stroke:#A80036;stroke-width:1.5;" x1="10" x2="177" y1="417.1328" y2="417.1328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="141" x="15" y="448.7227">Paused(account : address)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="157" x="15" y="461.6777">Unpaused(account : address)</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="10" x2="76" y1="431.6104" y2="431.6104"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="35" x="76" y="435.2676">events</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="111" x2="177" y1="431.6104" y2="431.6104"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="17" y="484.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="78" x="29" y="491.5879">_paused : bool</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="10" x2="77.5" y1="474.4756" y2="474.4756"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="32" x="77.5" y="478.1328">states</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="109.5" x2="177" y1="474.4756" y2="474.4756"/><ellipse cx="20" cy="517.8633" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="80" x="29" y="521.498">paused() : bool</text><polygon fill="#FFFF44" points="20,525.8184,24,529.8184,20,533.8184,16,529.8184" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="46" x="29" y="534.4531">_pause()</text><polygon fill="#FFFF44" points="20,538.7734,24,542.7734,20,546.7734,16,542.7734" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="60" x="29" y="547.4082">_unpause()</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="10" x2="68" y1="504.3857" y2="504.3857"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="51" x="68" y="508.043">functions</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="119" x2="177" y1="504.3857" y2="504.3857"/><!--MD5=[685ed278ab01dac59ebabcbb0d7fc7cd]
+class IERC165--><rect codeLine="39" fill="#FEFECE" filter="url(#f5lwmyicjd4ny)" height="53.0879" id="IERC165" style="stroke:#A80036;stroke-width:1.5;" width="265" x="206" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="50" x="313.5" y="23.6016">IERC165</text><line style="stroke:#A80036;stroke-width:1.5;" x1="207" x2="470" y1="31.1328" y2="31.1328"/><line style="stroke:#A80036;stroke-width:1.5;" x1="207" x2="470" y1="39.1328" y2="39.1328"/><ellipse cx="217" cy="50.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="239" x="226" y="53.7676">supportsInterface(interfaceId : bytes4) : bool</text><!--MD5=[fd9a54cb0d58c1b3b426d9fd51215ee4]
+class ERC165--><rect codeLine="44" fill="#FEFECE" filter="url(#f5lwmyicjd4ny)" height="53.0879" id="ERC165" style="stroke:#A80036;stroke-width:1.5;" width="267" x="205" y="178.5"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="47" x="315" y="195.1016">ERC165</text><line style="stroke:#A80036;stroke-width:1.5;" x1="206" x2="471" y1="202.6328" y2="202.6328"/><line style="stroke:#A80036;stroke-width:1.5;" x1="206" x2="471" y1="210.6328" y2="210.6328"/><ellipse cx="216" cy="221.6328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="98" x="225" y="225.2676">supportsInterface</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="143" x="323" y="225.2676">(interfaceId : bytes4) : bool</text><!--MD5=[a4226fa6c5e3e9182e49601fc4efe811]
+class IAccessControl--><rect codeLine="50" fill="#FEFECE" filter="url(#f5lwmyicjd4ny)" height="169.6836" id="IAccessControl" style="stroke:#A80036;stroke-width:1.5;" width="502" x="507.5" y="120"/><a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControl.sol" target="_top" title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControl.sol" xlink:actuate="onRequest" xlink:href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControl.sol" xlink:show="new" xlink:title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControl.sol" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" text-decoration="underline" textLength="83" x="717" y="136.6016">IAccessControl</text></a><line style="stroke:#A80036;stroke-width:1.5;" x1="508.5" x2="1008.5" y1="144.1328" y2="144.1328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="490" x="513.5" y="175.7227">RoleAdminChanged(role : bytes32, previousAdminRole : bytes32,  newAdminRole : bytes32)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="343" x="513.5" y="188.6777">RoleGranted(role : bytes32, account : address, sender : address)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="345" x="513.5" y="201.6328">RoleRevoked(role : bytes32, account : address, sender : address)</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="508.5" x2="741" y1="158.6104" y2="158.6104"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="35" x="741" y="162.2676">events</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="776" x2="1008.5" y1="158.6104" y2="158.6104"/><ellipse cx="518.5" cy="227.9082" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="257" x="527.5" y="231.543">hasRole(role : bytes32, account : address) : bool</text><ellipse cx="518.5" cy="240.8633" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="208" x="527.5" y="244.498">getRoleAdmin(role : bytes32) : bytes32</text><ellipse cx="518.5" cy="253.8184" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="234" x="527.5" y="257.4531">grantRole(role : bytes32, account : address)</text><ellipse cx="518.5" cy="266.7734" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="241" x="527.5" y="270.4082">revokeRole(role : bytes32, account : address)</text><ellipse cx="518.5" cy="279.7285" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="256" x="527.5" y="283.3633">renounceRole(role : bytes32, account : address)</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="508.5" x2="733" y1="214.4307" y2="214.4307"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="51" x="733" y="218.0879">functions</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="784" x2="1008.5" y1="214.4307" y2="214.4307"/><!--MD5=[4060868d4aa8803d18a509a09444b3c7]
+class IAccessControlEnumerable--><rect codeLine="63" fill="#FEFECE" filter="url(#f5lwmyicjd4ny)" height="66.043" id="IAccessControlEnumerable" style="stroke:#A80036;stroke-width:1.5;" width="329" x="582" y="440.5"/><a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControlEnumerable.sol" target="_top" title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControlEnumerable.sol" xlink:actuate="onRequest" xlink:href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControlEnumerable.sol" xlink:show="new" xlink:title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControlEnumerable.sol" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" text-decoration="underline" textLength="152" x="670.5" y="457.1016">IAccessControlEnumerable</text></a><line style="stroke:#A80036;stroke-width:1.5;" x1="583" x2="910" y1="464.6328" y2="464.6328"/><line style="stroke:#A80036;stroke-width:1.5;" x1="583" x2="910" y1="472.6328" y2="472.6328"/><ellipse cx="593" cy="483.6328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="303" x="602" y="487.2676">getRoleMember(role : bytes32, index : uint256) : address</text><ellipse cx="593" cy="496.5879" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="248" x="602" y="500.2227">getRoleMemberCount(role : bytes32) : uint256</text><!--MD5=[ee60552bc4698d86a6bc3ed4a603a080]
+class AccessControl--><rect codeLine="68" fill="#FEFECE" filter="url(#f5lwmyicjd4ny)" height="247.4141" id="AccessControl" style="stroke:#A80036;stroke-width:1.5;" width="301" x="235" y="350"/><a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControl.sol" target="_top" title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControl.sol" xlink:actuate="onRequest" xlink:href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControl.sol" xlink:show="new" xlink:title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControl.sol" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" text-decoration="underline" textLength="80" x="345.5" y="366.6016">AccessControl</text></a><line style="stroke:#A80036;stroke-width:1.5;" x1="236" x2="535" y1="374.1328" y2="374.1328"/><ellipse cx="246" cy="402.0879" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="177" x="255" y="405.7227">DEFAULT_ADMIN_ROLE : bytes32</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="243" y="412.043"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="211" x="255" y="418.6777">_roles : mapping(bytes32 =&gt; RoleData)</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="236" x2="369.5" y1="388.6104" y2="388.6104"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="32" x="369.5" y="392.2676">states</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="401.5" x2="535" y1="388.6104" y2="388.6104"/><ellipse cx="246" cy="444.9531" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="98" x="255" y="448.5879">supportsInterface</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="143" x="353" y="448.5879">(interfaceId : bytes4) : bool</text><ellipse cx="246" cy="457.9082" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="44" x="255" y="461.543">hasRole</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="215" x="299" y="461.543">(role : bytes32, account : address) : bool</text><polygon fill="#FFFF44" points="246,465.8633,250,469.8633,246,473.8633,242,469.8633" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="141" x="255" y="474.498">_checkRole(role : bytes32)</text><polygon fill="#FFFF44" points="246,478.8184,250,482.8184,246,486.8184,242,482.8184" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="242" x="255" y="487.4531">_checkRole(role : bytes32, account : address)</text><ellipse cx="246" cy="496.7734" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="79" x="255" y="500.4082">getRoleAdmin</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="133" x="334" y="500.4082">(role : bytes32) : bytes32</text><ellipse cx="246" cy="509.7285" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="54" x="255" y="513.3633">grantRole</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="182" x="309" y="513.3633">(role : bytes32, account : address)</text><ellipse cx="246" cy="522.6836" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="63" x="255" y="526.3184">revokeRole</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="182" x="318" y="526.3184">(role : bytes32, account : address)</text><ellipse cx="246" cy="535.6387" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="76" x="255" y="539.2734">renounceRole</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="182" x="331" y="539.2734">(role : bytes32, account : address)</text><polygon fill="#FFFF44" points="246,543.5938,250,547.5938,246,551.5938,242,547.5938" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="241" x="255" y="552.2285">_setupRole(role : bytes32, account : address)</text><polygon fill="#FFFF44" points="246,556.5488,250,560.5488,246,564.5488,242,560.5488" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="275" x="255" y="565.1836">_setRoleAdmin(role : bytes32, adminRole : bytes32)</text><polygon fill="#FFFF44" points="246,569.5039,250,573.5039,246,577.5039,242,573.5039" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="240" x="255" y="578.1387">_grantRole(role : bytes32, account : address)</text><polygon fill="#FFFF44" points="246,582.459,250,586.459,246,590.459,242,586.459" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="247" x="255" y="591.0938">_revokeRole(role : bytes32, account : address)</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="236" x2="360" y1="431.4756" y2="431.4756"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="51" x="360" y="435.1328">functions</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="411" x2="535" y1="431.4756" y2="431.4756"/><!--MD5=[273f497273e6070087d6cc9cf50360f9]
+class RoleData--><rect codeLine="87" fill="#FEFECE" filter="url(#f5lwmyicjd4ny)" height="80.1758" id="RoleData" style="stroke:#A80036;stroke-width:1.5;" width="231" x="270" y="689"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="44" x="363.5" y="705.6016">«struct»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="52" x="359.5" y="719.7344">RoleData</text><line style="stroke:#A80036;stroke-width:1.5;" x1="271" x2="500" y1="727.2656" y2="727.2656"/><ellipse cx="281" cy="738.2656" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;fill:none;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="108" x="290" y="741.9004">adminRole : bytes32</text><line style="stroke:#A80036;stroke-width:1.5;" x1="271" x2="500" y1="748.2207" y2="748.2207"/><ellipse cx="281" cy="759.2207" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="205" x="290" y="762.8555">members : mapping(address =&gt; bool)</text><!--MD5=[8041fe3ca65a376ca640c03f21f38bb3]
+class AccessControlEnumerable--><rect codeLine="94" fill="#FEFECE" filter="url(#f5lwmyicjd4ny)" height="143.7734" id="AccessControlEnumerable" style="stroke:#A80036;stroke-width:1.5;" width="376" x="541.5" y="657"/><a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControlEnumerable.sol" target="_top" title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControlEnumerable.sol" xlink:actuate="onRequest" xlink:href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControlEnumerable.sol" xlink:show="new" xlink:title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControlEnumerable.sol" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" text-decoration="underline" textLength="149" x="655" y="673.6016">AccessControlEnumerable</text></a><line style="stroke:#A80036;stroke-width:1.5;" x1="542.5" x2="916.5" y1="681.1328" y2="681.1328"/><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="549.5" y="706.0879"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="350" x="561.5" y="712.7227">_roleMembers : mapping(bytes32 =&gt; EnumerableSet.AddressSet)</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="542.5" x2="713.5" y1="695.6104" y2="695.6104"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="32" x="713.5" y="699.2676">states</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="745.5" x2="916.5" y1="695.6104" y2="695.6104"/><ellipse cx="552.5" cy="738.998" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="98" x="561.5" y="742.6328">supportsInterface</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="137" x="659.5" y="742.6328">(bytes4 interfaceId) : bool</text><ellipse cx="552.5" cy="751.9531" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="87" x="561.5" y="755.5879">getRoleMember</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="208" x="648.5" y="755.5879">(bytes32 role, uint256 index) : address</text><ellipse cx="552.5" cy="764.9082" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="120" x="561.5" y="768.543">getRoleMemberCount</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="126" x="681.5" y="768.543">(bytes32 role) : uint256</text><polygon fill="#FFFF44" points="552.5,772.8633,556.5,776.8633,552.5,780.8633,548.5,776.8633" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="60" x="561.5" y="781.498">_grantRole</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="170" x="621.5" y="781.498">(bytes32 role, address account)</text><polygon fill="#FFFF44" points="552.5,785.8184,556.5,789.8184,552.5,793.8184,548.5,789.8184" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="69" x="561.5" y="794.4531">_revokeRole</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="170" x="630.5" y="794.4531">(bytes32 role, address account)</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="542.5" x2="704" y1="725.5205" y2="725.5205"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="51" x="704" y="729.1777">functions</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="755" x2="916.5" y1="725.5205" y2="725.5205"/><!--MD5=[371d09c8090d6ff81df83230cb7eb2f6]
+reverse link Context to Pausable--><path d="M93.5,258.33 C93.5,296.63 93.5,349.3 93.5,392.82 " fill="none" id="Context-backto-Pausable" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="86.5,258.15,93.5,238.15,100.5,258.15,86.5,258.15" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[04643fa47ad1b51d74933a8628f4e8c6]
+reverse link IERC165 to ERC165--><path d="M338.5,80.27 C338.5,111.72 338.5,152.35 338.5,178.29 " fill="none" id="IERC165-backto-ERC165" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="331.5,80.24,338.5,60.24,345.5,80.24,331.5,80.24" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[4995275acdfbe442dab5a266800b5eae]
+reverse link IAccessControl to IAccessControlEnumerable--><path d="M753.79,310.49 C751.71,356.82 749.4,408.03 747.95,440.22 " fill="none" id="IAccessControl-backto-IAccessControlEnumerable" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="746.81,309.99,754.7,290.32,760.8,310.62,746.81,309.99" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[fbc14da67e9dc56ea6647e298a15504e]
+reverse link Context to AccessControl--><path d="M143.8,251.91 C173.6,279.1 212.89,314.97 251.12,349.86 " fill="none" id="Context-backto-AccessControl" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="138.78,256.8,128.72,238.15,148.21,246.46,138.78,256.8" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[6b8e2793a3005be9ce4cc17ac8a237b2]
+reverse link ERC165 to AccessControl--><path d="M346.49,251.3 C351.29,278.53 357.66,314.61 363.85,349.72 " fill="none" id="ERC165-backto-AccessControl" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="339.59,252.46,343.01,231.55,353.37,250.03,339.59,252.46" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b09689e72156aeadab3c5f6f0f552af3]
+reverse link IAccessControl to AccessControl--><path d="M624.15,301.99 C595.58,322.4 565.25,344.07 536.12,364.88 " fill="none" id="IAccessControl-backto-AccessControl" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="620.39,296.07,640.74,290.14,628.53,307.46,620.39,296.07" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[c673dd9d6ebea987286c00e0764bf3fb]
+link AccessControl to RoleData--><path codeLine="92" d="M385.5,597.17 C385.5,628.2 385.5,659.55 385.5,683.79 " fill="none" id="AccessControl-to-RoleData" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="385.5,688.85,389.5,679.85,385.5,683.85,381.5,679.85,385.5,688.85" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f54bf219ac50d1ca26d3dd1ca66798d1]
+reverse link AccessControl to AccessControlEnumerable--><path d="M552.38,597.48 C580.05,617.86 607.89,638.38 633.04,656.92 " fill="none" id="AccessControl-backto-AccessControlEnumerable" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="548.08,603,536.13,585.5,556.39,591.73,548.08,603" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[1d08abaed670b512da630e6d5386c198]
+reverse link IAccessControlEnumerable to AccessControlEnumerable--><path d="M743,526.74 C740.47,564.35 737.04,615.52 734.27,656.85 " fill="none" id="IAccessControlEnumerable-backto-AccessControlEnumerable" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="736.02,526.09,744.35,506.61,749.99,527.03,736.02,526.09" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[5931f7a8a5ed69096617b229a4fc233f]
+@startuml
+
+' Useful references
+/'
+https://plantuml.com/class-diagram
+https://plantuml.com/sequence-diagram
+https://plantuml.com/creole
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/color-names.html
+https://www.w3schools.com/colors/colors_names.asp
+https://plantuml.com/color
+'/
+
+
+hide circle
+show empty fields
+show empty methods
+' hide stereotypes
+
+!$baseUrl = "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts"
+
+abstract class Context {
+  # _msgSender() : address
+  # _msgData() : bytes
+}
+
+abstract class Pausable extends Context{
+  .. events ..
+  Paused(account : address)
+  Unpaused(account : address)
+  .. states ..
+  - _paused : bool
+  .. functions ..
+  + paused() : bool
+  # _pause()
+  # _unpause()
+}
+
+interface IERC165 {
+  + supportsInterface(interfaceId : bytes4) : bool
+  
+}
+
+abstract class ERC165 implements IERC165 {
+  + **supportsInterface**(interfaceId : bytes4) : bool
+}
+
+
+
+interface "[[$baseUrl/access/IAccessControl.sol IAccessControl]]" as IAccessControl{
+  .. events ..
+  RoleAdminChanged(role : bytes32, previousAdminRole : bytes32,  newAdminRole : bytes32)
+  RoleGranted(role : bytes32, account : address, sender : address)
+  RoleRevoked(role : bytes32, account : address, sender : address)
+  .. functions ..
+  + hasRole(role : bytes32, account : address) : bool
+  + getRoleAdmin(role : bytes32) : bytes32
+  + grantRole(role : bytes32, account : address)
+  + revokeRole(role : bytes32, account : address)
+  + renounceRole(role : bytes32, account : address)
+}
+
+interface "[[$baseUrl/access/IAccessControlEnumerable.sol IAccessControlEnumerable]]" as IAccessControlEnumerable extends IAccessControl{
+  + getRoleMember(role : bytes32, index : uint256) : address
+  + getRoleMemberCount(role : bytes32) : uint256
+}
+
+abstract class "[[$baseUrl/access/AccessControl.sol AccessControl]]" as AccessControl extends Context, ERC165 implements IAccessControl{
+  .. states ..
+  + DEFAULT_ADMIN_ROLE : bytes32
+  - _roles : mapping(bytes32 => RoleData)
+  .. functions ..
+  + **supportsInterface**(interfaceId : bytes4) : bool
+  + **hasRole**(role : bytes32, account : address) : bool
+  # _checkRole(role : bytes32)
+  # _checkRole(role : bytes32, account : address)
+  + **getRoleAdmin**(role : bytes32) : bytes32
+  + **grantRole**(role : bytes32, account : address)
+  + **revokeRole**(role : bytes32, account : address)
+  + **renounceRole**(role : bytes32, account : address)
+  # _setupRole(role : bytes32, account : address)
+  # _setRoleAdmin(role : bytes32, adminRole : bytes32)
+  # _grantRole(role : bytes32, account : address)
+  # _revokeRole(role : bytes32, account : address)
+}
+
+class RoleData <<struct>> {
+  + members : mapping(address => bool)
+  + adminRole : bytes32
+}
+
+AccessControl - -> RoleData
+
+abstract class "[[$baseUrl/access/AccessControlEnumerable.sol AccessControlEnumerable]]" as AccessControlEnumerable extends AccessControl implements IAccessControlEnumerable {
+  .. states ..
+  - _roleMembers : mapping(bytes32 => EnumerableSet.AddressSet)
+  .. functions ..
+  + **supportsInterface**(bytes4 interfaceId) : bool
+  + **getRoleMember**(bytes32 role, uint256 index) : address
+  + **getRoleMemberCount**(bytes32 role) : uint256
+  # **_grantRole**(bytes32 role, address account)
+  # **_revokeRole**(bytes32 role, address account)
+}
+
+@enduml
+
+@startuml
+
+
+
+hide circle
+show empty fields
+show empty methods
+
+
+abstract class Context {
+  # _msgSender() : address
+  # _msgData() : bytes
+}
+
+abstract class Pausable extends Context{
+  .. events ..
+  Paused(account : address)
+  Unpaused(account : address)
+  .. states ..
+  - _paused : bool
+  .. functions ..
+  + paused() : bool
+  # _pause()
+  # _unpause()
+}
+
+interface IERC165 {
+  + supportsInterface(interfaceId : bytes4) : bool
+  
+}
+
+abstract class ERC165 implements IERC165 {
+  + **supportsInterface**(interfaceId : bytes4) : bool
+}
+
+
+
+interface "[[https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControl.sol IAccessControl]]" as IAccessControl{
+  .. events ..
+  RoleAdminChanged(role : bytes32, previousAdminRole : bytes32,  newAdminRole : bytes32)
+  RoleGranted(role : bytes32, account : address, sender : address)
+  RoleRevoked(role : bytes32, account : address, sender : address)
+  .. functions ..
+  + hasRole(role : bytes32, account : address) : bool
+  + getRoleAdmin(role : bytes32) : bytes32
+  + grantRole(role : bytes32, account : address)
+  + revokeRole(role : bytes32, account : address)
+  + renounceRole(role : bytes32, account : address)
+}
+
+interface "[[https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControlEnumerable.sol IAccessControlEnumerable]]" as IAccessControlEnumerable extends IAccessControl{
+  + getRoleMember(role : bytes32, index : uint256) : address
+  + getRoleMemberCount(role : bytes32) : uint256
+}
+
+abstract class "[[https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControl.sol AccessControl]]" as AccessControl extends Context, ERC165 implements IAccessControl{
+  .. states ..
+  + DEFAULT_ADMIN_ROLE : bytes32
+  - _roles : mapping(bytes32 => RoleData)
+  .. functions ..
+  + **supportsInterface**(interfaceId : bytes4) : bool
+  + **hasRole**(role : bytes32, account : address) : bool
+  # _checkRole(role : bytes32)
+  # _checkRole(role : bytes32, account : address)
+  + **getRoleAdmin**(role : bytes32) : bytes32
+  + **grantRole**(role : bytes32, account : address)
+  + **revokeRole**(role : bytes32, account : address)
+  + **renounceRole**(role : bytes32, account : address)
+  # _setupRole(role : bytes32, account : address)
+  # _setRoleAdmin(role : bytes32, adminRole : bytes32)
+  # _grantRole(role : bytes32, account : address)
+  # _revokeRole(role : bytes32, account : address)
+}
+
+class RoleData <<struct>> {
+  + members : mapping(address => bool)
+  + adminRole : bytes32
+}
+
+AccessControl - -> RoleData
+
+abstract class "[[https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControlEnumerable.sol AccessControlEnumerable]]" as AccessControlEnumerable extends AccessControl implements IAccessControlEnumerable {
+  .. states ..
+  - _roleMembers : mapping(bytes32 => EnumerableSet.AddressSet)
+  .. functions ..
+  + **supportsInterface**(bytes4 interfaceId) : bool
+  + **getRoleMember**(bytes32 role, uint256 index) : address
+  + **getRoleMemberCount**(bytes32 role) : uint256
+  # **_grantRole**(bytes32 role, address account)
+  # **_revokeRole**(bytes32 role, address account)
+}
+
+@enduml
+
+PlantUML version 1.2021.5(Sun Apr 25 20:20:28 KST 2021)
+(EPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ko
+Country: KR
+--></g></svg>
