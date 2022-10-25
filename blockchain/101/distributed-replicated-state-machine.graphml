@@ -374,7 +374,7 @@ g(b, c, 30);
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="20.0" width="20.0" x="163.82675538852305" y="621.7943785122703"/>
+          <y:Geometry height="20.0" width="20.0" x="63.0" y="564.998838516518"/>
           <y:Fill color="#CCFFCC" transparent="false"/>
           <y:BorderStyle color="#339900" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.509765625" horizontalTextPosition="center" iconTextGap="4" modelName="sides" modelPosition="e" textColor="#000000" verticalTextPosition="bottom" visible="true" width="41.2080078125" x="25.0" xml:space="preserve" y="-1.7548828125">Leger</y:NodeLabel>
@@ -387,7 +387,7 @@ g(b, c, 30);
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="20.0" width="20.0" x="163.82675538852305" y="587.9332852436071"/>
+          <y:Geometry height="20.0" width="20.0" x="63.0" y="531.1377452478548"/>
           <y:Fill color="#FFCC99" transparent="false"/>
           <y:BorderStyle color="#993300" raised="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" borderDistance="5.0" fontFamily="Comic Sans MS" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="23.509765625" horizontalTextPosition="center" iconTextGap="4" modelName="sides" modelPosition="e" textColor="#000000" verticalTextPosition="bottom" visible="true" width="99.6416015625" x="25.0" xml:space="preserve" y="-1.7548828125">State Machine</y:NodeLabel>
