@@ -19,10 +19,10 @@
       <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="BevelNodeWithShadow">
-          <y:Geometry height="1050.0" width="1500.0" x="-263.4808886700762" y="-135.31187063080029"/>
+          <y:Geometry height="950.0" width="1500.0" x="-263.4808886700762" y="-124.33839130819592"/>
           <y:Fill color="#EEEEEE" color2="#EEEEEE" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Comic Sans MS" fontSize="38" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="56.955078125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="587.58203125" x="856.5616840480768" xml:space="preserve" y="32.98068219751599">EVM (Ethereum Virtual Machine)<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.5" labelRatioY="-0.5" nodeRatioX="0.4627624768653845" nodeRatioY="-0.4685898264785562" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Comic Sans MS" fontSize="38" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="56.955078125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="587.58203125" x="856.5616840480768" xml:space="preserve" y="29.8396648453716">EVM (Ethereum Virtual Machine)<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.5" labelRatioY="-0.5" nodeRatioX="0.4627624768653845" nodeRatioY="-0.4685898264785562" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:StyleProperties>
             <y:Property class="java.lang.Double" name="ModernNodeRadius" value="20.0"/>
             <y:Property class="java.lang.Boolean" name="ModernNodeShadow" value="false"/>
@@ -35,10 +35,10 @@
       <data key="d5"/>
       <data key="d6">
         <y:GenericNode configuration="BevelNodeWithShadow">
-          <y:Geometry height="900.0" width="1200.0" x="-225.0324053891875" y="-8.063258601470295"/>
+          <y:Geometry height="800.0" width="1200.0" x="-225.0324053891875" y="-10.311870630800286"/>
           <y:Fill color="#FFFFFF" color2="#FFFFFF" transparent="false"/>
           <y:BorderStyle color="#333333" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Comic Sans MS" fontSize="38" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="56.955078125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="127.314453125" x="1028.0005191134615" xml:space="preserve" y="28.269156169299436">Ledger<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.5" labelRatioY="-0.5" nodeRatioX="0.4627624768653845" nodeRatioY="-0.4685898264785562" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Comic Sans MS" fontSize="38" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="56.955078125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="127.314453125" x="1028.0005191134615" xml:space="preserve" y="25.128138817155047">Ledger<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.5" labelRatioY="-0.5" nodeRatioX="0.4627624768653845" nodeRatioY="-0.4685898264785562" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
           <y:StyleProperties>
             <y:Property class="java.lang.Double" name="ModernNodeRadius" value="20.0"/>
             <y:Property class="java.lang.Boolean" name="ModernNodeShadow" value="false"/>
@@ -54,7 +54,7 @@
           <y:Geometry height="90.0" width="135.0" x="-94.5" y="83.0"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#999999" raised="false" type="line" width="3.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Comic Sans MS" fontSize="22" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="65.31640625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="l" textColor="#000000" verticalTextPosition="bottom" visible="true" width="123.517578125" x="4.0" xml:space="preserve" y="12.341796875">balance : 31
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Arial Narrow" fontSize="26" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="63.66796875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="l" textColor="#000000" verticalTextPosition="bottom" visible="true" width="120.1875" x="4.0" xml:space="preserve" y="13.166015625">balance : 31
 nonce : 7</y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
@@ -78,10 +78,10 @@ nonce : 7</y:NodeLabel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="160.0" width="180.0" x="262.4514892001704" y="242.29116093235314"/>
+          <y:Geometry height="180.0" width="200.0" x="274.9675946108125" y="232.29116093235314"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#999999" raised="false" type="line" width="3.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" borderDistance="10.0" fontFamily="Comic Sans MS" fontSize="18" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="154.50390625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="l" textColor="#000000" verticalTextPosition="bottom" visible="true" width="165.40234375" x="10.0" xml:space="preserve" y="2.748046875">code : 0x10010...
+          <y:NodeLabel alignment="left" autoSizePolicy="content" borderDistance="10.0" fontFamily="Arial Narrow" fontSize="26" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="183.00390625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="l" textColor="#000000" verticalTextPosition="bottom" visible="true" width="187.751953125" x="10.0" xml:space="preserve" y="-1.501953125">code : 0x10010...
 states :
   total : 1000000
   balances[acct] : ...
@@ -112,7 +112,7 @@ states :
           <y:Geometry height="90.0" width="135.0" x="-87.7377181764142" y="292.29116093235314"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#999999" raised="false" type="line" width="3.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Comic Sans MS" fontSize="22" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="65.31640625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="l" textColor="#000000" verticalTextPosition="bottom" visible="true" width="113.61328125" x="4.0" xml:space="preserve" y="12.341796875">balance : 4
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Arial Narrow" fontSize="26" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="63.66796875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="l" textColor="#000000" verticalTextPosition="bottom" visible="true" width="108.330078125" x="4.0" xml:space="preserve" y="13.166015625">balance : 4
 nonce : 13</y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
@@ -139,7 +139,7 @@ nonce : 13</y:NodeLabel>
           <y:Geometry height="90.0" width="135.0" x="-87.7377181764142" y="501.5823218647063"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#999999" raised="false" type="line" width="3.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Comic Sans MS" fontSize="22" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="65.31640625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="l" textColor="#000000" verticalTextPosition="bottom" visible="true" width="127.041015625" x="4.0" xml:space="preserve" y="12.341796875">balance : 75
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Arial Narrow" fontSize="26" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="63.66796875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="l" textColor="#000000" verticalTextPosition="bottom" visible="true" width="120.1875" x="4.0" xml:space="preserve" y="13.166015625">balance : 75
 nonce : 102</y:NodeLabel>
           <y:Shape type="rectangle"/>
         </y:ShapeNode>
@@ -163,10 +163,10 @@ nonce : 102</y:NodeLabel>
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="140.0" width="160.0" x="454.80225783359924" y="461.5823218647062"/>
+          <y:Geometry height="160.0" width="180.0" x="527.3486493232981" y="478.59750453406224"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#999999" raised="false" type="line" width="3.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" borderDistance="10.0" fontFamily="Comic Sans MS" fontSize="18" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="129.419921875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="l" textColor="#000000" verticalTextPosition="bottom" visible="true" width="146.3916015625" x="10.0" xml:space="preserve" y="5.290039062500057">code : 0x00100...
+          <y:NodeLabel alignment="left" autoSizePolicy="content" borderDistance="10.0" fontFamily="Arial Narrow" fontSize="26" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="153.169921875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="l" textColor="#000000" verticalTextPosition="bottom" visible="true" width="167.6171875" x="10.0" xml:space="preserve" y="3.415039062500057">code : 0x00100...
 states :
   limit : ...
   nightLimit : ...  
@@ -179,7 +179,7 @@ states :
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="30.0" width="30.0" x="404.80225783359924" y="516.5823218647063"/>
+          <y:Geometry height="30.0" width="30.0" x="487.3486493232981" y="543.5975045340623"/>
           <y:Fill color="#0000FF" transparent="false"/>
           <y:BorderStyle color="#99CCFF" raised="false" type="line" width="3.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Comic Sans MS" fontSize="32" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="93.1875" horizontalTextPosition="center" iconTextGap="4" modelName="sides" modelPosition="w" textColor="#000000" verticalTextPosition="bottom" visible="true" width="131.59375" x="-135.59375" xml:space="preserve" y="-31.59375">address:
@@ -193,10 +193,10 @@ states :
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="120.0" width="160.0" x="521.5191113299238" y="68.0"/>
+          <y:Geometry height="120.0" width="180.0" x="570.3081622050154" y="68.0"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#999999" raised="false" type="line" width="3.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" borderDistance="10.0" fontFamily="Comic Sans MS" fontSize="18" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="79.251953125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="l" textColor="#000000" verticalTextPosition="bottom" visible="true" width="137.7431640625" x="10.0" xml:space="preserve" y="20.3740234375">code : 0x10111...
+          <y:NodeLabel alignment="left" autoSizePolicy="content" borderDistance="10.0" fontFamily="Arial Narrow" fontSize="26" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="93.501953125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="l" textColor="#000000" verticalTextPosition="bottom" visible="true" width="167.6171875" x="10.0" xml:space="preserve" y="13.2490234375">code : 0x10111...
 states :
   blocked[] : ...</y:NodeLabel>
           <y:Shape type="rectangle"/>
@@ -207,7 +207,7 @@ states :
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="30.0" width="30.0" x="471.5191113299238" y="113.0"/>
+          <y:Geometry height="30.0" width="30.0" x="519.8022578335992" y="113.0"/>
           <y:Fill color="#0000FF" transparent="false"/>
           <y:BorderStyle color="#99CCFF" raised="false" type="line" width="3.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Comic Sans MS" fontSize="32" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="93.1875" horizontalTextPosition="center" iconTextGap="4" modelName="sides" modelPosition="w" textColor="#000000" verticalTextPosition="bottom" visible="true" width="131.59375" x="-135.59375" xml:space="preserve" y="-31.59375">address:
@@ -256,10 +256,10 @@ states :
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="30.0" width="30.0" x="-535.2776941864277" y="833.6391530006756"/>
+          <y:Geometry height="30.0" width="30.0" x="-493.48283519584436" y="744.61263232328"/>
           <y:Fill color="#008000" transparent="false"/>
           <y:BorderStyle color="#CCFFCC" raised="false" type="line" width="3.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" borderDistance="10.0" fontFamily="Comic Sans MS" fontSize="20" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.87109375" horizontalTextPosition="center" iconTextGap="4" modelName="sides" modelPosition="e" textColor="#000000" verticalTextPosition="bottom" visible="true" width="141.119140625" x="40.0" xml:space="preserve" y="-0.935546875">owned address</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" borderDistance="10.0" fontFamily="Comic Sans MS" fontSize="24" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="37.4453125" horizontalTextPosition="center" iconTextGap="4" modelName="sides" modelPosition="e" textColor="#000000" verticalTextPosition="bottom" visible="true" width="165.9296875" x="40.0" xml:space="preserve" y="-3.72265625">owned account</y:NodeLabel>
           <y:Shape type="ellipse"/>
         </y:ShapeNode>
       </data>
@@ -268,10 +268,10 @@ states :
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="30.0" width="30.0" x="-535.2776941864277" y="884.6881293691997"/>
+          <y:Geometry height="30.0" width="30.0" x="-493.48283519584436" y="795.6616086918041"/>
           <y:Fill color="#0000FF" transparent="false"/>
           <y:BorderStyle color="#99CCFF" raised="false" type="line" width="3.0"/>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" borderDistance="10.0" fontFamily="Comic Sans MS" fontSize="20" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.87109375" horizontalTextPosition="center" iconTextGap="4" modelName="sides" modelPosition="e" textColor="#000000" verticalTextPosition="bottom" visible="true" width="163.970703125" x="40.0" xml:space="preserve" y="-0.935546875">contract address</y:NodeLabel>
+          <y:NodeLabel alignment="left" autoSizePolicy="content" borderDistance="10.0" fontFamily="Comic Sans MS" fontSize="24" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="37.4453125" horizontalTextPosition="center" iconTextGap="4" modelName="sides" modelPosition="e" textColor="#000000" verticalTextPosition="bottom" visible="true" width="193.3515625" x="40.0" xml:space="preserve" y="-3.72265625">contract account</y:NodeLabel>
           <y:Shape type="ellipse"/>
         </y:ShapeNode>
       </data>
@@ -280,10 +280,10 @@ states :
       <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="30.0" width="30.0" x="-535.2776941864277" y="782.5901766321516"/>
+          <y:Geometry height="30.0" width="30.0" x="-493.48283519584436" y="693.563655954756"/>
           <y:Fill color="#800000" transparent="false"/>
           <y:BorderStyle color="#FFCC99" raised="false" type="line" width="3.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="10.0" fontFamily="Comic Sans MS" fontSize="20" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.87109375" horizontalTextPosition="center" iconTextGap="4" modelName="sides" modelPosition="e" textColor="#000000" verticalTextPosition="bottom" visible="true" width="108.39453125" x="40.0" xml:space="preserve" y="-0.935546875">private key</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" borderDistance="10.0" fontFamily="Comic Sans MS" fontSize="24" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="37.4453125" horizontalTextPosition="center" iconTextGap="4" modelName="sides" modelPosition="e" textColor="#000000" verticalTextPosition="bottom" visible="true" width="129.2734375" x="40.0" xml:space="preserve" y="-3.72265625">private key</y:NodeLabel>
           <y:Shape type="diamond"/>
         </y:ShapeNode>
       </data>
@@ -404,6 +404,17 @@ states :
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="dashed" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e11" source="n1" target="n0">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="none"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
