@@ -1,0 +1,31 @@
+@startuml
+
+entity chain {
+  * id : INT
+  ---
+  * name : VARCHAR(200)
+  * rpc_endpoint : VARCHAR(300)
+  explorer_url : VARCHAR(300)
+  descr : TEXT
+  * is_valid : ENUM('Y', 'N')
+}
+
+entity eth_acct {
+  * addr : CHAR(42)
+  ---
+  pub_key : VARCHAR(130)
+  veiled_prv_key : VARCHAR(1000)
+  proxy_addr : CHAR(42)
+  * is_valid : ENUM('Y', 'N')
+  created_at : TIMESTAMP
+  invaild_at : TIMESTAMP
+}
+
+
+
+
+
+
+
+
+@enduml
