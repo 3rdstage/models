@@ -67,10 +67,10 @@ package token{
     + transferFrom(recipient, amt)
     + increaseAllowance(spender, delta)
     + decreaseAllowance(spender, delta)
-    - _transfer(sender, recipient, amt)
-    - _mint(acct, amt)
-    - _burn(acct, amt)
-    - _beforeTransfer(from, to, amt)
+    # _transfer(sender, recipient, amt)
+    # _mint(acct, amt)
+    # _burn(acct, amt)
+    # _beforeTransfer(from, to, amt)
   }
 
   abstract class ERC20Bunrable <<abstract>> extends ERC20{

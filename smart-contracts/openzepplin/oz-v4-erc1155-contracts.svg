@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1557px" preserveAspectRatio="none" style="width:3522px;height:1557px;background:#FFFFFF;" version="1.1" viewBox="0 0 3522 1557" width="3522px" zoomAndPan="magnify"><defs/><g><!--MD5=[6754354365917abf8f1a56af1b7e344c]
+class Context--><g id="elem_Context"><rect codeLine="22" fill="#F1F1F1" height="75.4648" id="Context" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="186" x="1095" y="443"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="55" x="1160.5" y="461.5352">Context</text><line style="stroke:#181818;stroke-width:0.5;" x1="1096" x2="1280" y1="469.4883" y2="469.4883"/><line style="stroke:#181818;stroke-width:0.5;" x1="1096" x2="1280" y1="477.4883" y2="477.4883"/><polygon fill="#FFFF44" points="1106,486.2324,1110,490.2324,1106,494.2324,1102,490.2324" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="160" x="1115" y="495.0234">_msgSender() : address</text><polygon fill="#FFFF44" points="1106,502.7207,1110,506.7207,1106,510.7207,1102,506.7207" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="1115" y="511.5117">_msgData() : bytes</text></g><!--MD5=[ae2d50f48df0b91d6e6d8bb9570007bd]
+class Pausable--><g id="elem_Pausable"><rect codeLine="27" fill="#F1F1F1" height="194.8828" id="Pausable" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="211" x="1082.5" y="716"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="61" x="1157.5" y="734.5352">Pausable</text><line style="stroke:#181818;stroke-width:0.5;" x1="1083.5" x2="1292.5" y1="742.4883" y2="742.4883"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="179" x="1088.5" y="780.5117">Paused(account : address)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="199" x="1088.5" y="797">Unpaused(account : address)</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1083.5" x2="1166" y1="758.7324" y2="758.7324"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="1166" y="763.5234">events</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1210" x2="1292.5" y1="758.7324" y2="758.7324"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1090.5" y="827.1855"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="1102.5" y="833.9766">_paused : bool</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1083.5" x2="1168" y1="812.1973" y2="812.1973"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="1168" y="816.9883">states</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1208" x2="1292.5" y1="812.1973" y2="812.1973"/><ellipse cx="1093.5" cy="867.1621" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103" x="1102.5" y="870.9531">paused() : bool</text><polygon fill="#FFFF44" points="1093.5,878.6504,1097.5,882.6504,1093.5,886.6504,1089.5,882.6504" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="1102.5" y="887.4414">_pause()</text><polygon fill="#FFFF44" points="1093.5,895.1387,1097.5,899.1387,1093.5,903.1387,1089.5,899.1387" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="1102.5" y="903.9297">_unpause()</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1083.5" x2="1156" y1="849.1738" y2="849.1738"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="1156" y="853.9648">functions</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1220" x2="1292.5" y1="849.1738" y2="849.1738"/></g><!--MD5=[685ed278ab01dac59ebabcbb0d7fc7cd]
+class IERC165--><g id="elem_IERC165"><rect codeLine="39" fill="#F1F1F1" height="58.9766" id="IERC165" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="330" x="1114" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="58" x="1250" y="25.5352">IERC165</text><line style="stroke:#181818;stroke-width:0.5;" x1="1115" x2="1443" y1="33.4883" y2="33.4883"/><line style="stroke:#181818;stroke-width:0.5;" x1="1115" x2="1443" y1="41.4883" y2="41.4883"/><ellipse cx="1125" cy="55.2324" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="304" x="1134" y="59.0234">supportsInterface(interfaceId : bytes4) : bool</text></g><!--MD5=[fd9a54cb0d58c1b3b426d9fd51215ee4]
+class ERC165--><g id="elem_ERC165"><rect codeLine="44" fill="#F1F1F1" height="58.9766" id="ERC165" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="336" x="724" y="451"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="54" x="865" y="469.5352">ERC165</text><line style="stroke:#181818;stroke-width:0.5;" x1="725" x2="1059" y1="477.4883" y2="477.4883"/><line style="stroke:#181818;stroke-width:0.5;" x1="725" x2="1059" y1="485.4883" y2="485.4883"/><ellipse cx="735" cy="499.2324" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="127" x="744" y="503.0234">supportsInterface</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183" x="871" y="503.0234">(interfaceId : bytes4) : bool</text></g><!--MD5=[a4226fa6c5e3e9182e49601fc4efe811]
+class IAccessControl--><g id="elem_IAccessControl"><rect codeLine="50" fill="#F1F1F1" height="26.4883" id="IAccessControl" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="108" x="441" y="467.5"/><a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControl.sol" target="_top" title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControl.sol" xlink:actuate="onRequest" xlink:href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControl.sol" xlink:show="new" xlink:title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControl.sol" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" text-decoration="underline" textLength="102" x="444" y="486.0352">IAccessControl</text></a></g><!--MD5=[4060868d4aa8803d18a509a09444b3c7]
+class IAccessControlEnumerable--><g id="elem_IAccessControlEnumerable"><rect codeLine="63" fill="#F1F1F1" height="75.4648" id="IAccessControlEnumerable" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="416" x="11" y="776"/><a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControlEnumerable.sol" target="_top" title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControlEnumerable.sol" xlink:actuate="onRequest" xlink:href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControlEnumerable.sol" xlink:show="new" xlink:title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControlEnumerable.sol" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" text-decoration="underline" textLength="184" x="127" y="794.5352">IAccessControlEnumerable</text></a><line style="stroke:#181818;stroke-width:0.5;" x1="12" x2="426" y1="802.4883" y2="802.4883"/><line style="stroke:#181818;stroke-width:0.5;" x1="12" x2="426" y1="810.4883" y2="810.4883"/><ellipse cx="22" cy="824.2324" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="390" x="31" y="828.0234">getRoleMember(role : bytes32, index : uint256) : address</text><ellipse cx="22" cy="840.7207" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="319" x="31" y="844.5117">getRoleMemberCount(role : bytes32) : uint256</text></g><!--MD5=[ee60552bc4698d86a6bc3ed4a603a080]
+class AccessControl--><g id="elem_AccessControl"><rect codeLine="68" fill="#F1F1F1" height="306.3008" id="AccessControl" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="378" x="462" y="660.5"/><a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControl.sol" target="_top" title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControl.sol" xlink:actuate="onRequest" xlink:href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControl.sol" xlink:show="new" xlink:title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControl.sol" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" text-decoration="underline" textLength="98" x="602" y="679.0352">AccessControl</text></a><line style="stroke:#181818;stroke-width:0.5;" x1="463" x2="839" y1="686.9883" y2="686.9883"/><ellipse cx="473" cy="721.2207" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="223" x="482" y="725.0117">DEFAULT_ADMIN_ROLE : bytes32</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="470" y="734.709"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="269" x="482" y="741.5">_roles : mapping(bytes32 =&gt; RoleData)</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="463" x2="631" y1="703.2324" y2="703.2324"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="631" y="708.0234">states</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="671" x2="839" y1="703.2324" y2="703.2324"/><ellipse cx="473" cy="774.6855" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="127" x="482" y="778.4766">supportsInterface</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183" x="609" y="778.4766">(interfaceId : bytes4) : bool</text><ellipse cx="473" cy="791.1738" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="57" x="482" y="794.9648">hasRole</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="274" x="539" y="794.9648">(role : bytes32, account : address) : bool</text><polygon fill="#FFFF44" points="473,802.6621,477,806.6621,473,810.6621,469,806.6621" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="179" x="482" y="811.4531">_checkRole(role : bytes32)</text><polygon fill="#FFFF44" points="473,819.1504,477,823.1504,473,827.1504,469,823.1504" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="307" x="482" y="827.9414">_checkRole(role : bytes32, account : address)</text><ellipse cx="473" cy="840.6387" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="102" x="482" y="844.4297">getRoleAdmin</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="169" x="584" y="844.4297">(role : bytes32) : bytes32</text><ellipse cx="473" cy="857.127" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="70" x="482" y="860.918">grantRole</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="231" x="552" y="860.918">(role : bytes32, account : address)</text><ellipse cx="473" cy="873.6152" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="80" x="482" y="877.4063">revokeRole</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="231" x="562" y="877.4063">(role : bytes32, account : address)</text><ellipse cx="473" cy="890.1035" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="97" x="482" y="893.8945">renounceRole</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="231" x="579" y="893.8945">(role : bytes32, account : address)</text><polygon fill="#FFFF44" points="473,901.5918,477,905.5918,473,909.5918,469,905.5918" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="306" x="482" y="910.3828">_setupRole(role : bytes32, account : address)</text><polygon fill="#FFFF44" points="473,918.0801,477,922.0801,473,926.0801,469,922.0801" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="352" x="482" y="926.8711">_setRoleAdmin(role : bytes32, adminRole : bytes32)</text><polygon fill="#FFFF44" points="473,934.5684,477,938.5684,473,942.5684,469,938.5684" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="305" x="482" y="943.3594">_grantRole(role : bytes32, account : address)</text><polygon fill="#FFFF44" points="473,951.0566,477,955.0566,473,959.0566,469,955.0566" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="314" x="482" y="959.8477">_revokeRole(role : bytes32, account : address)</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="463" x2="619" y1="756.6973" y2="756.6973"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="619" y="761.4883">functions</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="683" x2="839" y1="756.6973" y2="756.6973"/></g><!--MD5=[273f497273e6070087d6cc9cf50360f9]
+class RoleData--><g id="elem_RoleData"><rect codeLine="87" fill="#F1F1F1" height="89.5977" id="RoleData" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="288" x="518" y="1151"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="44" x="640" y="1167.6016">«struct»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="631.5" y="1183.668">RoleData</text><line style="stroke:#181818;stroke-width:0.5;" x1="519" x2="805" y1="1191.6211" y2="1191.6211"/><ellipse cx="529" cy="1205.3652" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="139" x="538" y="1209.1563">adminRole : bytes32</text><line style="stroke:#181818;stroke-width:0.5;" x1="519" x2="805" y1="1216.1094" y2="1216.1094"/><ellipse cx="529" cy="1229.8535" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="262" x="538" y="1233.6445">members : mapping(address =&gt; bool)</text></g><!--MD5=[8041fe3ca65a376ca640c03f21f38bb3]
+class AccessControlEnumerable--><g id="elem_AccessControlEnumerable"><rect codeLine="94" fill="#F1F1F1" height="174.3945" id="AccessControlEnumerable" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="474" x="9" y="1109"/><a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControlEnumerable.sol" target="_top" title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControlEnumerable.sol" xlink:actuate="onRequest" xlink:href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControlEnumerable.sol" xlink:show="new" xlink:title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControlEnumerable.sol" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" text-decoration="underline" textLength="180" x="156" y="1127.5352">AccessControlEnumerable</text></a><line style="stroke:#181818;stroke-width:0.5;" x1="10" x2="482" y1="1135.4883" y2="1135.4883"/><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="17" y="1166.7207"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="448" x="29" y="1173.5117">_roleMembers : mapping(bytes32 =&gt; EnumerableSet.AddressSet)</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="10" x2="226" y1="1151.7324" y2="1151.7324"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="226" y="1156.5234">states</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="266" x2="482" y1="1151.7324" y2="1151.7324"/><ellipse cx="20" cy="1206.6973" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="127" x="29" y="1210.4883">supportsInterface</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="175" x="156" y="1210.4883">(bytes4 interfaceId) : bool</text><ellipse cx="20" cy="1223.1855" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="113" x="29" y="1226.9766">getRoleMember</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="266" x="142" y="1226.9766">(bytes32 role, uint256 index) : address</text><ellipse cx="20" cy="1239.6738" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="156" x="29" y="1243.4648">getRoleMemberCount</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="161" x="185" y="1243.4648">(bytes32 role) : uint256</text><polygon fill="#FFFF44" points="20,1251.1621,24,1255.1621,20,1259.1621,16,1255.1621" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="77" x="29" y="1259.9531">_grantRole</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="215" x="106" y="1259.9531">(bytes32 role, address account)</text><polygon fill="#FFFF44" points="20,1267.6504,24,1271.6504,20,1275.6504,16,1271.6504" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="87" x="29" y="1276.4414">_revokeRole</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="215" x="116" y="1276.4414">(bytes32 role, address account)</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="10" x2="214" y1="1188.709" y2="1188.709"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="214" y="1193.5">functions</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="278" x2="482" y1="1188.709" y2="1188.709"/></g><!--MD5=[05093defab3463dcbccb56c0f3765a85]
+class IERC1155--><g id="elem_IERC1155"><rect codeLine="25" fill="#F1F1F1" height="256.8359" id="IERC1155" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="709" x="1310.5" y="126"/><a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/token/ERC1155/IERC1155.sol" target="_top" title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/token/ERC1155/IERC1155.sol" xlink:actuate="onRequest" xlink:href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/token/ERC1155/IERC1155.sol" xlink:show="new" xlink:title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/token/ERC1155/IERC1155.sol" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" text-decoration="underline" textLength="67" x="1631.5" y="144.5352">IERC1155</text></a><line style="stroke:#181818;stroke-width:0.5;" x1="1311.5" x2="2018.5" y1="152.4883" y2="152.4883"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="619" x="1316.5" y="190.5117">TransferSingle(operator : address, from : address, to : address, id : uint25, value : uint256)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="657" x="1316.5" y="207">TransferBatch(operator : address, from : address, to : address, ids : uint256[], values : uint256[])</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="483" x="1316.5" y="223.4883">ApprovalForAll(account : address, operator : address, approved : bool)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="208" x="1316.5" y="239.9766">URI(value : string, id : uint256)</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1311.5" x2="1643" y1="168.7324" y2="168.7324"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="1643" y="173.5234">events</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1687" x2="2018.5" y1="168.7324" y2="168.7324"/><ellipse cx="1321.5" cy="273.1621" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="352" x="1330.5" y="276.9531">balanceOf(account : address, id : uint256) : uint256</text><ellipse cx="1321.5" cy="289.6504" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="433" x="1330.5" y="293.4414">balanceOfBatch(accounts : address[], ids : uint256[]) : uint256[]</text><ellipse cx="1321.5" cy="306.1387" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="375" x="1330.5" y="309.9297">setApprovalForAll(operator : address, approved : bool)</text><ellipse cx="1321.5" cy="322.627" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="426" x="1330.5" y="326.418">isApprovedForAll(account : address, operator : address) : bool</text><ellipse cx="1321.5" cy="339.1152" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="619" x="1330.5" y="342.9063">safeTransferFrom(from : address, to : address, id : uint256, amount : uint256, data : bytes)</text><ellipse cx="1321.5" cy="355.6035" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="683" x="1330.5" y="359.3945">safeBatchTransferFrom(from : address, to : address, ids : uint256[], amounts : uint256[], data : byte)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="1330.5" y="375.8828"> </text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1311.5" x2="1633" y1="255.1738" y2="255.1738"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="1633" y="259.9648">functions</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1697" x2="2018.5" y1="255.1738" y2="255.1738"/></g><!--MD5=[38a59e52012df1117ff4c9ba333d28ce]
+class IERC1155MetadataURI--><g id="elem_IERC1155MetadataURI"><rect codeLine="41" fill="#F1F1F1" height="58.9766" id="IERC1155MetadataURI" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="178" x="1718" y="451"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="153" x="1730.5" y="469.5352">IERC1155MetadataURI</text><line style="stroke:#181818;stroke-width:0.5;" x1="1719" x2="1895" y1="477.4883" y2="477.4883"/><line style="stroke:#181818;stroke-width:0.5;" x1="1719" x2="1895" y1="485.4883" y2="485.4883"/><ellipse cx="1729" cy="499.2324" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="152" x="1738" y="503.0234">uri(uint256 id) : string</text></g><!--MD5=[4cdfc642bb20751295a2f884cb4c3cc7]
+class ERC1155--><g id="elem_ERC1155"><rect codeLine="46" fill="#F1F1F1" height="471.1836" id="ERC1155" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="956" x="1329" y="578"/><a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/token/ERC1155/ERC1155.sol" target="_top" title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/token/ERC1155/ERC1155.sol" xlink:actuate="onRequest" xlink:href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/token/ERC1155/ERC1155.sol" xlink:show="new" xlink:title="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/token/ERC1155/ERC1155.sol" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="63" x="1775.5" y="596.5352">ERC1155</text></a><line style="stroke:#181818;stroke-width:0.5;" x1="1330" x2="2284" y1="604.4883" y2="604.4883"/><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1337" y="635.7207"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="443" x="1349" y="642.5117">_balances : mapping(uint256 =&gt; mapping(address =&gt; uint256))</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1337" y="652.209"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="489" x="1349" y="659">_operatorApprovals : mapping(address =&gt; mapping(address =&gt; bool))</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1337" y="668.6973"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="1349" y="675.4883">_uri : string</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1330" x2="1787" y1="620.7324" y2="620.7324"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="1787" y="625.5234">states</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1827" x2="2284" y1="620.7324" y2="620.7324"/><ellipse cx="1340" cy="708.6738" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="167" x="1349" y="712.4648">constructor(uri_ : string)</text><ellipse cx="1340" cy="725.1621" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="127" x="1349" y="728.9531">supportsInterface</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183" x="1476" y="728.9531">(interfaceId : bytes4) : bool</text><ellipse cx="1340" cy="741.6504" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="20" x="1349" y="745.4414">uri</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="133" x="1369" y="745.4414">(uint256 id) : string</text><ellipse cx="1340" cy="758.1387" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="72" x="1349" y="761.9297">balanceOf</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="283" x="1421" y="761.9297">(account : address, id : uint256) : uint256</text><ellipse cx="1340" cy="774.627" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="111" x="1349" y="778.418">balanceOfBatch</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="327" x="1460" y="778.418">(accounts : address[], ids : uint256[]) : uint256[]</text><ellipse cx="1340" cy="791.1152" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="129" x="1349" y="794.9063">setApprovalForAll</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="252" x="1478" y="794.9063">(operator : address, approved : bool)</text><ellipse cx="1340" cy="807.6035" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="124" x="1349" y="811.3945">isApprovedForAll</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="307" x="1473" y="811.3945">(account : address, operator : address) : bool</text><ellipse cx="1340" cy="824.0918" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="128" x="1349" y="827.8828">safeTransferFrom</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="497" x="1477" y="827.8828">(from : address, to : address, id : uint256, amount : uint256, data : bytes)</text><ellipse cx="1340" cy="840.5801" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="167" x="1349" y="844.3711">safeBatchTransferFrom</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="524" x="1516" y="844.3711">(from : address, to : address, ids : uint256[], amounts : uint256[], data : byte)</text><polygon fill="#FFFF44" points="1340,852.0684,1344,856.0684,1340,860.0684,1336,856.0684" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="626" x="1349" y="860.8594">_safeTransferFrom(from : address, to : address, id : uint256, amount : uint256, data : bytes)</text><polygon fill="#FFFF44" points="1340,868.5566,1344,872.5566,1340,876.5566,1336,872.5566" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="690" x="1349" y="877.3477">_safeBatchTransferFrom(from : address, to : address, ids : uint256[], amounts : uint256[], data : byte)</text><polygon fill="#FFFF44" points="1340,885.0449,1344,889.0449,1340,893.0449,1336,889.0449" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159" x="1349" y="893.8359">_setURI(newuri : string)</text><polygon fill="#FFFF44" points="1340,901.5332,1344,905.5332,1340,909.5332,1336,905.5332" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="428" x="1349" y="910.3242">_mint(to : address, id : uint256, amount : uint256, data : bytes)</text><polygon fill="#FFFF44" points="1340,918.0215,1344,922.0215,1340,926.0215,1336,922.0215" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="499" x="1349" y="926.8125">_mintBatch(to : address, ids : uint256[], amounts : uint256[], data : bytes)</text><polygon fill="#FFFF44" points="1340,934.5098,1344,938.5098,1340,942.5098,1336,938.5098" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="363" x="1349" y="943.3008">_burn(from : address, id : uint256, amount : uint256)</text><polygon fill="#FFFF44" points="1340,950.998,1344,954.998,1340,958.998,1336,954.998" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="434" x="1349" y="959.7891">_burnBatch(from : address, ids : uint256[], amounts : uint256[])</text><polygon fill="#FFFF44" points="1340,967.4863,1344,971.4863,1340,975.4863,1336,971.4863" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="499" x="1349" y="976.2773">_setApprovalForAll(owner : address, operator : address, approved : bool)</text><polygon fill="#FFFF44" points="1340,983.9746,1344,987.9746,1340,991.9746,1336,987.9746" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="814" x="1349" y="992.7656">_beforeTokenTransfer(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)</text><polygon fill="#FFFF44" points="1340,1000.4629,1344,1004.4629,1340,1008.4629,1336,1004.4629" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="801" x="1349" y="1009.2539">_afterTokenTransfer(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1337" y="1018.9512"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="868" x="1349" y="1025.7422">_doSafeTransferAcceptanceCheck((operator : address, from : address, to : address, id : uint256, amount : uint256, data : bytes)</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1337" y="1035.4395"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="930" x="1349" y="1042.2305">_doSafeBatchTransferAcceptanceCheck(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1330" x2="1778.5" y1="690.6855" y2="690.6855"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="1778.5" y="695.4766">function</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1835.5" x2="2284" y1="690.6855" y2="690.6855"/></g><!--MD5=[09e502a83e76a3eaee10f10ad3234b1c]
+class ERC1155Burnable--><g id="elem_ERC1155Burnable"><rect codeLine="75" fill="#F1F1F1" height="75.4648" id="ERC1155Burnable" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="457" x="1815.5" y="1158.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="124" x="1982" y="1177.0352">ERC1155Burnable</text><line style="stroke:#181818;stroke-width:0.5;" x1="1816.5" x2="2271.5" y1="1184.9883" y2="1184.9883"/><line style="stroke:#181818;stroke-width:0.5;" x1="1816.5" x2="2271.5" y1="1192.9883" y2="1192.9883"/><ellipse cx="1826.5" cy="1206.7324" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="360" x="1835.5" y="1210.5234">burn(account : address, id : uint256, value : uint256)</text><ellipse cx="1826.5" cy="1223.2207" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="431" x="1835.5" y="1227.0117">burnBatch(account : address, ids : uint256[], values : uint256[])</text></g><!--MD5=[9734ffd97f7ecf99330a893de349d636]
+class ERC1155Pausable--><g id="elem_ERC1155Pausable"><rect codeLine="80" fill="#F1F1F1" height="58.9766" id="ERC1155Pausable" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="846" x="934" y="1166.5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="124" x="1295" y="1185.0352">ERC1155Pausable</text><line style="stroke:#181818;stroke-width:0.5;" x1="935" x2="1779" y1="1192.9883" y2="1192.9883"/><line style="stroke:#181818;stroke-width:0.5;" x1="935" x2="1779" y1="1200.9883" y2="1200.9883"/><polygon fill="#FFFF44" points="945,1209.7324,949,1213.7324,945,1217.7324,941,1213.7324" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="159" x="954" y="1218.5234">_beforeTokenTransfer</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="661" x="1113" y="1218.5234">(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)</text></g><!--MD5=[0c2e17e891061b80dc7fcdf046b0e70b]
+class ERC1155Supply--><g id="elem_ERC1155Supply"><rect codeLine="84" fill="#F1F1F1" height="157.9063" id="ERC1155Supply" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="846" x="2308" y="1117"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="109" x="2676.5" y="1135.5352">ERC1155Supply</text><line style="stroke:#181818;stroke-width:0.5;" x1="2309" x2="3153" y1="1143.4883" y2="1143.4883"/><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="2316" y="1174.7207"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="305" x="2328" y="1181.5117">_totalSupply : mapping(uint256 =&gt; uint256)</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="2309" x2="2711" y1="1159.7324" y2="1159.7324"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="2711" y="1164.5234">states</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="2751" x2="3153" y1="1159.7324" y2="1159.7324"/><ellipse cx="2319" cy="1214.6973" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="232" x="2328" y="1218.4883">totalSupply(id : uint256) : uint256</text><ellipse cx="2319" cy="1231.1855" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="172" x="2328" y="1234.9766">exists(id : uint256) : bool</text><polygon fill="#FFFF44" points="2319,1242.6738,2323,1246.6738,2319,1250.6738,2315,1246.6738" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="159" x="2328" y="1251.4648">_beforeTokenTransfer</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="661" x="2487" y="1251.4648">(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="2328" y="1267.9531"> </text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="2309" x2="2699" y1="1196.709" y2="1196.709"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="2699" y="1201.5">functions</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="2763" x2="3153" y1="1196.709" y2="1196.709"/></g><!--MD5=[1e2fdd93770085c8165b1d2850aec22f]
+class ERC1155URIStorage--><g id="elem_ERC1155URIStorage"><rect codeLine="94" fill="#F1F1F1" height="157.9063" id="ERC1155URIStorage" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="326" x="3189" y="1117"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="139" x="3282.5" y="1135.5352">ERC1155URIStorage</text><line style="stroke:#181818;stroke-width:0.5;" x1="3190" x2="3514" y1="1143.4883" y2="1143.4883"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="3197" y="1174.7207"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="3209" y="1181.5117">_baseURI : string</text><rect fill="#F24D5C" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="3197" y="1191.209"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="283" x="3209" y="1198">_tokenURIs : mapping(uint256 =&gt; string)</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="3190" x2="3332" y1="1159.7324" y2="1159.7324"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="3332" y="1164.5234">states</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="3372" x2="3514" y1="1159.7324" y2="1159.7324"/><ellipse cx="3200" cy="1231.1855" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="20" x="3209" y="1234.9766">uri</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="180" x="3229" y="1234.9766">(tokenId : uint256) : string</text><polygon fill="#FFFF44" points="3200,1242.6738,3204,1246.6738,3200,1250.6738,3196,1246.6738" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="300" x="3209" y="1251.4648">_setURI(tokenId : uint256, tokenURI : string)</text><polygon fill="#FFFF44" points="3200,1259.1621,3204,1263.1621,3200,1267.1621,3196,1263.1621" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="198" x="3209" y="1267.9531">_setBaseURI(baseURI : string)</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="3190" x2="3320" y1="1213.1973" y2="1213.1973"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="3320" y="1217.9883">functions</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="3384" x2="3514" y1="1213.1973" y2="1213.1973"/></g><!--MD5=[d8b765f09c4585f944439df452f5d5ae]
+class ERC1155PresetMinterPauser--><g id="elem_ERC1155PresetMinterPauser"><rect codeLine="105" fill="#F1F1F1" height="207.3711" id="ERC1155PresetMinterPauser" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="846" x="696" y="1343"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="195" x="1021.5" y="1361.5352">ERC1155PresetMinterPauser</text><line style="stroke:#181818;stroke-width:0.5;" x1="697" x2="1541" y1="1369.4883" y2="1369.4883"/><ellipse cx="707" cy="1403.7207" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="160" x="716" y="1407.5117">MINTER_ROLE : bytes32</text><ellipse cx="707" cy="1420.209" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="161" x="716" y="1424">PAUSER_ROLE : bytes32</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="697" x2="1099" y1="1385.7324" y2="1385.7324"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="1099" y="1390.5234">states</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1139" x2="1541" y1="1385.7324" y2="1385.7324"/><ellipse cx="707" cy="1457.1855" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="421" x="716" y="1460.9766">mint(to : address, id : uint256, amount : uint256, data : bytes)</text><ellipse cx="707" cy="1473.6738" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="492" x="716" y="1477.4648">mintBatch(to : address, ids : uint256[], amounts : uint256[], data : bytes)</text><ellipse cx="707" cy="1490.1621" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="716" y="1493.9531">pause()</text><ellipse cx="707" cy="1506.6504" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="716" y="1510.4414">unpause()</text><ellipse cx="707" cy="1523.1387" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="127" x="716" y="1526.9297">supportsInterface</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183" x="843" y="1526.9297">(interfaceId : bytes4) : bool</text><polygon fill="#FFFF44" points="707,1534.627,711,1538.627,707,1542.627,703,1538.627" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="159" x="716" y="1543.418">_beforeTokenTransfer</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="661" x="875" y="1543.418">(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="697" x2="1087" y1="1439.1973" y2="1439.1973"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="1087" y="1443.9883">functions</text><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1151" x2="1541" y1="1439.1973" y2="1439.1973"/></g><!--MD5=[371d09c8090d6ff81df83230cb7eb2f6]
+reverse link Context to Pausable--><g id="link_Context_Pausable"><path d="M1188,538.19 C1188,586.85 1188,658.05 1188,715.71 " fill="none" id="Context-backto-Pausable" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="1181,538.19,1188,518.19,1195,538.19,1181,538.19" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[04643fa47ad1b51d74933a8628f4e8c6]
+reverse link IERC165 to ERC165--><g id="link_IERC165_ERC165"><path d="M1240.59,81.37 C1161.62,171.56 982.95,375.62 917.04,450.9 " fill="none" id="IERC165-backto-ERC165" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="1235.46,76.6,1253.91,66.16,1246,85.82,1235.46,76.6" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4995275acdfbe442dab5a266800b5eae]
+reverse link IAccessControl to IAccessControlEnumerable--><g id="link_IAccessControl_IAccessControlEnumerable"><path d="M472,509.08 C422.36,568.62 305.17,709.16 249.45,775.98 " fill="none" id="IAccessControl-backto-IAccessControlEnumerable" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="466.67,504.55,484.85,493.67,477.42,513.52,466.67,504.55" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[fbc14da67e9dc56ea6647e298a15504e]
+reverse link Context to AccessControl--><g id="link_Context_AccessControl"><path d="M1075.54,518.06 C979.85,544.4 944.63,530.15 867,578 C831.19,600.07 797.6,629.71 768.08,660.47 " fill="none" id="Context-backto-AccessControl" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="1073.66,511.32,1094.82,512.44,1077.58,524.76,1073.66,511.32" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[6b8e2793a3005be9ce4cc17ac8a237b2]
+reverse link ERC165 to AccessControl--><g id="link_ERC165_AccessControl"><path d="M859.43,526.24 C834.07,561.06 797.31,611.55 761.71,660.45 " fill="none" id="ERC165-backto-AccessControl" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="853.81,522.06,871.24,510.01,865.13,530.3,853.81,522.06" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[b09689e72156aeadab3c5f6f0f552af3]
+reverse link IAccessControl to AccessControl--><g id="link_IAccessControl_AccessControl"><path d="M509.4,512.06 C525.51,546.25 552.83,604.21 579.2,660.15 " fill="none" id="IAccessControl-backto-AccessControl" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="502.93,514.75,500.74,493.67,515.6,508.78,502.93,514.75" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[c673dd9d6ebea987286c00e0764bf3fb]
+link AccessControl to RoleData--><g id="link_AccessControl_RoleData"><path codeLine="92" d="M655.39,966.52 C657.24,1030.31 659.26,1100.07 660.57,1145.51 " fill="none" id="AccessControl-to-RoleData" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="660.72,1150.65,664.4613,1141.5394,660.5772,1145.652,656.4646,1141.7679,660.72,1150.65" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[f54bf219ac50d1ca26d3dd1ca66798d1]
+reverse link AccessControl to AccessControlEnumerable--><g id="link_AccessControl_AccessControlEnumerable"><path d="M511.45,981.56 C489.65,1004.98 466.78,1028.14 444,1049 C421.48,1069.62 396.09,1090.12 371.2,1108.94 " fill="none" id="AccessControl-backto-AccessControlEnumerable" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="506.55,976.55,525.24,966.57,516.85,986.03,506.55,976.55" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[1d08abaed670b512da630e6d5386c198]
+reverse link IAccessControlEnumerable to AccessControlEnumerable--><g id="link_IAccessControlEnumerable_AccessControlEnumerable"><path d="M223.04,871.43 C227.5,934.27 234.73,1036.12 239.88,1108.76 " fill="none" id="IAccessControlEnumerable-backto-AccessControlEnumerable" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="216.05,871.78,221.61,851.33,230.01,870.78,216.05,871.78" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[1170714a40a464e6db43b0c249f1b0f2]
+reverse link IERC165 to IERC1155--><g id="link_IERC165_IERC1155"><path d="M1347.72,75.95 C1373.61,90.44 1404.68,107.83 1437.12,125.98 " fill="none" id="IERC165-backto-IERC1155" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="1344.29,82.06,1330.26,66.18,1351.13,69.84,1344.29,82.06" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[747b7d43453285aa9f149f810220d3bf]
+reverse link IERC1155 to IERC1155MetadataURI--><g id="link_IERC1155_IERC1155MetadataURI"><path d="M1756.73,400.2 C1768.78,419.21 1779.96,436.84 1788.7,450.63 " fill="none" id="IERC1155-backto-IERC1155MetadataURI" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="1750.75,403.84,1745.96,383.2,1762.58,396.35,1750.75,403.84" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[84dcd04fa4cb261974ff1b84efa828c2]
+reverse link Context to ERC1155--><g id="link_Context_ERC1155"><path d="M1274.31,527.65 C1301.47,542.17 1333.53,559.32 1368.23,577.88 " fill="none" id="Context-backto-ERC1155" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="1270.65,533.63,1256.31,518.03,1277.25,521.29,1270.65,533.63" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[ed0f1309e7f977ef964fb59e13c86bfb]
+reverse link ERC165 to ERC1155--><g id="link_ERC165_ERC1155"><path d="M1049.96,514.2 C1147.54,535.11 1262.99,561.34 1311,578 C1316.96,580.07 1322.95,582.19 1328.95,584.35 " fill="none" id="ERC165-backto-ERC1155" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="1048.49,521.04,1030.39,510.02,1051.41,507.35,1048.49,521.04" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[8b0fb64397628bd70830230b406d3f58]
+reverse link IERC1155 to ERC1155--><g id="link_IERC1155_ERC1155"><path d="M1679.73,403.09 C1685,440.85 1691.95,481.18 1701,518 C1705.83,537.66 1711.5,557.83 1717.66,577.95 " fill="none" id="IERC1155-backto-ERC1155" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="1672.76,403.77,1677.05,383.02,1686.64,401.92,1672.76,403.77" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[f9d44b3bb2da7c794bacc2bb365a0ff2]
+reverse link IERC1155MetadataURI to ERC1155--><g id="link_IERC1155MetadataURI_ERC1155"><path d="M1807,530.22 C1807,544.16 1807,560.35 1807,577.8 " fill="none" id="IERC1155MetadataURI-backto-ERC1155" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="1800,530.01,1807,510.01,1814,530.01,1800,530.01" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[23a5dec3918c4bd430622652fbba28b3]
+reverse link ERC1155 to ERC1155Burnable--><g id="link_ERC1155_ERC1155Burnable"><path d="M1963.98,1066.52 C1986.33,1102.41 2006.63,1135.01 2021.2,1158.39 " fill="none" id="ERC1155-backto-ERC1155Burnable" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="1957.85,1069.93,1953.22,1049.25,1969.73,1062.52,1957.85,1069.93" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[bb9d2e61c01c0b9aa353192bfd00b505]
+reverse link ERC1155 to ERC1155Pausable--><g id="link_ERC1155_ERC1155Pausable"><path d="M1513.86,1062.37 C1464.34,1104.24 1419.68,1142 1390.8,1166.42 " fill="none" id="ERC1155-backto-ERC1155Pausable" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="1509.58,1056.82,1529.37,1049.25,1518.62,1067.51,1509.58,1056.82" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0bcf5ff51eed97af06e103b2731d8925]
+reverse link Pausable to ERC1155Pausable--><g id="link_Pausable_ERC1155Pausable"><path d="M1238.99,929.3 C1275.61,1011.76 1322.26,1116.78 1344.33,1166.48 " fill="none" id="Pausable-backto-ERC1155Pausable" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="1232.59,932.13,1230.86,911.01,1245.38,926.44,1232.59,932.13" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a3b9620028d1b7ac656e0c8308cf7a30]
+reverse link ERC1155 to ERC1155Supply--><g id="link_ERC1155_ERC1155Supply"><path d="M2303.87,1019.11 C2388.42,1053.93 2471.4,1088.1 2541.41,1116.93 " fill="none" id="ERC1155-backto-ERC1155Supply" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="2301.07,1025.53,2285.24,1011.44,2306.4,1012.58,2301.07,1025.53" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[27f3cf7abf65a7fc1ed18def87aeb629]
+reverse link ERC1155 to ERC1155URIStorage--><g id="link_ERC1155_ERC1155URIStorage"><path d="M2304.98,893.08 C2566.99,941.61 2891.25,1013.12 3172,1109 C3179.21,1111.46 3186.51,1114.14 3193.83,1116.97 " fill="none" id="ERC1155-backto-ERC1155URIStorage" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="2303.43,899.91,2285.03,889.41,2305.97,886.14,2303.43,899.91" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[97c371d7e0cc1af20438c80797172abd]
+reverse link Context to ERC1155PresetMinterPauser--><g id="link_Context_ERC1155PresetMinterPauser"><path d="M1110.39,530.23 C1093.45,543.92 1077.01,560.04 1065,578 C928.72,781.74 949.42,866.17 916,1109 C905.46,1185.61 882.51,1213.29 916,1283 C926.56,1304.97 941.69,1324.91 959.01,1342.68 " fill="none" id="Context-backto-ERC1155PresetMinterPauser" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="1106.17,524.65,1126.32,518.12,1114.64,535.8,1106.17,524.65" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[6ddfa99888005da4d791dbd8b21b9e7e]
+reverse link AccessControlEnumerable to ERC1155PresetMinterPauser--><g id="link_AccessControlEnumerable_ERC1155PresetMinterPauser"><path d="M502.36,1283.63 C579.33,1306.59 646.53,1325.35 712.06,1343 " fill="none" id="AccessControlEnumerable-backto-ERC1155PresetMinterPauser" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="500.26,1290.31,483.11,1277.86,504.28,1276.9,500.26,1290.31" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0636f8c4f561d443f27a1961581069ee]
+reverse link ERC1155Burnable to ERC1155PresetMinterPauser--><g id="link_ERC1155Burnable_ERC1155PresetMinterPauser"><path d="M1927.95,1240.29 C1887.15,1254.78 1840.82,1270.43 1798,1283 C1715.86,1307.12 1627.37,1330.3 1542.27,1351.22 " fill="none" id="ERC1155Burnable-backto-ERC1155PresetMinterPauser" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="1925.69,1233.66,1946.87,1233.51,1930.41,1246.84,1925.69,1233.66" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[6cb88e834c77c70acb7d3cccfcccd726]
+reverse link ERC1155Pausable to ERC1155PresetMinterPauser--><g id="link_ERC1155Pausable_ERC1155PresetMinterPauser"><path d="M1315.65,1240.17 C1288.45,1268.57 1251.64,1307.01 1217.22,1342.94 " fill="none" id="ERC1155Pausable-backto-ERC1155PresetMinterPauser" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="1310.81,1235.11,1329.7,1225.51,1320.92,1244.79,1310.81,1235.11" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[57610706def58852609f804db6e19899]
+@startuml
+
+' Useful references
+/'
+https://plantuml.com/class-diagram
+https://plantuml.com/sequence-diagram
+https://plantuml.com/creole
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/color-names.html
+https://www.w3schools.com/colors/colors_names.asp
+https://plantuml.com/color
+'/
+
+
+!include oz-v4-common-contracts.plantuml
+
+hide circle
+show empty fields
+show empty methods
+' hide stereotypes
+hide IAccessControl members
+
+
+
+interface "[[$baseUrl/token/ERC1155/IERC1155.sol IERC1155]]" as IERC1155 extends IERC165 {
+  .. events ..
+  TransferSingle(operator : address, from : address, to : address, id : uint25, value : uint256)
+  TransferBatch(operator : address, from : address, to : address, ids : uint256[], values : uint256[])
+  ApprovalForAll(account : address, operator : address, approved : bool)
+  URI(value : string, id : uint256)
+  .. functions ..
+  + balanceOf(account : address, id : uint256) : uint256
+  + balanceOfBatch(accounts : address[], ids : uint256[]) : uint256[]
+  + setApprovalForAll(operator : address, approved : bool)
+  + isApprovedForAll(account : address, operator : address) : bool
+  + safeTransferFrom(from : address, to : address, id : uint256, amount : uint256, data : bytes)
+  + safeBatchTransferFrom(from : address, to : address, ids : uint256[], amounts : uint256[], data : byte)
+
+}
+
+interface IERC1155MetadataURI extends IERC1155 {
+  + uri(uint256 id) : string
+}
+
+
+class "[[$baseUrl/token/ERC1155/ERC1155.sol ERC1155]]" as ERC1155 extends Context, ERC165 implements IERC1155, IERC1155MetadataURI {
+  .. states ..
+  - _balances : mapping(uint256 => mapping(address => uint256))
+  - _operatorApprovals : mapping(address => mapping(address => bool))
+  - _uri : string
+  .. function ..
+  + constructor(uri_ : string)
+  + **supportsInterface**(interfaceId : bytes4) : bool
+  + **uri**(uint256 id) : string
+  + **balanceOf**(account : address, id : uint256) : uint256
+  + **balanceOfBatch**(accounts : address[], ids : uint256[]) : uint256[]
+  + **setApprovalForAll**(operator : address, approved : bool)
+  + **isApprovedForAll**(account : address, operator : address) : bool
+  + **safeTransferFrom**(from : address, to : address, id : uint256, amount : uint256, data : bytes)
+  + **safeBatchTransferFrom**(from : address, to : address, ids : uint256[], amounts : uint256[], data : byte)
+  # _safeTransferFrom(from : address, to : address, id : uint256, amount : uint256, data : bytes)
+  # _safeBatchTransferFrom(from : address, to : address, ids : uint256[], amounts : uint256[], data : byte)
+  # _setURI(newuri : string)
+  # _mint(to : address, id : uint256, amount : uint256, data : bytes)
+  # _mintBatch(to : address, ids : uint256[], amounts : uint256[], data : bytes)
+  # _burn(from : address, id : uint256, amount : uint256)
+  # _burnBatch(from : address, ids : uint256[], amounts : uint256[])
+  # _setApprovalForAll(owner : address, operator : address, approved : bool)
+  # _beforeTokenTransfer(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)
+  # _afterTokenTransfer(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)
+  - _doSafeTransferAcceptanceCheck((operator : address, from : address, to : address, id : uint256, amount : uint256, data : bytes)
+  - _doSafeBatchTransferAcceptanceCheck(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)
+}
+
+abstract class ERC1155Burnable extends ERC1155 {
+  + burn(account : address, id : uint256, value : uint256)
+  + burnBatch(account : address, ids : uint256[], values : uint256[])
+}
+
+abstract class ERC1155Pausable extends ERC1155, Pausable {
+  # **_beforeTokenTransfer**(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)
+}
+
+abstract class ERC1155Supply extends ERC1155 {
+  .. states ..
+  - _totalSupply : mapping(uint256 => uint256)
+  .. functions ..
+  + totalSupply(id : uint256) : uint256
+  + exists(id : uint256) : bool
+  # **_beforeTokenTransfer**(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)
+
+}
+
+abstract class ERC1155URIStorage extends ERC1155 {
+  .. states ..
+  - _baseURI : string
+  - _tokenURIs : mapping(uint256 => string)
+  .. functions ..
+  + **uri**(tokenId : uint256) : string
+  # _setURI(tokenId : uint256, tokenURI : string)
+  # _setBaseURI(baseURI : string)
+}
+
+
+class "ERC1155PresetMinterPauser" as ERC1155PresetMinterPauser extends Context, AccessControlEnumerable, ERC1155Burnable, ERC1155Pausable {
+  .. states ..
+  + MINTER_ROLE : bytes32
+  + PAUSER_ROLE : bytes32
+  .. functions ..
+  + mint(to : address, id : uint256, amount : uint256, data : bytes)
+  + mintBatch(to : address, ids : uint256[], amounts : uint256[], data : bytes)
+  + pause()
+  + unpause()
+  + **supportsInterface**(interfaceId : bytes4) : bool
+  # **_beforeTokenTransfer**(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)
+}
+
+
+@enduml
+
+@startuml
+
+
+
+
+
+
+hide circle
+show empty fields
+show empty methods
+
+
+abstract class Context {
+  # _msgSender() : address
+  # _msgData() : bytes
+}
+
+abstract class Pausable extends Context{
+  .. events ..
+  Paused(account : address)
+  Unpaused(account : address)
+  .. states ..
+  - _paused : bool
+  .. functions ..
+  + paused() : bool
+  # _pause()
+  # _unpause()
+}
+
+interface IERC165 {
+  + supportsInterface(interfaceId : bytes4) : bool
+  
+}
+
+abstract class ERC165 implements IERC165 {
+  + **supportsInterface**(interfaceId : bytes4) : bool
+}
+
+
+
+interface "[[https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControl.sol IAccessControl]]" as IAccessControl{
+  .. events ..
+  RoleAdminChanged(role : bytes32, previousAdminRole : bytes32,  newAdminRole : bytes32)
+  RoleGranted(role : bytes32, account : address, sender : address)
+  RoleRevoked(role : bytes32, account : address, sender : address)
+  .. functions ..
+  + hasRole(role : bytes32, account : address) : bool
+  + getRoleAdmin(role : bytes32) : bytes32
+  + grantRole(role : bytes32, account : address)
+  + revokeRole(role : bytes32, account : address)
+  + renounceRole(role : bytes32, account : address)
+}
+
+interface "[[https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/IAccessControlEnumerable.sol IAccessControlEnumerable]]" as IAccessControlEnumerable extends IAccessControl{
+  + getRoleMember(role : bytes32, index : uint256) : address
+  + getRoleMemberCount(role : bytes32) : uint256
+}
+
+abstract class "[[https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControl.sol AccessControl]]" as AccessControl extends Context, ERC165 implements IAccessControl{
+  .. states ..
+  + DEFAULT_ADMIN_ROLE : bytes32
+  - _roles : mapping(bytes32 => RoleData)
+  .. functions ..
+  + **supportsInterface**(interfaceId : bytes4) : bool
+  + **hasRole**(role : bytes32, account : address) : bool
+  # _checkRole(role : bytes32)
+  # _checkRole(role : bytes32, account : address)
+  + **getRoleAdmin**(role : bytes32) : bytes32
+  + **grantRole**(role : bytes32, account : address)
+  + **revokeRole**(role : bytes32, account : address)
+  + **renounceRole**(role : bytes32, account : address)
+  # _setupRole(role : bytes32, account : address)
+  # _setRoleAdmin(role : bytes32, adminRole : bytes32)
+  # _grantRole(role : bytes32, account : address)
+  # _revokeRole(role : bytes32, account : address)
+}
+
+class RoleData <<struct>> {
+  + members : mapping(address => bool)
+  + adminRole : bytes32
+}
+
+AccessControl - -> RoleData
+
+abstract class "[[https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/access/AccessControlEnumerable.sol AccessControlEnumerable]]" as AccessControlEnumerable extends AccessControl implements IAccessControlEnumerable {
+  .. states ..
+  - _roleMembers : mapping(bytes32 => EnumerableSet.AddressSet)
+  .. functions ..
+  + **supportsInterface**(bytes4 interfaceId) : bool
+  + **getRoleMember**(bytes32 role, uint256 index) : address
+  + **getRoleMemberCount**(bytes32 role) : uint256
+  # **_grantRole**(bytes32 role, address account)
+  # **_revokeRole**(bytes32 role, address account)
+}
+
+
+hide circle
+show empty fields
+show empty methods
+hide IAccessControl members
+
+
+
+interface "[[https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/token/ERC1155/IERC1155.sol IERC1155]]" as IERC1155 extends IERC165 {
+  .. events ..
+  TransferSingle(operator : address, from : address, to : address, id : uint25, value : uint256)
+  TransferBatch(operator : address, from : address, to : address, ids : uint256[], values : uint256[])
+  ApprovalForAll(account : address, operator : address, approved : bool)
+  URI(value : string, id : uint256)
+  .. functions ..
+  + balanceOf(account : address, id : uint256) : uint256
+  + balanceOfBatch(accounts : address[], ids : uint256[]) : uint256[]
+  + setApprovalForAll(operator : address, approved : bool)
+  + isApprovedForAll(account : address, operator : address) : bool
+  + safeTransferFrom(from : address, to : address, id : uint256, amount : uint256, data : bytes)
+  + safeBatchTransferFrom(from : address, to : address, ids : uint256[], amounts : uint256[], data : byte)
+
+}
+
+interface IERC1155MetadataURI extends IERC1155 {
+  + uri(uint256 id) : string
+}
+
+
+class "[[https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.6.0/contracts/token/ERC1155/ERC1155.sol ERC1155]]" as ERC1155 extends Context, ERC165 implements IERC1155, IERC1155MetadataURI {
+  .. states ..
+  - _balances : mapping(uint256 => mapping(address => uint256))
+  - _operatorApprovals : mapping(address => mapping(address => bool))
+  - _uri : string
+  .. function ..
+  + constructor(uri_ : string)
+  + **supportsInterface**(interfaceId : bytes4) : bool
+  + **uri**(uint256 id) : string
+  + **balanceOf**(account : address, id : uint256) : uint256
+  + **balanceOfBatch**(accounts : address[], ids : uint256[]) : uint256[]
+  + **setApprovalForAll**(operator : address, approved : bool)
+  + **isApprovedForAll**(account : address, operator : address) : bool
+  + **safeTransferFrom**(from : address, to : address, id : uint256, amount : uint256, data : bytes)
+  + **safeBatchTransferFrom**(from : address, to : address, ids : uint256[], amounts : uint256[], data : byte)
+  # _safeTransferFrom(from : address, to : address, id : uint256, amount : uint256, data : bytes)
+  # _safeBatchTransferFrom(from : address, to : address, ids : uint256[], amounts : uint256[], data : byte)
+  # _setURI(newuri : string)
+  # _mint(to : address, id : uint256, amount : uint256, data : bytes)
+  # _mintBatch(to : address, ids : uint256[], amounts : uint256[], data : bytes)
+  # _burn(from : address, id : uint256, amount : uint256)
+  # _burnBatch(from : address, ids : uint256[], amounts : uint256[])
+  # _setApprovalForAll(owner : address, operator : address, approved : bool)
+  # _beforeTokenTransfer(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)
+  # _afterTokenTransfer(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)
+  - _doSafeTransferAcceptanceCheck((operator : address, from : address, to : address, id : uint256, amount : uint256, data : bytes)
+  - _doSafeBatchTransferAcceptanceCheck(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)
+}
+
+abstract class ERC1155Burnable extends ERC1155 {
+  + burn(account : address, id : uint256, value : uint256)
+  + burnBatch(account : address, ids : uint256[], values : uint256[])
+}
+
+abstract class ERC1155Pausable extends ERC1155, Pausable {
+  # **_beforeTokenTransfer**(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)
+}
+
+abstract class ERC1155Supply extends ERC1155 {
+  .. states ..
+  - _totalSupply : mapping(uint256 => uint256)
+  .. functions ..
+  + totalSupply(id : uint256) : uint256
+  + exists(id : uint256) : bool
+  # **_beforeTokenTransfer**(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)
+
+}
+
+abstract class ERC1155URIStorage extends ERC1155 {
+  .. states ..
+  - _baseURI : string
+  - _tokenURIs : mapping(uint256 => string)
+  .. functions ..
+  + **uri**(tokenId : uint256) : string
+  # _setURI(tokenId : uint256, tokenURI : string)
+  # _setBaseURI(baseURI : string)
+}
+
+
+class "ERC1155PresetMinterPauser" as ERC1155PresetMinterPauser extends Context, AccessControlEnumerable, ERC1155Burnable, ERC1155Pausable {
+  .. states ..
+  + MINTER_ROLE : bytes32
+  + PAUSER_ROLE : bytes32
+  .. functions ..
+  + mint(to : address, id : uint256, amount : uint256, data : bytes)
+  + mintBatch(to : address, ids : uint256[], amounts : uint256[], data : bytes)
+  + pause()
+  + unpause()
+  + **supportsInterface**(interfaceId : bytes4) : bool
+  # **_beforeTokenTransfer**(operator : address, from : address, to : address, ids : uint256[],  uint256[] amounts, data : bytes)
+}
+
+
+@enduml
+
+PlantUML version 1.2022.7(Tue Aug 23 02:01:30 KST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ko
+Country: KR
+--></g></svg>

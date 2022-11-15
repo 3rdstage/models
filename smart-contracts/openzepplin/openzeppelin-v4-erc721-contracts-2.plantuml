@@ -23,6 +23,9 @@ interface IERC165
 interface Context
 interface IERC721Metadata
 
+abstract class ERC165
+IERC165 <|-- ERC165
+
 
 IERC165 <|-- IERC721
 interface IERC721 {
