@@ -1,0 +1,35 @@
+@startuml
+
+' Useful references
+/'
+https://plantuml.com/class-diagram
+https://plantuml.com/sequence-diagram
+https://plantuml.com/creole
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/color-names.html
+https://www.w3schools.com/colors/colors_names.asp
+https://plantuml.com/color
+'/
+
+
+hide circle
+hide empty fields
+hide empty methods
+' hide stereotypes
+
+abstract class AccessControl
+class Contract
+class Role
+abstract class Account
+class OwnedAccount
+class ContractAccount
+
+Contract -up-|> AccessControl
+Contract "1" *--right--> "0..*" Role : "     has     "
+Role --> Role
+Role "0..*" ..right.. "0..*" Account : "     granted to     "
+OwnedAccount -up-|> Account
+ContractAccount -up-|> Account
+
+@enduml

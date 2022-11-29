@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="213px" preserveAspectRatio="none" style="width:560px;height:213px;background:#FFFFFF;" version="1.1" viewBox="0 0 560 213" width="560px" zoomAndPan="magnify"><defs/><g><!--MD5=[ee60552bc4698d86a6bc3ed4a603a080]
+class AccessControl--><g id="elem_AccessControl"><rect codeLine="20" fill="#F1F1F1" height="26.4883" id="AccessControl" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="104" x="7" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="98" x="10" y="25.5352">AccessControl</text></g><!--MD5=[461026a38b737c4ce5e8254b9a577e21]
+class Contract--><g id="elem_Contract"><rect codeLine="21" fill="#F1F1F1" height="26.4883" id="Contract" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="65" x="26.5" y="94"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="29.5" y="112.5352">Contract</text></g><!--MD5=[a3638c1e5b65d287ecad7f06f5c0f212]
+class Role--><g id="elem_Role"><rect codeLine="22" fill="#F1F1F1" height="26.4883" id="Role" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="36" x="190" y="94"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="193" y="112.5352">Role</text></g><!--MD5=[f9a29335b499db729be669fd1bd54958]
+class Account--><g id="elem_Account"><rect codeLine="23" fill="#F1F1F1" height="26.4883" id="Account" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="62" x="386" y="94"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="56" x="389" y="112.5352">Account</text></g><!--MD5=[6f61aeae0c712222ba927e51e59f07c4]
+class OwnedAccount--><g id="elem_OwnedAccount"><rect codeLine="24" fill="#F1F1F1" height="26.4883" id="OwnedAccount" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="110" x="287" y="181"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104" x="290" y="199.5352">OwnedAccount</text></g><!--MD5=[362e4e4ce0df86d13b8a63639347dc44]
+class ContractAccount--><g id="elem_ContractAccount"><rect codeLine="25" fill="#F1F1F1" height="26.4883" id="ContractAccount" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="121" x="432.5" y="181"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="435.5" y="199.5352">ContractAccount</text></g><!--MD5=[098a0d171bcecc91ae05a742ba780252]
+reverse link AccessControl to Contract--><g id="link_AccessControl_Contract"><path codeLine="27" d="M59,53.43 C59,67.58 59,83.31 59,93.84 " fill="none" id="AccessControl-backto-Contract" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="52,53.18,59,33.18,66,53.18,52,53.18" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[87b4d1ce3ab1d7f0af84448badcd910c]
+link Contract to Role--><g id="link_Contract_Role"><path codeLine="28" d="M103.7,107 C103.7,107 155.8,107 176.66,107 " fill="none" id="Contract-Role" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="189.86,107,180.86,103,184.86,107,180.86,111,189.86,107" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="184.86" x2="176.86" y1="107" y2="107"/><polygon fill="#181818" points="91.7,107,97.7,111,103.7,107,97.7,103,91.7,107" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="129.75" y="100.5684">has</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="99.7281" y="102.9083">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="160.0286" y="121.5601">0..*</text></g><!--MD5=[98cefc2f9fa099266f63fe290b846d56]
+link Role to Role--><g id="link_Role_Role"><path codeLine="29" d="M226.19,100.58 C242.94,97.35 261,99.49 261,107 C261,113.74 246.43,116.16 231.32,114.24 " fill="none" id="Role-to-Role" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="226.19,113.42,234.4504,118.7833,231.128,114.2049,235.7064,110.8825,226.19,113.42" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[f319ae86ead3a71dbe8efd061b1ec090]
+link Role to Account--><g id="link_Role_Account"><path codeLine="30" d="M226.18,107 C261.93,107 341.75,107 385.99,107 " fill="none" id="Role-Account" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="65" x="273.5" y="100.5684">granted to</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="234.0221" y="102.5289">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="355.9818" y="103.1217">0..*</text></g><!--MD5=[dff0a6c477ca1a42bb1706a249a41259]
+reverse link Account to OwnedAccount--><g id="link_Account_OwnedAccount"><path codeLine="31" d="M393.02,135.18 C379.46,150.54 363.19,168.99 352.73,180.84 " fill="none" id="Account-backto-OwnedAccount" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="387.77,130.54,406.25,120.18,398.27,139.81,387.77,130.54" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[fd2fced1e9134a8d76a20a2fff67b08e]
+reverse link Account to ContractAccount--><g id="link_Account_ContractAccount"><path codeLine="32" d="M441.3,135.18 C455.04,150.54 471.53,168.99 482.13,180.84 " fill="none" id="Account-backto-ContractAccount" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="436,139.75,427.89,120.18,446.44,130.42,436,139.75" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[c4a1732374103153998f1bfb10c422ce]
+@startuml
+
+' Useful references
+/'
+https://plantuml.com/class-diagram
+https://plantuml.com/sequence-diagram
+https://plantuml.com/creole
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html#class
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/color-names.html
+https://www.w3schools.com/colors/colors_names.asp
+https://plantuml.com/color
+'/
+
+
+hide circle
+hide empty fields
+hide empty methods
+' hide stereotypes
+
+abstract class AccessControl
+class Contract
+class Role
+abstract class Account
+class OwnedAccount
+class ContractAccount
+
+Contract -up-|> AccessControl
+Contract "1" *- -right- -> "0..*" Role : "     has     "
+Role - -> Role
+Role "0..*" ..right.. "0..*" Account : "     granted to     "
+OwnedAccount -up-|> Account
+ContractAccount -up-|> Account
+
+@enduml
+
+@startuml
+
+
+
+hide circle
+hide empty fields
+hide empty methods
+
+abstract class AccessControl
+class Contract
+class Role
+abstract class Account
+class OwnedAccount
+class ContractAccount
+
+Contract -up-|> AccessControl
+Contract "1" *- -right- -> "0..*" Role : "     has     "
+Role - -> Role
+Role "0..*" ..right.. "0..*" Account : "     granted to     "
+OwnedAccount -up-|> Account
+ContractAccount -up-|> Account
+
+@enduml
+
+PlantUML version 1.2022.7(Tue Aug 23 02:01:30 KST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ko
+Country: KR
+--></g></svg>
