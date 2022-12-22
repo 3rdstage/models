@@ -1,0 +1,43 @@
+@startuml
+
+' https://plantuml.com/state-diagram
+
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+skinparam {
+  'global font
+  'DefaultFontName Consolas
+  DefaultFontName Monaco
+  'DefaultFontName Lucida Console
+  'DefaultMonospacedFontName Consolas
+  'DefaultFontStyle bold
+  
+  'diagram scope style
+  DiagramBorderThickness 1
+  DiagramBorderColor black
+  'BackgroundColor transparent
+  BackgroundColor #eeeeee
+  PageMargin 10
+}
+
+scale max 2048 width
+
+state Unset
+
+state Set {
+  state Unfrozen
+  state Frozen
+  state FrozenPermanently
+}
+
+
+Unset -right-> Unfrozen : set
+Unfrozen -right-> Frozen : freeze
+Unset <-- Unfrozen : unset
+Unfrozen -up-> Unfrozen : increase
+Unfrozen -up-> Unfrozen : decrease
+Unfrozen <-- Frozen : unfreeze
+Unfrozen -right-> FrozenPermanently : freezeForever
+Frozen -down-> FrozenPermanently : freezeForever
+
+
+@enduml
