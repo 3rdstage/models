@@ -1,0 +1,76 @@
+// cspell:word sectnums autowidth consensys
+ 
+= ConsenSys *Universal Token* Review
+:sectnums:
+:toc:
+
+== Access Control Matrix
+
+* https://github.com/ConsenSys/UniversalToken/blob/master/contracts/ERC1400.sol[``ERC1400.sol``, window=_blank]
+
+[options='header,autowidth', width='100%']
+|===
+^| Function ^| Granted to ^| Applied to ^| Remarks
+
+| `transfer(to, value)` |    | holder(signer) |
+
+| `transferFrom(from, to, value)` | holder, operator, controller | holder(`from`) |
+
+| `transferWithData(to, value, data)` |    | holder(signer) |
+
+| `transferFromWithData(from, to, value, data)` | holder, operator, controller | holder(`from`) |
+
+| `issue(holder, value, data)` | issuer |   |
+
+| `redeem(value, data)` |   | holder(signer) |
+
+| `redeemFrom(from, value, data)` | holder, operator, controller |   |
+
+| `setDocument(name, url, hash)` | controller |   |
+
+| `removeDocument(name)` | controller |   |
+
+| `renounceControl()` | admin |   | `Ownable.onlyOwner()`
+
+| `renounceIssuance()` | admin |   |
+
+| `setControllers(accounts)` | admin |   |
+
+| `approve(spender, value)` |    | holder(signer) |
+
+| `authorizeOperator(operator)` |   | holder(signer) | operator &ne; holder
+
+| `revokeOperator(operator)` |   | holder(signer) | operator &ne; holder
+|===
+
+[%collapsible]
+====
+
+* admin = contract owner
+* holder = token owner
+
+[source,solidity]
+----
+  modifier onlyMinter() override {
+      require(isMinter(msg.sender) || owner() == _msgSender());
+      _;
+  }
+
+  function _isOperator(address operator, address tokenHolder) internal view returns (bool) {
+    return (operator == tokenHolder
+      || _authorizedOperator[operator][tokenHolder]
+      || (_isControllable && _isController[operator])
+    );
+  }
+
+----
+
+====
+
+
+== Limitations
+
+* Built-in `ERC1400` contract doesn't implement pausing functions.
+* Built-in `ERC1400` contract doesn't functions regarding supply cap.
+* Batch functionality of built-in `ERC1400` contract is externalized to use registry contract and plug-in or extension contracts, which is more complex than expected.
+* Once built-in `ERC1400` is set to *NOT issuable*, it can NOT be set back issuable.
