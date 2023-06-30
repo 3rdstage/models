@@ -1,4 +1,30 @@
 
+### ECDSA Signing
+
+* [RFC-6979: Deterministic Usage of the DSA and ECDSA](https://datatracker.ietf.org/doc/html/rfc6979)
+    * Defines a deterministic digital signature generation procedure.
+
+* [ECDSA sign](https://cryptobook.nakov.com/digital-signatures/ecdsa-sign-verify-messages#ecdsa-sign)
+    * Calculate the message hash ***`h`***
+    * Generate a random number ***`k`***
+    * Calculate the random point ***`R`*** from ***`k`*** and take its x-coordinate ***`r`***
+        * ***`R`*** = ***`k`*** * **`G`**
+        * ***`r`*** = ***`R`*** .**`x`**
+    * Calculate the signature proof ***`s`*** from message hash( ***`h`*** ), random number( ***`k`*** ), random point( ***`r`*** ) and private key
+        * ***`s`*** = ***`k`*** <sup>-1</sup> * ( ***`h`*** + ***`r`*** * ***`prvKey`*** ) (<tt>mod ***n***</tt>)
+    * Return the signature ( ***`r`*** , ***`s`*** )
+
+* [ECDSA signature generation algorithm](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm#Signature_generation_algorithm)
+    * Calculate ***`e`*** = `HASH`( ***`m`*** )
+    * Select a cryptographically secure random integer ***`k`***
+    * Calculate the curve point ( ***`x`*** , ***`y`*** ) = ***`k`*** * **`G`**
+    * Calculate ***`r`*** = ***`x`*** <tt>mod</tt> **`n`**
+    * Calculate ***`s`*** = ***`k`*** <sup>-1</sup> ( *`z`* + ***`r`*** * ***<code>d<sub>A</sub></code>*** )
+    * ( ***`r`*** , ***`s`*** ) is signature
+        * ( ***`r`*** , ***`-s`*** <tt>mod</tt> `n`) is also valid signature
+
+----
+
 ### Ethereum Signing
 
 * Transaction signing in practice
