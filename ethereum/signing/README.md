@@ -1,4 +1,6 @@
 
+## Ethereum Signing
+
 ### ECDSA Signing
 
 * [RFC-6979: Deterministic Usage of the DSA and ECDSA](https://datatracker.ietf.org/doc/html/rfc6979)
@@ -25,7 +27,7 @@
 
 ----
 
-### Ethereum Signing
+### Ethereum Transaction Signing
 
 * Transaction signing in practice
     * Create a transaction data structure, containing 9 fields: `[nonce, gasPrice, gasLimit, to, value, data, chainID, 0, 0]`
@@ -65,7 +67,7 @@ value `0` represents an **even y** value and `1` represents an **odd y** value. 
 
 ##### Web3j
 
-| ![Web3j Signing Workflow](./transaction-signing-workflow-web3j-4.8.svg) |
+| ![Web3j Transaction Signing Workflow](./transaction-signing-workflow-web3j-4.8.svg) |
 | ------ |
 
 * [`org.web3j.tx.RawTransactionManager.sendTransaction()`](https://github.com/web3j/web3j/blob/v4.8.8/core/src/main/java/org/web3j/tx/RawTransactionManager.java#L111)
@@ -80,3 +82,7 @@ value `0` represents an **even y** value and `1` represents an **odd y** value. 
 * [`org.web3j.crypto.Sign.SignatureData()`](https://github.com/web3j/web3j/blob/v4.8.8/crypto/src/main/java/org/web3j/crypto/Sign.java#L340)
 * ...
 
+##### Ethers
+
+| ![Ethers v6 Transaction Signing Workflow](./transaction-signing-workflow-ehters-v6.png) |
+| ------ |

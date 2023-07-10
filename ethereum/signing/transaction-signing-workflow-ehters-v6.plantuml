@@ -97,27 +97,100 @@ hide Footbox
 
 participant client
 participant BaseWallet as wallet
+participant SigningKey as key
+participant Signature as signature
+participant secp256k1 as secp256k1
 participant Transaction as tx
+participant Utils as utils
+participant Crypto as crypto
 
-url of wallet is [[https://github.com/ethers-io/ethers.js/blob/v6.6.2/src.ts/wallet/base-wallet.ts]]
+!$baseUrl = "https://github.com/ethers-io/ethers.js/blob/v6.6.2/src.ts"
+
+url of wallet is [[$baseUrl/wallet/base-wallet.ts]]
+url of key is [[$baseUrl/crypto/signing-key.ts]]
+url of signature is [[$baseUrl/crypto/signature.ts]]
+url of secp256k1 is [[https://github.com/paulmillr/noble-secp256k1/blob/1.7.1/index.ts]]
+url of tx is [[$baseUrl/transaction/transaction.ts]]
+url of utils is [[$baseUrl/utils]]
+url of crypto is [[$baseUrl/crypto]]
 
 ' https://plantuml.com/preprocessing
-!$baseUrl = "https://github.com/ethers-io/ethers.js/blob/v6.6.2/src.ts"
 !$signTransaction = $baseUrl + "/wallet/base-wallet.ts#L71"
-!$unsignedHash = "https://github.com/ethers-io/ethers.js/blob/v6.6.2/src.ts/transaction/transaction.ts#L578"
-!$unsignedSerialized = "https://github.com/ethers-io/ethers.js/blob/v6.6.2/src.ts/transaction/transaction.ts#L636"
+!$unsignedHash = $baseUrl + "/transaction/transaction.ts#L578"
+!$unsignedSerialized = $baseUrl + "/transaction/transaction.ts#L636"
 !$inferType = $baseUrl + "/transaction/transaction.ts#L636"
+!$eip2930 = "https://eips.ethereum.org/EIPS/eip-2930"
+!$eip1559 = "https://eips.ethereum.org/EIPS/eip-1559"
+!$_serializeLegacy = $baseUrl + "/transaction/transaction.ts#L188"
+!$_serializeEip2930 = $baseUrl + "/transaction/transaction.ts#L344"
+!$_serializeEip1559 = $baseUrl + "/transaction/transaction.ts#L294"
+!$encodeRlp = $baseUrl + "/utils/rlp-encode.ts#L57"
+!$secp256k1_signSync = "https://github.com/paulmillr/noble-secp256k1/blob/1.7.1/index.ts#L1284"
+!$signature = $baseUrl + "/transaction/transaction.ts#L524"
+!$serialized = $baseUrl + "/transaction/transaction.ts#L615"
 
 client -> wallet ++ [[$signTransaction]] : signTransaction(//txRequest//)
   wallet -> tx **
   wallet -> tx ++ [[$unsignedHash]] : unsignedHash()
     tx -> tx ++ [[$unsignedSerialized]] : unsignedSerialized()
       tx -> tx ++ [[$inferType]] : inferType()
-        tx --
-      tx --> tx -- : return ""//serialized//""
-      tx--
-    wallet <-- tx --
+        return ""//transaction type//""
+      ||20||
+      alt legacy transaction
+        tx -> tx ++ [[$_serializeLegacy]] : _serializeLegacy(this)
+          tx -> utils ++ [[$encodeRlp]] : encodeRlp(""//fields//"")
+            utils --
+          tx --
+      else [[$eip2930 EIP-2390]] transaction
+        tx -> tx ++ [[$_serializeEip2930]] : _serializeEip2930(this)
+          tx -> utils ++ [[$encodeRlp]] : encodeRlp(""//fields//"")
+            utils --
+          tx --
+      else [[$eip1559 EIP-1559]] transaction
+        tx -> tx ++ [[$_serializeEip1559]] : _serializeEip1559(this)
+          tx -> utils ++ [[$encodeRlp]] : encodeRlp(""//fields//"")
+            utils --
+          tx --
+      end
 
+      return ""//unsignedSerialized//""
+    tx -> crypto ++ : keccak256(""//unsignedSerialized//"")
+      crypto --    
+    return ""//hash//""
+  wallet -> key ++ : sign(""//hash//"")
+    key -> utils ++ : getBytesCopy(""//hash//"")
+      return ""//digest//""
+    key -> utils ++ : getBytesCopy(this.#privateKey)
+      return ""//prvKey//""
+    key -> secp256k1 ++ [[$secp256k1_signSync]] : signSync(""//digest//"",\n""//prvKey//"",\n{recovered: true,\ncanonical: true})
+      return
+    key -> signature ** : from()
+    return ""//signature//""
+  wallet -> tx ++ [[$signature]]: signature(""//signature//"")
+    return
+  wallet -> tx ++ [[$serialized]]: serialized()
+    tx -> tx ++ [[$inferType]] : inferType()
+      return ""//transaction type//""
+    ||20||
+    alt legacy transaction
+      tx -> tx ++ [[$_serializeLegacy]] : _serializeLegacy(this,\nthis.signature)
+        tx -> utils ++ [[$encodeRlp]] : encodeRlp(""//fields//"")
+          utils --
+        tx --
+    else [[$eip2930 EIP-2390]] transaction
+      tx -> tx ++ [[$_serializeEip2930]] : _serializeEip2930(this,\nthis.signature)
+        tx -> utils ++ [[$encodeRlp]] : encodeRlp(""//fields//"")
+          utils --
+        tx --
+    else [[$eip1559 EIP-1559]] transaction
+      tx -> tx ++ [[$_serializeEip1559]] : _serializeEip1559(this,\nthis.signature)
+        tx -> utils ++ [[$encodeRlp]] : encodeRlp(""//fields//"")
+          utils --
+        tx --
+    end
+
+    return ""//serialized//""
+  return ""//serialized//""
 ||200||
 
 @enduml
