@@ -191,6 +191,6 @@ client -> wallet ++ [[$signTransaction]] : signTransaction(//txRequest//)
 
     return ""//serialized//""
   return ""//serialized//""
-||200||
 
+||100||
 @enduml
