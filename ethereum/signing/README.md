@@ -84,5 +84,5 @@ value `0` represents an **even y** value and `1` represents an **odd y** value. 
 
 ##### Ethers
 
-| ![Ethers v6 Transaction Signing Workflow](./transaction-signing-workflow-ehters-v6.png) |
+| ![Ethers v6 Transaction Signing Workflow](./transaction-signing-workflow-ehters-v6.svg) |
 | ------ |
