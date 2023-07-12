@@ -1,0 +1,18 @@
+// cspell:word sectnums imagesdir autowidth hyperledger besu kroki plantuml pygments highlightjs
+// cspell:ignore
+
+= Ethers v6
+:toc:
+:sectnums:
+:imagesdir: ./
+:kroki-fetch-diagram:
+:source-highlighter: highlightjs
+
+* Contract and Signer
+
+image::ethers6-classes.svg[Ethers v6/Contracts and Signers, 800]
+
+* Provider
+
+image::ethers6-providers-classes.svg[Ethers v6/Providers, 800]
+
