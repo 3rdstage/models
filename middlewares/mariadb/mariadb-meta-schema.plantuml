@@ -1,0 +1,121 @@
+
+@startuml
+
+' Useful references
+/'
+https://plantuml.com/ie-diagram
+https://plantuml.com/class-diagram
+https://plantuml.com/sequence-diagram
+https://plantuml.com/activity-diagram-beta
+https://plantuml.com/state-diagram
+https://plantuml.com/commons
+https://plantuml.com/creole
+https://plantuml-documentation.readthedocs.io/en/latest/formatting/color-names.html
+https://www.w3schools.com/colors/colors_names.asp
+https://plantuml.com/color
+'/
+
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+skinparam {
+  'global font
+  'DefaultFontName Consolas
+  DefaultFontName Monaco
+  'DefaultFontName Lucida Console
+  'DefaultMonospacedFontName Consolas
+  'DefaultFontStyle bold
+  
+  'diagram scope style
+  DiagramBorderThickness 1
+  DiagramBorderColor black
+  'BackgroundColor transparent
+  BackgroundColor #eeeeee
+  PageMargin 10
+
+  'note style
+  NoteFontName Courier
+  NoteBackgroundColor SeaShell
+  NoteBorderColor transparent
+  NoteShadowing false
+  
+  'class style
+  MinClassWidth 75
+  ClassFontStyle bold
+
+  'arrow style
+  ArrowFontSize 16
+  ArrowThickness 1
+  ResponseMessageBelowArrow true
+
+  BoxPadding 50
+  ParticipantPadding 20  
+}
+
+entity "SCHEMATA" as schemata {
+  *CATALOG_NAME : varchar(512)
+  *SCHEMA_NAME : varchar(64)
+  --
+  *DEFAULT_CHARACTER_SET_NAME : varchar(32)
+  *DEFAULT_COLLATION_NAME : varchar(32)
+  SQL_PATH : varchar(512)
+  *SCHEMA_COMMENT : varchar(1024)
+}
+
+entity "TABLES" as tables {
+  *TABLE_CATALOG : varchar(512) <<FK>> 
+  *TABLE_SCHEMA : varchar(64) <<FK>>
+  *TABLE_NAME : varchar(64)
+  --
+  *TABLE_TYPE : varchar(64) 
+  ENGINE : varchar(64) 
+  VERSION : bigint(21) unsigned
+  ROW_FORMAT : varchar(10)
+  TABLE_ROWS : bigint(21) unsigned
+  AVG_ROW_LENGTH : bigint(21) unsigned
+  DATA_LENGTH : bigint(21) unsigned
+  MAX_DATA_LENGTH : bigint(21) unsigned
+  INDEX_LENGTH : bigint(21) unsigned
+  DATA_FREE : bigint(21) unsigned
+  AUTO_INCREMENT : bigint(21) unsigned
+  CREATE_TIME : datetime
+  UPDATE_TIME : datetime
+  CHECK_TIME : datetime
+  TABLE_COLLATION : varchar(32)
+  CHECKSUM : bigint(21) unsigned
+  CREATE_OPTIONS : varchar(2048)
+  *TABLE_COMMENT : varchar(2048)
+  MAX_INDEX_LENGTH : bigint(21) unsigned
+  TEMPORARY : varchar(1)
+}
+
+entity "COLUMNS" as columns {
+  *TABLE_CATALOG : varchar(512) <<FK>>
+  *TABLE_SCHEMA : varchar(64) <<FK>>
+  *TABLE_NAME : varchar(64) <<FK>>
+  *COLUMN_NAME : varchar(64)
+  --
+  *ORDINAL_POSITION : bigint(21) unsigned
+  COLUMN_DEFAULT : longtext
+  *IS_NULLABLE : varchar(3)
+  *DATA_TYPE : varchar(64)
+  CHARACTER_MAXIMUM_LENGTH : bigint(21) unsigned
+  CHARACTER_OCTET_LENGTH : bigint(21) unsigned
+  NUMERIC_PRECISION : bigint(21) unsigned
+  NUMERIC_SCALE : bigint(21) unsigned
+  DATETIME_PRECISION : bigint(21) unsigned
+  CHARACTER_SET_NAME : varchar(32)
+  COLLATION_NAME : varchar(32)
+  *COLUMN_TYPE : longtext
+  *COLUMN_KEY : varchar(3)
+  *EXTRA : varchar(80)
+  *PRIVILEGES : varchar(80)
+  *COLUMN_COMMENT : varchar(1024)
+  *IS_GENERATED : varchar(6)
+  GENERATION_EXPRESSION : longtext
+}
+
+
+schemata ||..o{ tables : CATALOG_NAME, SCHEMA_NAME
+tables ||.right.o{ columns : TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME
+
+@enduml
+

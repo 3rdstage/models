@@ -1,0 +1,6 @@
+# https://cspell.org/docs/dictionaries-custom/
+bitcoin
+ethereum
+solana
+ipfs
+typechain

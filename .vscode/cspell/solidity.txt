@@ -1,0 +1,6 @@
+# https://cspell.org/docs/dictionaries-custom/
+struct
+structs
+bytecode
+inheritdoc
+mload

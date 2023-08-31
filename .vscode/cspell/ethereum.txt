@@ -1,0 +1,22 @@
+# https://cspell.org/docs/dictionaries-custom/
+ethereum
+yellowpape
+erc
+ierc
+soulbound
+keccak
+secp256k1
+chainid
+ropsten
+rinkeby
+kovan
+goerli
+vyper
+ganache
+remix
+remixd
+solhint
+mythril
+mythx
+openzeppelin
+consensys
