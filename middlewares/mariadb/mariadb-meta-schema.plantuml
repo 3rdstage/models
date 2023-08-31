@@ -50,6 +50,15 @@ skinparam {
   ParticipantPadding 20  
 }
 
+' https://plantuml.com/commons
+scale max 2048 width
+hide Circle
+hide Footbox
+
+'title Title
+'caption Caption
+'mainframe Title
+
 entity "SCHEMATA" as schemata {
   *CATALOG_NAME : varchar(512)
   *SCHEMA_NAME : varchar(64)
