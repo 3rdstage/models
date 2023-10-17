@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><Db flnm="sto-datamodel-postgresql" nm="newDatabase" ver="5.0.0">
+  <VerLbl/>
+  <VerNotes/>
+  <DefTblOpts/>
+  <DocFolder>/Users/3rdstage/Git/Repos/3rdstage/models/services/sto</DocFolder>
+  <Sch Cm="" nm="schemaA">
+    <CustomTypes/>
+  </Sch>
+  <Sch Cm="" nm="ST API">
+    <Tbl UsSo="1" nm="chain">
+      <TblOpts/>
+      <Cl au="0" df="" nm="id" nu="1">
+        <DT arr="0" ds="Serial" en="" id="777" ln="null" sc="null" sg="0" un="0"/>
+      </Cl>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <CustomTypes/>
+  </Sch>
+  <Dgm nm="diagramA">
+    <RnCf ClkAct="true" FtSz="13" lkStgy="RightAngleStrategy" zm="1.0">
+      <VbCfg>
+        <Fg ky="Auto Number" vl="0"/>
+        <Fg ky="Check" vl="0"/>
+        <Fg ky="Comment" vl="0"/>
+        <Fg ky="Data Type" vl="1"/>
+        <Fg ky="Default" vl="0"/>
+        <Fg ky="ENUM Values" vl="0"/>
+        <Fg ky="Length" vl="1"/>
+        <Fg ky="Name" vl="1"/>
+        <Fg ky="Nullable" vl="0"/>
+        <Fg ky="Schema Name" vl="0"/>
+        <Fg ky="Signed" vl="0"/>
+      </VbCfg>
+    </RnCf>
+    <DiaProps>
+      <Show AllCols="1" FkCols="1" FkNms="0" PkCols="1"/>
+      <ErNotation>InfoEngErNotation</ErNotation>
+      <DbTableRectangleFill>HeaderFooterFill</DbTableRectangleFill>
+      <svg path=""/>
+    </DiaProps>
+    <Notes/>
+    <Zones/>
+  </Dgm>
+  <Dgm nm="ST API">
+    <RnCf ClkAct="true" FtSz="13" lkStgy="RightAngleStrategy" zm="1.0">
+      <VbCfg>
+        <Fg ky="Auto Number" vl="0"/>
+        <Fg ky="Check" vl="0"/>
+        <Fg ky="Comment" vl="0"/>
+        <Fg ky="Data Type" vl="1"/>
+        <Fg ky="Default" vl="0"/>
+        <Fg ky="ENUM Values" vl="0"/>
+        <Fg ky="Length" vl="1"/>
+        <Fg ky="Name" vl="1"/>
+        <Fg ky="Nullable" vl="0"/>
+        <Fg ky="Schema Name" vl="0"/>
+        <Fg ky="Signed" vl="0"/>
+      </VbCfg>
+    </RnCf>
+    <DiaProps>
+      <Show AllCols="1" FkCols="1" FkNms="0" PkCols="1"/>
+      <ErNotation>InfoEngErNotation</ErNotation>
+      <DbTableRectangleFill>HeaderFooterFill</DbTableRectangleFill>
+      <svg path=""/>
+    </DiaProps>
+    <TbGl bkCl="#6699ff64" h="50" sch="ST API" tbl="chain" w="165" x="69" y="232"/>
+    <Notes/>
+    <Zones/>
+  </Dgm>
+  <RnmMgr/>
+  <BasicOptionMgr>
+    <Name>dbDocOptionMgr</Name>
+    <BoolOpt lbl="Overwrite CSS File" nm="doc.overwrite.css" on="1" spl="0"/>
+    <BoolOpt lbl="Procedures" nm="doc.procs" on="1" spl="0"/>
+    <BoolOpt lbl="Indexes" nm="doc.indexes" on="1" spl="0"/>
+    <BoolOpt lbl="Triggers" nm="doc.triggers" on="1" spl="0"/>
+    <BoolOpt lbl="Foreign Keys" nm="doc.fks" on="1" spl="0"/>
+    <BoolOpt lbl="Sequences" nm="doc.sequences" on="1" spl="0"/>
+    <BoolOpt lbl="Schemas" nm="doc.schemas" on="1" spl="0"/>
+    <BoolOpt lbl="Tables" nm="doc.tables" on="1" spl="0"/>
+    <BoolOpt lbl="Diagrams" nm="doc.diagrams" on="1" spl="0"/>
+    <BoolOpt lbl="Views" nm="doc.views" on="1" spl="0"/>
+  </BasicOptionMgr>
+  <OpenEditors/>
+  <TreePaths>
+    <TreePath>newDatabase.Schemas</TreePath>
+    <TreePath>newDatabase.Diagrams</TreePath>
+    <TreePath>ST API</TreePath>
+  </TreePaths>
+  <SqlTexts/>
+</Db>
