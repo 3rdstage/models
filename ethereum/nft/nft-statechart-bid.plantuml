@@ -3,7 +3,6 @@
 
 ' https://plantuml.com/state-diagram
 
-
 state Open {
   state Placed
 }
