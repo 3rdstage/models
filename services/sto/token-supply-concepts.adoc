@@ -1,0 +1,72 @@
+
+= Token Supply Concepts
+:toc:
+:sectnums:
+:imagesdir: ./
+:icons: font
+:source-highlighter: highlight.js
+:kroki-default-format: svg
+
+
+[cols='a,a', width='100%']
+|===
+
+|
+[plantuml,format='png']
+....
+@startmindmap
+skinparam {
+  DefaultFontSize 16
+}
+
+scale 1200 width
+
+* [[https://academy.binance.com/en/glossary/maximum-supply Supply Cap]]
+* [[https://academy.binance.com/en/glossary/total-supply Total Supply]]
+** [[https://academy.binance.com/en/glossary/circulating-supply Circulating Supply]]
+** Locked Supply
+
+@endmindmap
+....
+
+|
+[verse]
+____
+total-supply = &Sigma; issued-tokens - &Sigma; redeemed-tokens
+             =  circulating-supply - locked-supply
+
+
+supply-cap = max-supply
+           = total-supply + more-issuable-tokens
+
+total-supply &le; supply-cap
+____
+|===
+
+
+
+[cols='*', frame='ends', options='header,autowidth', width='100%']
+|===
+^| 용어 영문 ^| 용어 한글 ^| 설명 ^| 참고
+
+| Total Supply | 총발행량
+a| * The number of tokens that currently exists and are either in circulation or locked somehow.
+* Tokens that have been burned or destroyed should be subtracted from this amount.
+* `ERC1400.issue()` : This function must be called to increase the total supply.
+* `ERC1400.redeem()` : The redeemed tokens must be subtracted from the total supply and the balance of the token holder.
+a| * https://academy.binance.com/en/glossary/total-supply
+* https://github.com/ethereum/EIPs/issues/1594 (ERC-1594/ERC-1400)
+
+| Circulating Supply | 총유통량
+a| * The number of cryptocurrency coins or tokens that are publicly available and circulating in the market.
+a| * https://academy.binance.com/en/glossary/circulating-supply
+
+| Supply Cap | 최대발행량
+a| * The maximum amount of coins that will ever exist in the lifetime of the cryptocurrency.
+a| * https://coinmarketcap.com/academy/glossary/max-supply (Max Supply)
+* https://academy.binance.com/en/glossary/maximum-supply (Maximum Supply)
+|===
+
+
+
+
