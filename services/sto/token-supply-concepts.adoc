@@ -33,7 +33,7 @@ scale 1200 width
 [verse]
 ____
 total-supply = &Sigma; issued-tokens - &Sigma; redeemed-tokens
-             =  circulating-supply - locked-supply
+             =  circulating-supply + locked-supply
 
 
 supply-cap = max-supply
