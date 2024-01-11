@@ -18,12 +18,12 @@ table eth_acct {
   pub_key char(130)
   is_valid bool [not null, default: true]
   created_at timestamp
-  invaild_at timestamp
+  invalid_at timestamp
 }
 
 table contract {
   chain_id int [pk]
-  adddr char(42) [pk]
+  addr char(42) [pk]
   contr_src_id int [not null]
   deployer_addr char(42)
   deploy_tx_hash char(66)
